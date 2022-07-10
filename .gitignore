@@ -1,23 +1,64 @@
-# ignore everything in the root except the "wp-content" directory.
-!wp-content/
+# Version control and temp files
+*~
+.DS_Store
+thumbs.db
+.svn
+.cvs
+.git
+.hg
+.listing
+*.bak
+*.swp
+*.tmp
+.vscode
 
-# ignore everything in the "wp-content" directory, except:
-# "mu-plugins", "plugins", "themes" directory
-wp-content/*
-!wp-content/mu-plugins/
-!wp-content/plugins/
-!wp-content/themes/
+bower_components/*
+!bower_components/.gitkeep
+node_modules
+.sass-cache
 
-# ignore these plugins
-wp-content/plugins/hello.php
-
-# ignore specific themes
-wp-content/themes/twenty*/
-
-# ignore node dependency directories
-node_modules/
-
-# ignore log files and databases
-*.log
+# Log and database files
 *.sql
-*.sqlite
+*.log
+
+# known large file types
+*.zip
+*.tar
+*.tgz
+*.gz
+
+# IDE
+.idea
+.phpintel
+
+
+
+*.map
+*.orig
+*~
+*.iws
+._*
+*.sublime-project
+*.sublime-workspace
+.sublime-
+.project
+license.txt
+readme.html
+sitemap*.xml
+sitemap*.xml.gz
+Desktop.ini
+.Spotlight-V100
+.Trashes
+
+node_modules
+node_modules/**
+node_modules_bck
+wp-content/advanced-cache.php
+wp-content/backup-db/
+wp-content/backups/
+wp-content/blogs.dir/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/wp-cache-config.php
+wp-content/db.php
+package-lock.json

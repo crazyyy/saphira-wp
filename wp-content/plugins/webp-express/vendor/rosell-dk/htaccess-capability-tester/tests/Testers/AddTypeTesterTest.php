@@ -2,7 +2,7 @@
 /*
 subdir: add-type
 files:
-  - filename: '.htaccess'
+  - filename: '2.htaccess'
     content: |
       <IfModule mod_mime.c>
           AddType image/gif .test
@@ -23,7 +23,7 @@ Tested:
 
 | Case                           |  Test result
 | ------------------------------ | ------------------
-| .htaccess disabled             |  failure
+| 2.htaccess disabled             |  failure
 | forbidden directives (fatal)   |  failure
 | access denied                  |  inconclusive
 | directive has no effect        |  failure

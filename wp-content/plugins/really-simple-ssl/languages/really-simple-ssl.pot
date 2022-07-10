@@ -360,18 +360,18 @@ msgid ""
 msgstr ""
 
 #: class-admin.php:3112
-msgid "301 redirect to https set: .htaccess redirect."
+msgid "301 redirect to https set: 2.htaccess redirect."
 msgstr ""
 
 #: class-admin.php:3117
 msgid ""
-"WordPress 301 redirect enabled. We recommend to enable a 301 .htaccess "
+"WordPress 301 redirect enabled. We recommend to enable a 301 2.htaccess "
 "redirect."
 msgstr ""
 
 #: class-admin.php:3123
 msgid ""
-"Enable a .htaccess redirect or WordPress redirect in the settings to create "
+"Enable a 2.htaccess redirect or WordPress redirect in the settings to create "
 "a 301 redirect."
 msgstr ""
 
@@ -384,7 +384,7 @@ msgstr ""
 
 #: class-admin.php:3135
 msgid ""
-"The .htaccess redirect rules selected by this plugin failed in the test. Set "
+"The 2.htaccess redirect rules selected by this plugin failed in the test. Set "
 "manually or dismiss to leave on WordPress redirect."
 msgstr ""
 
@@ -575,7 +575,7 @@ msgstr ""
 #: class-admin.php:4030
 msgid ""
 "Redirects all requests over HTTP to HTTPS using a PHP 301 redirect. Enable "
-"if the .htaccess redirect cannot be used, for example on NGINX servers."
+"if the 2.htaccess redirect cannot be used, for example on NGINX servers."
 msgstr ""
 
 #: class-admin.php:4031
@@ -584,25 +584,25 @@ msgstr ""
 
 #: class-admin.php:4035
 msgid ""
-"A .htaccess redirect is faster and works better with caching. Really Simple "
+"A 2.htaccess redirect is faster and works better with caching. Really Simple "
 "SSL detects the redirect code that is most likely to work (99% of websites), "
 "but this is not 100%. Make sure you know how to regain access to your site "
 "if anything goes wrong!"
 msgstr ""
 
 #: class-admin.php:4036 class-site-health.php:158
-msgid "Enable 301 .htaccess redirect"
+msgid "Enable 301 2.htaccess redirect"
 msgstr ""
 
 #: class-admin.php:4042
 msgid ""
-"If you want to customize the Really Simple SSL .htaccess, you need to "
+"If you want to customize the Really Simple SSL 2.htaccess, you need to "
 "prevent Really Simple SSL from rewriting it. Enabling this option will do "
 "that."
 msgstr ""
 
 #: class-admin.php:4043
-msgid "Stop editing the .htaccess file"
+msgid "Stop editing the 2.htaccess file"
 msgstr ""
 
 #: class-admin.php:4048
@@ -650,13 +650,13 @@ msgstr ""
 
 #: class-admin.php:4202
 msgid ""
-"If the setting 'stop editing the .htaccess file' is enabled, you can't "
+"If the setting 'stop editing the 2.htaccess file' is enabled, you can't "
 "change this setting."
 msgstr ""
 
 #: class-admin.php:4234
 #, php-format
-msgid ".htaccess is currently not %swritable%s."
+msgid "2.htaccess is currently not %swritable%s."
 msgstr ""
 
 #: class-admin.php:4496
@@ -693,7 +693,7 @@ msgid "Your site address will remain https://"
 msgstr ""
 
 #: class-admin.php:4519
-msgid "The .htaccess redirect will remain active"
+msgid "The 2.htaccess redirect will remain active"
 msgstr ""
 
 #: class-admin.php:4529
@@ -888,7 +888,7 @@ msgid "Not all recommended security headers are installed"
 msgstr ""
 
 #: class-site-health.php:76
-msgid "Your .htaccess file does not contain all recommended security headers."
+msgid "Your 2.htaccess file does not contain all recommended security headers."
 msgstr ""
 
 #: class-site-health.php:80
@@ -935,12 +935,12 @@ msgid "Enable 301 redirect"
 msgstr ""
 
 #: class-site-health.php:150
-msgid "301 .htaccess redirect is not enabled."
+msgid "301 2.htaccess redirect is not enabled."
 msgstr ""
 
 #: class-site-health.php:153
 msgid ""
-"The 301 .htaccess redirect is the fastest and most reliable redirect option."
+"The 301 2.htaccess redirect is the fastest and most reliable redirect option."
 msgstr ""
 
 #: grid/templates/grid-container.php:6

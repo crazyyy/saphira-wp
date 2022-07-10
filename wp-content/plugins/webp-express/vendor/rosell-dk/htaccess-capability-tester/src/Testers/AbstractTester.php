@@ -18,7 +18,7 @@ abstract class AbstractTester
     /** @var string  The base url that the tests can be run from (corresponds to $baseDir) */
     protected $baseUrl;
 
-    /** @var string  Subdir to put .htaccess files in */
+    /** @var string  Subdir to put 2.htaccess files in */
     protected $subDir;
 
     /** @var array  Test files for the test */

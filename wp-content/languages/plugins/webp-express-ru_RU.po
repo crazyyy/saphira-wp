@@ -50,8 +50,8 @@ msgid "You are on Microsof IIS server. The plugin does not work on IIS"
 msgstr "Ваш сайт работает на сервере Microsoft IIS. Плагин не способен работать на IIS"
 
 #: lib/message.php:25
-msgid "WebP Express updated .htaccess"
-msgstr "WebP Express изменил .htaccess"
+msgid "WebP Express updated 2.htaccess"
+msgstr "WebP Express изменил 2.htaccess"
 
 #: lib/message.php:10
 msgid "Plugin <b>deactivated</b>"

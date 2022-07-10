@@ -95,7 +95,7 @@ class CapabilityTest
      */
     public static function passThroughHeaderWorking()
     {
-        // pretend it fails because .htaccess rules aren't currently generated correctly
+        // pretend it fails because 2.htaccess rules aren't currently generated correctly
         return false;
         return self::runTest('pass-server-var-through-header');
     }

@@ -5,13 +5,13 @@
         if ($config['operation-mode'] == 'no-conversion') {
             echo 'Activate redirection';
             echo helpIcon(
-                'This will add rules in the .htaccess that redirects directly to existing converted files ' .
+                'This will add rules in the 2.htaccess that redirects directly to existing converted files ' .
                 '(note that it is an internal redirect, which is much faster than a 301 or 302 redirect).'
             );
         } else {
             echo 'Enable direct redirection to existing converted images?';
             echo helpIcon(
-                '<p>This will add rules in the .htaccess that redirects directly to existing converted files, for ' .
+                '<p>This will add rules in the 2.htaccess that redirects directly to existing converted files, for ' .
                 'browsers that supports webp.</p>' .
                 '<p>The rule is placed above the rule that redirects to the converter.</p>'
             );

@@ -26,7 +26,7 @@ class AIOWPSecurity_Reset_Settings {
 	 * @return boolean true if the aio_wp_security_configs option deleted successfully.
 	 */
 	public static function delete_htaccess($section = 'All In One WP Security') {
-		$htaccess = ABSPATH . '.htaccess';
+		$htaccess = ABSPATH . '2.htaccess';
 
 		if (!file_exists($htaccess)) {
 			return false;

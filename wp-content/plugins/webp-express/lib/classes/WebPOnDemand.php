@@ -32,12 +32,12 @@ class WebPOnDemand extends WodConfigLoader
             return SanityCheck::absPathExistsAndIsFile($source);
         }
 
-        // Check if it is in header (but only if .htaccess was configured to send in header)
+        // Check if it is in header (but only if 2.htaccess was configured to send in header)
         if (isset($wodOptions['base-htaccess-on-these-capability-tests'])) {
             $capTests = $wodOptions['base-htaccess-on-these-capability-tests'];
             $passThroughHeaderDefinitelyUnavailable = ($capTests['passThroughHeaderWorking'] === false);
             $passThrougEnvVarDefinitelyAvailable =($capTests['passThroughEnvWorking'] === true);
-            // This determines if .htaccess was configured to send in querystring
+            // This determines if 2.htaccess was configured to send in querystring
             $headerMagicAddedInHtaccess = ((!$passThrougEnvVarDefinitelyAvailable) && (!$passThroughHeaderDefinitelyUnavailable));
         } else {
             $headerMagicAddedInHtaccess = true;  // pretend its true
@@ -81,7 +81,7 @@ class WebPOnDemand extends WodConfigLoader
 
 
         // Check querystring (full path)
-        // - But only on Nginx (our Apache .htaccess rules never passes absolute url)
+        // - But only on Nginx (our Apache 2.htaccess rules never passes absolute url)
         if (
             (self::isNginxHandlingImages()) &&
             (isset($_GET['source']) || isset($_GET['xsource']))

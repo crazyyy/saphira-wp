@@ -89,14 +89,14 @@ function webpexpress_migrate3() {
             '<i>New in WebP Express 0.8.0:</i>' .
             '<ul style="list-style-type:disc;margin-left:20px">' .
             '<li>New conversion method, which calls imagick binary directly</li>' .
-            '<li>Made sure not to trigger LFI warning i Wordfence (to activate, click the force .htaccess button)</li>' .
+            '<li>Made sure not to trigger LFI warning i Wordfence (to activate, click the force 2.htaccess button)</li>' .
             "<li>Imagick can now be configured to set quality to auto on systems where the auto option isn't generally available</li>" .
             '<li><a href="https://github.com/rosell-dk/webp-express/issues?q=is%3Aclosed+milestone%3A0.8.0">and more...</a></li>' .
             '</ul>' .
             '</ul>' .
             '<br><i>Roadmap / wishlist:</i>' .
             '<ul style="list-style-type:disc;margin-left:20px">' .
-            '<li>Rule in .htaccess to serve already converted images immediately (optional)</li>' .
+            '<li>Rule in 2.htaccess to serve already converted images immediately (optional)</li>' .
             '<li>Better NGINX support (print rules that needs to be manually inserted in nginx.conf)</li>' .
             '<li>Diagnose button</li>' .
             '<li>A file explorer for viewing converted images, reconverting them, and seeing them side by side with the original</li>' .

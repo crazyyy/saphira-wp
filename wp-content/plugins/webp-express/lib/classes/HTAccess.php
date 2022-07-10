@@ -76,13 +76,13 @@ class HTAccess
             }
             return substr($content, $pos1, $pos2 - $pos1);
         } else {
-            // the .htaccess isn't even there. So there are no rules.
+            // the 2.htaccess isn't even there. So there are no rules.
             return false;
         }
     }
 
     /**
-     *  Sneak peak into .htaccess to see if we have rules in it
+     *  Sneak peak into 2.htaccess to see if we have rules in it
      *  This may not be possible (it requires read permission)
      *  Return true, false, or null if we just can't tell
      */
@@ -99,7 +99,7 @@ class HTAccess
 
             return (strpos($weRules, '<IfModule ') !== false);
         } else {
-            // the .htaccess isn't even there. So there are no rules.
+            // the 2.htaccess isn't even there. So there are no rules.
             return false;
         }
     }
@@ -113,7 +113,7 @@ class HTAccess
         }
         if ($result === null) {
             // We were not allowed to sneak-peak.
-            // Well, good thing that we stored successful .htaccess write locations ;)
+            // Well, good thing that we stored successful 2.htaccess write locations ;)
             // If we recorded a successful write, then we assume there are still rules there
             // If we did not, we assume there are no rules there
             $dir = FileHelper::dirName($filename);
@@ -127,7 +127,7 @@ class HTAccess
         $allIds[] = 'cache';
         $result = [];
         foreach ($allIds as $imageRootId) {
-            $filename = Paths::getAbsDirById($imageRootId) . '/.htaccess';
+            $filename = Paths::getAbsDirById($imageRootId) . '/2.htaccess';
             if (self::haveWeRulesInThisHTAccessBestGuess($filename)) {
                 $result[] = $imageRootId;
             }
@@ -147,7 +147,7 @@ class HTAccess
         $existingFilePermission = null;
         $existingDirPermission = null;
 
-        // Try to make .htaccess writable if its not
+        // Try to make 2.htaccess writable if its not
         if (@file_exists($filename)) {
             if (!@is_writable($filename)) {
                 $existingFilePermission = FileHelper::filePerm($filename);
@@ -161,7 +161,7 @@ class HTAccess
             }
         }
 
-        /* Add rules to .htaccess  */
+        /* Add rules to 2.htaccess  */
         if (!function_exists('insert_with_markers')) {
             require_once ABSPATH . 'wp-admin/includes/misc.php';
         }
@@ -202,7 +202,7 @@ class HTAccess
     }
 
     public static function saveHTAccessRules($rootId, $rules, $createIfMissing = true) {
-        $filename = Paths::getAbsDirById($rootId) . '/.htaccess';
+        $filename = Paths::getAbsDirById($rootId) . '/2.htaccess';
         return self::saveHTAccessRulesToFile($filename, $rules, $createIfMissing);
     }
 
@@ -210,7 +210,7 @@ class HTAccess
     public static function saveHTAccessRulesToFirstWritableHTAccessDir($dirs, $rules)
     {
         foreach ($dirs as $dir) {
-            if (self::saveHTAccessRulesToFile($dir . '/.htaccess', $rules, true)) {
+            if (self::saveHTAccessRulesToFile($dir . '/2.htaccess', $rules, true)) {
                 return $dir;
             }
         }
@@ -219,7 +219,7 @@ class HTAccess
 
 
     /**
-     *  Try to deactivate all .htaccess rules.
+     *  Try to deactivate all 2.htaccess rules.
      *  If success, we return true.
      *  If we fail, we return an array of filenames that have problems
      *  @return  true|array
@@ -234,7 +234,7 @@ class HTAccess
 
         foreach ($rootsToClean as $imageRootId) {
             $dir = Paths::getAbsDirById($imageRootId);
-            $filename = $dir . '/.htaccess';
+            $filename = $dir . '/2.htaccess';
             if (!FileHelper::fileExists($filename)) {
                 //error_log('exists not:' . $filename);
                 continue;
@@ -391,7 +391,7 @@ class HTAccess
                 if ($rootIdName == 'cache') {
                     $rootIdName = 'webp folder';
                 }
-                $msg .= '<i>' . Paths::getAbsDirById($rootId) . '/.htaccess</i> (' . $rootIdName . ')<br>';
+                $msg .= '<i>' . Paths::getAbsDirById($rootId) . '/2.htaccess</i> (' . $rootIdName . ')<br>';
             }
         }
 
@@ -402,7 +402,7 @@ class HTAccess
                 if ($rootIdName == 'cache') {
                     $rootIdName = 'webp folder';
                 }
-                $msg .= '<i>' . Paths::getAbsDirById($rootId) . '/.htaccess</i> (' . $rootIdName . ')<br>';
+                $msg .= '<i>' . Paths::getAbsDirById($rootId) . '/2.htaccess</i> (' . $rootIdName . ')<br>';
             }
         }
 
@@ -416,7 +416,7 @@ class HTAccess
         if (count($failedWrites) > 0) {
             $msg = '<p>Failed writing rewrite rules to the following files:</p>';
             foreach ($failedWrites as $rootId) {
-                $msg .= '<i>' . Paths::getAbsDirById($rootId) . '/.htaccess</i> (' . $rootId . ')<br>';
+                $msg .= '<i>' . Paths::getAbsDirById($rootId) . '/2.htaccess</i> (' . $rootId . ')<br>';
             }
             $msg .= 'You need to change the file permissions to allow WebP Express to save the rules.';
             Messenger::addMessage('error', $msg);
@@ -424,7 +424,7 @@ class HTAccess
             if (count($failedDeactivations) > 0) {
                 $msg = '<p>Failed deleting unused rewrite rules in the following files:</p>';
                 foreach ($failedDeactivations as $rootId) {
-                    $msg .= '<i>' . Paths::getAbsDirById($rootId) . '/.htaccess</i> (' . $rootId . ')<br>';
+                    $msg .= '<i>' . Paths::getAbsDirById($rootId) . '/2.htaccess</i> (' . $rootId . ')<br>';
                 }
                 $msg .= 'You need to change the file permissions to allow WebP Express to remove the rules or ' .
                     'remove them manually';

@@ -58,7 +58,7 @@ if ( current_user_can( 'manage_options' ) ) {
 		echo "* htaccess redirect\n";
 	}
 	if ( RSSSL()->really_simple_ssl->do_not_edit_htaccess ) {
-		echo "* Stop editing the .htaccess file\n";
+		echo "* Stop editing the 2.htaccess file\n";
 	}
 	if ( RSSSL()->really_simple_ssl->switch_mixed_content_fixer_hook ) {
 		echo "* Use alternative method to fix mixed content\n";

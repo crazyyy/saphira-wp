@@ -130,10 +130,10 @@ msgstr "Nonce 확인 은 저장 블랙리스트 설정에 대한 실패!"
 #: admin/wp-security-list-comment-spammer-ip.php:202
 #: classes/wp-security-general-init-tasks.php:224
 msgid ""
-"The plugin was unable to write to the .htaccess file. Please edit file "
+"The plugin was unable to write to the 2.htaccess file. Please edit file "
 "manually."
 msgstr ""
-"플러그인은 .htaccess 파일에 쓸 수 없습니다. 수동으로 파일을 편집하십시오."
+"플러그인은 2.htaccess 파일에 쓸 수 없습니다. 수동으로 파일을 편집하십시오."
 
 # @ all-in-one-wp-security-and-firewall
 #: admin/wp-security-blacklist-menu.php:143
@@ -164,16 +164,16 @@ msgstr ""
 msgid ""
 "The plugin achieves this by making appropriate modifications to your ."
 "htaccess file."
-msgstr "플러그인은 .htaccess 파일을 적절하게 수정하여 이를 달성합니다."
+msgstr "플러그인은 2.htaccess 파일을 적절하게 수정하여 이를 달성합니다."
 
 # @ all-in-one-wp-security-and-firewall
 #: admin/wp-security-blacklist-menu.php:149
 msgid ""
-"By blocking people via the .htaccess file your are using the most secure "
+"By blocking people via the 2.htaccess file your are using the most secure "
 "first line of defence which denies all access to blacklisted visitors as "
 "soon as they hit your hosting server."
 msgstr ""
-".htaccess 파일을 통해 사람들을 차단함으로써 가장 안전한 첫 번째 방어 선을 사"
+"2.htaccess 파일을 통해 사람들을 차단함으로써 가장 안전한 첫 번째 방어 선을 사"
 "용하여 호스팅 서버에 부딪히자마자 블랙리스트에 오른 방문자에 대한 모든 액세스"
 "를 거부합니다."
 
@@ -387,10 +387,10 @@ msgstr "주의!"
 
 #: admin/wp-security-brute-force-menu.php:137
 msgid ""
-"Could not delete the Cookie-based directives from the .htaccess file. Please "
+"Could not delete the Cookie-based directives from the 2.htaccess file. Please "
 "check the file permissions."
 msgstr ""
-".htaccess 파일에서 쿠키 기반 지침을 삭제할 수 없습니다. 파일 권한을 확인하십"
+"2.htaccess 파일에서 쿠키 기반 지침을 삭제할 수 없습니다. 파일 권한을 확인하십"
 "시오."
 
 #: admin/wp-security-brute-force-menu.php:157
@@ -534,8 +534,8 @@ msgstr "쿠키 기반 무차별 무력 방지 기능 설정을 성공적으로 �
 #: admin/wp-security-firewall-menu.php:746
 #: admin/wp-security-settings-menu.php:636 admin/wp-security-spam-menu.php:109
 msgid ""
-"Could not write to the .htaccess file. Please check the file permissions."
-msgstr ".htaccess 파일에 쓸 수 없습니다. 파일 권한을 확인하십시오."
+"Could not write to the 2.htaccess file. Please check the file permissions."
+msgstr "2.htaccess 파일에 쓸 수 없습니다. 파일 권한을 확인하십시오."
 
 # @ all-in-one-wp-security-and-firewall
 #: admin/wp-security-brute-force-menu.php:318
@@ -565,11 +565,11 @@ msgstr ""
 #: admin/wp-security-brute-force-menu.php:325
 msgid ""
 "The features in this tab will stop the majority of Brute Force Login Attacks "
-"at the .htaccess level thus providing even better protection for your WP "
+"at the 2.htaccess level thus providing even better protection for your WP "
 "login page and also reducing the load on your server because the system does "
 "not have to run PHP code to process the login attempts."
 msgstr ""
-"이 탭의 기능은 .htaccess 수준에서 대부분의 무차별 포스 로그인 공격을 중지하므"
+"이 탭의 기능은 2.htaccess 수준에서 대부분의 무차별 포스 로그인 공격을 중지하므"
 "로 WP 로그인 페이지에 대한 더 나은 보호를 제공하고 시스템이 로그인 시도를 처"
 "리하기 위해 PHP 코드를 실행할 필요가 없기 때문에 서버의 부하를 줄입니다."
 
@@ -581,12 +581,12 @@ msgid ""
 "htaccess file before proceeding</strong>."
 msgstr ""
 "이 기능은 사이트의 일반적인 기능에 영향을 미치지 않아야하지만 <strong>진행하"
-"기 전에 .htaccess 파일의 %s를 가져 가는 것이 좋습니다.</strong>"
+"기 전에 2.htaccess 파일의 %s를 가져 가는 것이 좋습니다.</strong>"
 
 #: admin/wp-security-brute-force-menu.php:333
 msgid ""
 "If this feature is not used correctly, you can get locked out of your site. "
-"A backed up .htaccess file will come in handy if that happens."
+"A backed up 2.htaccess file will come in handy if that happens."
 msgstr ""
 "이 기능을 올바르게 사용하지 않으면 사이트에서 잠길 수 있습니다. 백업 ."
 "htaccess 파일이 발생하면 유용합니다."
@@ -967,16 +967,16 @@ msgstr ""
 msgid ""
 "The plugin achieves this by writing the appropriate directives to your ."
 "htaccess file."
-msgstr "플러그인은 .htaccess 파일에 적절한 지침을 작성하여 이를 달성합니다."
+msgstr "플러그인은 2.htaccess 파일에 적절한 지침을 작성하여 이를 달성합니다."
 
 #: admin/wp-security-brute-force-menu.php:672
 msgid ""
-"By allowing/blocking IP addresses via the .htaccess file your are using the "
+"By allowing/blocking IP addresses via the 2.htaccess file your are using the "
 "most secure first line of defence because login access will only be granted "
 "to whitelisted IP addresses and other addresses will be blocked as soon as "
 "they try to access your login page."
 msgstr ""
-".htaccess 파일을 통해 IP 주소를 허용/차단하면 로그인 액세스가 허용되고 다른 "
+"2.htaccess 파일을 통해 IP 주소를 허용/차단하면 로그인 액세스가 허용되고 다른 "
 "주소가 로그인 페이지에 액세스하려고 하는 즉시 차단되므로 가장 안전한 첫 번째 "
 "방어 선을 사용하고 있습니다."
 
@@ -1461,11 +1461,11 @@ msgstr "이 탭에는 영구적으로 차단된 모든 IP 주소 목록이 표�
 
 #: admin/wp-security-dashboard-menu.php:788 admin/wp-security-spam-menu.php:291
 msgid ""
-"NOTE: This feature does NOT use the .htaccess file to permanently block the "
+"NOTE: This feature does NOT use the 2.htaccess file to permanently block the "
 "IP addresses so it should be compatible with all web servers running "
 "WordPress."
 msgstr ""
-"참고: 이 기능은 .htaccess 파일을 사용하여 IP 주소를 영구적으로 차단하지 않으"
+"참고: 이 기능은 2.htaccess 파일을 사용하여 IP 주소를 영구적으로 차단하지 않으"
 "므로 WordPress를 실행하는 모든 웹 서버와 호환되어야 합니다."
 
 #: admin/wp-security-dashboard-menu.php:794
@@ -2681,7 +2681,7 @@ msgstr "방화벽 설정"
 #, php-format
 msgid ""
 "This should not have any impact on your site's general functionality but if "
-"you wish you can take a %s of your .htaccess file before proceeding."
+"you wish you can take a %s of your 2.htaccess file before proceeding."
 msgstr ""
 
 # @ all-in-one-wp-security-and-firewall
@@ -2695,7 +2695,7 @@ msgstr ""
 #: admin/wp-security-firewall-menu.php:138
 msgid ""
 "The firewall functionality is achieved via the insertion of special code "
-"into your currently active .htaccess file."
+"into your currently active 2.htaccess file."
 msgstr ""
 
 #: admin/wp-security-firewall-menu.php:149
@@ -2763,18 +2763,18 @@ msgstr "4) 그것에 대한 액세스를 거부하여 wp-config.php 파일을 �
 # @ all-in-one-wp-security-and-firewall
 #: admin/wp-security-firewall-menu.php:181
 msgid ""
-"The above firewall features will be applied via your .htaccess file and "
+"The above firewall features will be applied via your 2.htaccess file and "
 "should not affect your site's overall functionality."
 msgstr ""
-"위의 방화벽 기능은 .htaccess 파일을 통해 적용되며 사이트의 전반적인 기능에영"
+"위의 방화벽 기능은 2.htaccess 파일을 통해 적용되며 사이트의 전반적인 기능에영"
 "향을 미치지 않아야 합니다."
 
 # @ all-in-one-wp-security-and-firewall
 #: admin/wp-security-firewall-menu.php:182
 msgid ""
-"You are still advised to take a backup of your active .htaccess file just in "
+"You are still advised to take a backup of your active 2.htaccess file just in "
 "case."
-msgstr "활성 .htaccess 파일의 백업을 하는 것이 좋습니다."
+msgstr "활성 2.htaccess 파일의 백업을 하는 것이 좋습니다."
 
 #: admin/wp-security-firewall-menu.php:191
 msgid "WordPress XMLRPC & Pingback Vulnerability Protection"
@@ -2794,7 +2794,7 @@ msgstr ""
 
 #: admin/wp-security-firewall-menu.php:206
 msgid ""
-"This setting will add a directive in your .htaccess to disable access to the "
+"This setting will add a directive in your 2.htaccess to disable access to the "
 "WordPress xmlrpc.php file which is responsible for the XML-RPC functionality "
 "in WordPress."
 msgstr ""
@@ -2942,9 +2942,9 @@ msgstr "추가 방화벽 보호"
 #: admin/wp-security-firewall-menu.php:351
 #, php-format
 msgid ""
-"Due to the nature of the code being inserted to the .htaccess file, this "
+"Due to the nature of the code being inserted to the 2.htaccess file, this "
 "feature may break some functionality for certain plugins and you are "
-"therefore advised to take a %s of .htaccess before applying this "
+"therefore advised to take a %s of 2.htaccess before applying this "
 "configuration."
 msgstr ""
 
@@ -2959,7 +2959,7 @@ msgstr ""
 #: admin/wp-security-firewall-menu.php:354
 msgid ""
 "The advanced firewall rules are applied via the insertion of special code to "
-"your currently active .htaccess file."
+"your currently active 2.htaccess file."
 msgstr ""
 
 # @ all-in-one-wp-security-and-firewall
@@ -3080,7 +3080,7 @@ msgstr ""
 # @ all-in-one-wp-security-and-firewall
 #: admin/wp-security-firewall-menu.php:469
 msgid ""
-"This feature will write rules in your .htaccess file to prevent malicious "
+"This feature will write rules in your 2.htaccess file to prevent malicious "
 "string attacks on your site using XSS."
 msgstr ""
 
@@ -3095,7 +3095,7 @@ msgstr ""
 #: admin/wp-security-firewall-menu.php:471
 #: admin/wp-security-firewall-menu.php:501
 msgid ""
-"You are therefore strongly advised to take a backup of your active .htaccess "
+"You are therefore strongly advised to take a backup of your active 2.htaccess "
 "file before applying this feature."
 msgstr ""
 
@@ -3166,7 +3166,7 @@ msgstr ""
 msgid ""
 "The added advantage of applying the 6G firewall to your site is that it has "
 "been tested and confirmed by the people at PerishablePress.com to be an "
-"optimal and least disruptive set of .htaccess security rules for general WP "
+"optimal and least disruptive set of 2.htaccess security rules for general WP "
 "sites running on an Apache server or similar."
 msgstr ""
 
@@ -3174,7 +3174,7 @@ msgstr ""
 #, php-format
 msgid ""
 "Therefore the 6G firewall rules should not have any impact on your site's "
-"general functionality but if you wish you can take a %s of your .htaccess "
+"general functionality but if you wish you can take a %s of your 2.htaccess "
 "file before proceeding."
 msgstr ""
 
@@ -3377,7 +3377,7 @@ msgstr ""
 #: admin/wp-security-firewall-menu.php:755
 msgid ""
 "This feature will prevent people from directly hotlinking images from your "
-"site's pages by writing some directives in your .htaccess file."
+"site's pages by writing some directives in your 2.htaccess file."
 msgstr ""
 
 #: admin/wp-security-firewall-menu.php:760
@@ -3535,12 +3535,12 @@ msgid "Click this button if you wish to purge all 404 event logs from the DB."
 msgstr ""
 
 #: admin/wp-security-firewall-menu.php:1047
-msgid "Custom .htaccess Rules Settings"
+msgid "Custom 2.htaccess Rules Settings"
 msgstr ""
 
 #: admin/wp-security-firewall-menu.php:1054
 msgid ""
-"This feature can be used to apply your own custom .htaccess rules and "
+"This feature can be used to apply your own custom 2.htaccess rules and "
 "directives."
 msgstr ""
 
@@ -3564,7 +3564,7 @@ msgstr ""
 
 #: admin/wp-security-firewall-menu.php:1063
 msgid ""
-"Incorrect .htaccess rules or directives can break or prevent access to your "
+"Incorrect 2.htaccess rules or directives can break or prevent access to your "
 "site."
 msgstr ""
 
@@ -3576,16 +3576,16 @@ msgstr ""
 #: admin/wp-security-firewall-menu.php:1065
 msgid ""
 "If you break your site you will need to access your server via FTP or "
-"something similar and then edit your .htaccess file and delete the changes "
+"something similar and then edit your 2.htaccess file and delete the changes "
 "you made."
 msgstr ""
 
 #: admin/wp-security-firewall-menu.php:1071
-msgid "Custom .htaccess Rules"
+msgid "Custom 2.htaccess Rules"
 msgstr ""
 
 #: admin/wp-security-firewall-menu.php:1075
-msgid "Enable Custom .htaccess Rules"
+msgid "Enable Custom 2.htaccess Rules"
 msgstr ""
 
 #: admin/wp-security-firewall-menu.php:1078
@@ -3594,11 +3594,11 @@ msgid ""
 msgstr ""
 
 #: admin/wp-security-firewall-menu.php:1082
-msgid "Enter Custom .htaccess Rules:"
+msgid "Enter Custom 2.htaccess Rules:"
 msgstr ""
 
 #: admin/wp-security-firewall-menu.php:1086
-msgid "Enter your custom .htaccess rules/directives."
+msgid "Enter your custom 2.htaccess rules/directives."
 msgstr ""
 
 #: admin/wp-security-firewall-menu.php:1091
@@ -3682,14 +3682,14 @@ msgstr ""
 # @ all-in-one-wp-security-and-firewall
 #: admin/wp-security-list-comment-spammer-ip.php:198
 msgid ""
-"The .htaccess file was successfully modified to include the selected IP "
+"The 2.htaccess file was successfully modified to include the selected IP "
 "addresses."
 msgstr ""
 
 # @ all-in-one-wp-security-and-firewall
 #: admin/wp-security-list-comment-spammer-ip.php:209
 msgid ""
-"NOTE: The .htaccess file was not modified because you have disabled the "
+"NOTE: The 2.htaccess file was not modified because you have disabled the "
 "\"Enable IP or User Agent Blacklisting\" check box."
 msgstr ""
 
@@ -3983,8 +3983,8 @@ msgstr "모든 보안 기능이 성공적으로 비활성화되었습니다!"
 #: admin/wp-security-settings-menu.php:102
 #: admin/wp-security-settings-menu.php:129
 msgid ""
-"Could not write to the .htaccess file. Please restore your .htaccess file "
-"manually using the restore functionality in the \".htaccess File\"."
+"Could not write to the 2.htaccess file. Please restore your 2.htaccess file "
+"manually using the restore functionality in the \"2.htaccess File\"."
 msgstr ""
 
 # @ all-in-one-wp-security-and-firewall
@@ -4021,7 +4021,7 @@ msgstr ""
 # @ all-in-one-wp-security-and-firewall
 #: admin/wp-security-settings-menu.php:158
 msgid ""
-"It is a good practice to take a backup of your .htaccess file, database and "
+"It is a good practice to take a backup of your 2.htaccess file, database and "
 "wp-config.php file before activating the security features. This plugin has "
 "options that you can use to backup those resources easily."
 msgstr ""
@@ -4033,7 +4033,7 @@ msgstr ""
 
 # @ all-in-one-wp-security-and-firewall
 #: admin/wp-security-settings-menu.php:162
-msgid "Backup .htaccess file"
+msgid "Backup 2.htaccess file"
 msgstr ""
 
 # @ all-in-one-wp-security-and-firewall
@@ -4111,11 +4111,11 @@ msgstr "디버그 설정 저장"
 
 #: admin/wp-security-settings-menu.php:253
 msgid ""
-"Your .htaccess file was successfully backed up! Using an FTP program go to "
+"Your 2.htaccess file was successfully backed up! Using an FTP program go to "
 "the \"/wp-content/aiowps_backups\" directory to save a copy of the file to "
 "your computer."
 msgstr ""
-".htaccess 파일이 성공적으로 백업되었습니다! FTP 프로그램을 사용하여 \"/wp-"
+"2.htaccess 파일이 성공적으로 백업되었습니다! FTP 프로그램을 사용하여 \"/wp-"
 "content/aiowps_backups\" 디렉터리로 이동하여 파일의 복사본을 컴퓨터에 저장합"
 "니다."
 
@@ -4135,13 +4135,13 @@ msgstr "htaccess 백업에 실패했습니다."
 
 # @ all-in-one-wp-security-and-firewall
 #: admin/wp-security-settings-menu.php:280
-msgid "Please choose a .htaccess to restore from."
+msgid "Please choose a 2.htaccess to restore from."
 msgstr "복원하려면 .htaccess를 선택하십시오."
 
 # @ all-in-one-wp-security-and-firewall
 #: admin/wp-security-settings-menu.php:296
 msgid ""
-"htaccess file restore failed. Please attempt to restore the .htaccess "
+"htaccess file restore failed. Please attempt to restore the 2.htaccess "
 "manually using FTP."
 msgstr ""
 "htaccess 파일 복원에 실패했습니다. FTP를 사용하여 수동으로 .htaccess를 복원하"
@@ -4149,8 +4149,8 @@ msgstr ""
 
 # @ all-in-one-wp-security-and-firewall
 #: admin/wp-security-settings-menu.php:300
-msgid "Your .htaccess file has successfully been restored!"
-msgstr ".htaccess 파일이 성공적으로 복원되었습니다!"
+msgid "Your 2.htaccess file has successfully been restored!"
+msgstr "2.htaccess 파일이 성공적으로 복원되었습니다!"
 
 # @ all-in-one-wp-security-and-firewall
 #: admin/wp-security-settings-menu.php:306
@@ -4162,22 +4162,22 @@ msgstr ""
 
 # @ all-in-one-wp-security-and-firewall
 #: admin/wp-security-settings-menu.php:312
-msgid ".htaccess File Operations"
-msgstr ".htaccess 파일 작업"
+msgid "2.htaccess File Operations"
+msgstr "2.htaccess 파일 작업"
 
 # @ all-in-one-wp-security-and-firewall
 #: admin/wp-security-settings-menu.php:315
 msgid ""
-"Your \".htaccess\" file is a key component of your website's security and it "
+"Your \"2.htaccess\" file is a key component of your website's security and it "
 "can be modified to implement various levels of protection mechanisms."
 msgstr ""
-"\".htaccess\" 파일은 웹 사이트 보안의 핵심 구성 요소이며 다양한 수준의 보호 "
+"\"2.htaccess\" 파일은 웹 사이트 보안의 핵심 구성 요소이며 다양한 수준의 보호 "
 "메커니즘을 구현하도록 수정할 수 있습니다."
 
 # @ all-in-one-wp-security-and-firewall
 #: admin/wp-security-settings-menu.php:316
 msgid ""
-"This feature allows you to backup and save your currently active .htaccess "
+"This feature allows you to backup and save your currently active 2.htaccess "
 "file should you need to re-use the the backed up file in the future."
 msgstr ""
 "이 기능을 사용하면 나중에 백업된 파일을 다시 사용해야 하는 경우 현재 활성 ."
@@ -4186,38 +4186,38 @@ msgstr ""
 # @ all-in-one-wp-security-and-firewall
 #: admin/wp-security-settings-menu.php:317
 msgid ""
-"You can also restore your site's .htaccess settings using a backed up ."
+"You can also restore your site's 2.htaccess settings using a backed up ."
 "htaccess file."
 msgstr ""
-"백업된 .htaccess 파일을 사용하여 사이트의 .htaccess 설정을 복원할 수도 있습니"
+"백업된 2.htaccess 파일을 사용하여 사이트의 2.htaccess 설정을 복원할 수도 있습니"
 "다."
 
 # @ all-in-one-wp-security-and-firewall
 #: admin/wp-security-settings-menu.php:331
-msgid "Save the current .htaccess file"
-msgstr "현재 .htaccess 파일 저장"
+msgid "Save the current 2.htaccess file"
+msgstr "현재 2.htaccess 파일 저장"
 
 # @ all-in-one-wp-security-and-firewall
 #: admin/wp-security-settings-menu.php:335
 msgid ""
-"Click the button below to backup and save the currently active .htaccess "
+"Click the button below to backup and save the currently active 2.htaccess "
 "file."
-msgstr "아래 버튼을 클릭하여 현재 활성 .htaccess 파일을 백업하고 저장합니다."
+msgstr "아래 버튼을 클릭하여 현재 활성 2.htaccess 파일을 백업하고 저장합니다."
 
 # @ all-in-one-wp-security-and-firewall
 #: admin/wp-security-settings-menu.php:336
-msgid "Backup .htaccess File"
-msgstr "백업 .htaccess 파일"
+msgid "Backup 2.htaccess File"
+msgstr "백업 2.htaccess 파일"
 
 # @ all-in-one-wp-security-and-firewall
 #: admin/wp-security-settings-menu.php:340
-msgid "Restore from a backed up .htaccess file"
-msgstr "백업된 .htaccess 파일에서 복원"
+msgid "Restore from a backed up 2.htaccess file"
+msgstr "백업된 2.htaccess 파일에서 복원"
 
 # @ all-in-one-wp-security-and-firewall
 #: admin/wp-security-settings-menu.php:346
-msgid ".htaccess file to restore from"
-msgstr "복원할 .htaccess 파일"
+msgid "2.htaccess file to restore from"
+msgstr "복원할 2.htaccess 파일"
 
 # @ all-in-one-wp-security-and-firewall
 #: admin/wp-security-settings-menu.php:352
@@ -4230,8 +4230,8 @@ msgstr ""
 
 # @ all-in-one-wp-security-and-firewall
 #: admin/wp-security-settings-menu.php:358
-msgid "Restore .htaccess File"
-msgstr ".htaccess 파일 복원"
+msgid "Restore 2.htaccess File"
+msgstr "2.htaccess 파일 복원"
 
 # @ all-in-one-wp-security-and-firewall
 #: admin/wp-security-settings-menu.php:391
@@ -4539,7 +4539,7 @@ msgstr ""
 #: admin/wp-security-spam-menu.php:124
 msgid ""
 "Adding a captcha field in the comment form is a simple way of greatly "
-"reducing SPAM comments from bots without using .htaccess rules."
+"reducing SPAM comments from bots without using 2.htaccess rules."
 msgstr ""
 
 #: admin/wp-security-spam-menu.php:133
@@ -4826,7 +4826,7 @@ msgstr ""
 #: admin/wp-security-spam-menu.php:462
 msgid ""
 "Adding a captcha field in the registration form is a simple way of greatly "
-"reducing SPAM signups from bots without using .htaccess rules."
+"reducing SPAM signups from bots without using 2.htaccess rules."
 msgstr ""
 
 #: admin/wp-security-spam-menu.php:472

@@ -25,7 +25,7 @@ class ContentDigestTester extends CustomTester
                 [
                     'subdir' => 'on',
                     'files' => [
-                        ['.htaccess', 'ContentDigest On'],
+                        ['2.htaccess', 'ContentDigest On'],
                         ['request-me.txt', 'hi'],
                     ],
                     'request' => 'request-me.txt',
@@ -36,7 +36,7 @@ class ContentDigestTester extends CustomTester
                 [
                     'subdir' => 'off',
                     'files' => [
-                        ['.htaccess', 'ContentDigest Off'],
+                        ['2.htaccess', 'ContentDigest Off'],
                         ['request-me.txt', "hi"],
                     ],
                     'request' => 'request-me.txt',

@@ -4,7 +4,7 @@ subdir: server-signature
 subtests:
   - subdir: on
     files:
-    - filename: '.htaccess'
+    - filename: '2.htaccess'
       content: |
         ServerSignature On
     - filename: 'test.php'
@@ -24,7 +24,7 @@ subtests:
 
   - subdir: off
     files:
-    - filename: '.htaccess'
+    - filename: '2.htaccess'
       content: |
         ServerSignature Off
     - filename: 'test.php'
@@ -49,7 +49,7 @@ Tested:
 
 Server setup                   |  Test result
 --------------------------------------------------
-.htaccess disabled             |  failure
+2.htaccess disabled             |  failure
 forbidden directives (fatal)   |  inconclusive  (special!)
 access denied                  |  inconclusive  (it might be allowed to other files)
 directive has no effect        |  failure

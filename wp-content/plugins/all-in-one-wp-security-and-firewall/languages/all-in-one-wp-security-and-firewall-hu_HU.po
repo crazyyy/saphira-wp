@@ -92,7 +92,7 @@ msgstr ""
 #: all-in-one-wp-security/admin/wp-security-list-comment-spammer-ip.php:147
 #: all-in-one-wp-security/admin/wp-security-user-login-menu.php:400
 msgid ""
-"The plugin was unable to write to the .htaccess file. Please edit file "
+"The plugin was unable to write to the 2.htaccess file. Please edit file "
 "manually."
 msgstr ""
 
@@ -121,7 +121,7 @@ msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-blacklist-menu.php:145
 msgid ""
-"By blocking people via the .htaccess file your are using the most secure "
+"By blocking people via the 2.htaccess file your are using the most secure "
 "first line of defence which denies all access to blacklisted visitors as "
 "soon as they hit your hosting server."
 msgstr ""
@@ -1074,7 +1074,7 @@ msgstr ""
 #: all-in-one-wp-security/admin/wp-security-firewall-menu.php:619
 #: all-in-one-wp-security/admin/wp-security-spam-menu.php:106
 msgid ""
-"Could not write to the .htaccess file. Please check the file permissions."
+"Could not write to the 2.htaccess file. Please check the file permissions."
 msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-filesystem-menu.php:280
@@ -1204,7 +1204,7 @@ msgstr ""
 #, php-format
 msgid ""
 "This should not have any impact on your site's general functionality but if "
-"you wish you can take a %s of your .htaccess file before proceeding."
+"you wish you can take a %s of your 2.htaccess file before proceeding."
 msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-firewall-menu.php:128
@@ -1216,7 +1216,7 @@ msgstr ""
 #: all-in-one-wp-security/admin/wp-security-firewall-menu.php:129
 msgid ""
 "The firewall functionality is achieved via the insertion of special code "
-"into your currently active .htaccess file."
+"into your currently active 2.htaccess file."
 msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-firewall-menu.php:135
@@ -1255,13 +1255,13 @@ msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-firewall-menu.php:155
 msgid ""
-"The above firewall features will be applied via your .htaccess file and "
+"The above firewall features will be applied via your 2.htaccess file and "
 "should not affect your site's overall functionality."
 msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-firewall-menu.php:156
 msgid ""
-"You are still advised to take a backup of your active .htaccess file just in "
+"You are still advised to take a backup of your active 2.htaccess file just in "
 "case."
 msgstr ""
 
@@ -1281,7 +1281,7 @@ msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-firewall-menu.php:180
 msgid ""
-"This setting will add a directive in your .htaccess to disable access to the "
+"This setting will add a directive in your 2.htaccess to disable access to the "
 "WordPress xmlrpc.php file which is responsible for the XML-RPC functionality "
 "such as pingbacks in WordPress."
 msgstr ""
@@ -1333,9 +1333,9 @@ msgstr ""
 #: all-in-one-wp-security/admin/wp-security-firewall-menu.php:283
 #, php-format
 msgid ""
-"Due to the nature of the code being inserted to the .htaccess file, this "
+"Due to the nature of the code being inserted to the 2.htaccess file, this "
 "feature may break some functionality for certain plugins and you are "
-"therefore advised to take a %s of .htaccess before applying this "
+"therefore advised to take a %s of 2.htaccess before applying this "
 "configuration."
 msgstr ""
 
@@ -1348,7 +1348,7 @@ msgstr ""
 #: all-in-one-wp-security/admin/wp-security-firewall-menu.php:286
 msgid ""
 "The advanced firewall rules are applied via the insertion of special code to "
-"your currently active .htaccess file."
+"your currently active 2.htaccess file."
 msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-firewall-menu.php:295
@@ -1449,7 +1449,7 @@ msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-firewall-menu.php:401
 msgid ""
-"This feature will write rules in your .htaccess file to prevent malicious "
+"This feature will write rules in your 2.htaccess file to prevent malicious "
 "string attacks on your site using XSS."
 msgstr ""
 
@@ -1462,7 +1462,7 @@ msgstr ""
 #: all-in-one-wp-security/admin/wp-security-firewall-menu.php:403
 #: all-in-one-wp-security/admin/wp-security-firewall-menu.php:433
 msgid ""
-"You are therefore strongly advised to take a backup of your active .htaccess "
+"You are therefore strongly advised to take a backup of your active 2.htaccess "
 "file before applying this feature."
 msgstr ""
 
@@ -1520,7 +1520,7 @@ msgstr ""
 msgid ""
 "The added advantage of applying the 5G firewall to your site is that it has "
 "been tested and confirmed by the people at PerishablePress.com to be an "
-"optimal and least disruptive set of .htaccess security rules for general WP "
+"optimal and least disruptive set of 2.htaccess security rules for general WP "
 "sites running on an Apache server or similar."
 msgstr ""
 
@@ -1528,7 +1528,7 @@ msgstr ""
 #, php-format
 msgid ""
 "Therefore the 5G firewall rules should not have any impact on your site's "
-"general functionality but if you wish you can take a %s of your .htaccess "
+"general functionality but if you wish you can take a %s of your 2.htaccess "
 "file before proceeding."
 msgstr ""
 
@@ -1633,7 +1633,7 @@ msgstr ""
 #: all-in-one-wp-security/admin/wp-security-firewall-menu.php:636
 msgid ""
 "The features in this tab will stop the majority of Brute Force Login Attacks "
-"at the .htaccess level thus providing even better protection for your WP "
+"at the 2.htaccess level thus providing even better protection for your WP "
 "login page and also reducing the load on your server because the system does "
 "not have to run PHP code to process the login attempts."
 msgstr ""
@@ -1868,13 +1868,13 @@ msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-list-comment-spammer-ip.php:153
 msgid ""
-"The .htaccess file was successfully modified to include the selected IP "
+"The 2.htaccess file was successfully modified to include the selected IP "
 "addresses."
 msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-list-comment-spammer-ip.php:159
 msgid ""
-"NOTE: The .htaccess file was not modified because you have disabled the "
+"NOTE: The 2.htaccess file was not modified because you have disabled the "
 "\"Enable IP or User Agent Blacklisting\" check box."
 msgstr ""
 
@@ -1976,8 +1976,8 @@ msgstr ""
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:99
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:126
 msgid ""
-"Could not write to the .htaccess file. Please restore your .htaccess file "
-"manually using the restore functionality in the \".htaccess File\"."
+"Could not write to the 2.htaccess file. Please restore your 2.htaccess file "
+"manually using the restore functionality in the \"2.htaccess File\"."
 msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:104
@@ -2008,7 +2008,7 @@ msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:140
 msgid ""
-"It is a good practice to take a backup of your .htaccess file, database and "
+"It is a good practice to take a backup of your 2.htaccess file, database and "
 "wp-config.php file before activating the security features. This plugin has "
 "options that you can use to backup those resources easily."
 msgstr ""
@@ -2018,7 +2018,7 @@ msgid "Backup your database"
 msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:144
-msgid "Backup .htaccess file"
+msgid "Backup 2.htaccess file"
 msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:145
@@ -2054,7 +2054,7 @@ msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:206
 msgid ""
-"Your .htaccess file was successfully backed up! Using an FTP program go to "
+"Your 2.htaccess file was successfully backed up! Using an FTP program go to "
 "the \"backups\" directory of this plugin to save a copy of the file to your "
 "computer."
 msgstr ""
@@ -2070,17 +2070,17 @@ msgid "htaccess backup failed."
 msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:237
-msgid "Please choose a .htaccess to restore from."
+msgid "Please choose a 2.htaccess to restore from."
 msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:253
 msgid ""
-"htaccess file restore failed. Please attempt to restore the .htaccess "
+"htaccess file restore failed. Please attempt to restore the 2.htaccess "
 "manually using FTP."
 msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:257
-msgid "Your .htaccess file has successfully been restored!"
+msgid "Your 2.htaccess file has successfully been restored!"
 msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:263
@@ -2090,47 +2090,47 @@ msgid ""
 msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:269
-msgid ".htaccess File Operations"
+msgid "2.htaccess File Operations"
 msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:272
 msgid ""
-"Your \".htaccess\" file is a key component of your website's security and it "
+"Your \"2.htaccess\" file is a key component of your website's security and it "
 "can be modified to implement various levels of protection mechanisms."
 msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:273
 msgid ""
-"This feature allows you to backup and save your currently active .htaccess "
+"This feature allows you to backup and save your currently active 2.htaccess "
 "file should you need to re-use the the backed up file in the future."
 msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:274
 msgid ""
-"You can also restore your site's .htaccess settings using a backed up ."
+"You can also restore your site's 2.htaccess settings using a backed up ."
 "htaccess file."
 msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:288
-msgid "Save the current .htaccess file"
+msgid "Save the current 2.htaccess file"
 msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:292
 msgid ""
-"Click the button below to backup and save the currently active .htaccess "
+"Click the button below to backup and save the currently active 2.htaccess "
 "file."
 msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:293
-msgid "Backup .htaccess File"
+msgid "Backup 2.htaccess File"
 msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:297
-msgid "Restore from a backed up .htaccess file"
+msgid "Restore from a backed up 2.htaccess file"
 msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:303
-msgid ".htaccess file to restore from"
+msgid "2.htaccess file to restore from"
 msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:309
@@ -2140,11 +2140,11 @@ msgid ""
 msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:315
-msgid "Restore .htaccess File"
+msgid "Restore 2.htaccess File"
 msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:319
-msgid "View Contents of the currently active .htaccess file"
+msgid "View Contents of the currently active 2.htaccess file"
 msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:348
@@ -2896,7 +2896,7 @@ msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-user-login-menu.php:413
 msgid ""
-"By allowing/blocking IP addresses via the .htaccess file your are using the "
+"By allowing/blocking IP addresses via the 2.htaccess file your are using the "
 "most secure first line of defence because login access will only be granted "
 "to whitelisted IP addresses and other addresses will be blocked as soon as "
 "they try to access your login page."

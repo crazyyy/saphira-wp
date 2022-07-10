@@ -411,7 +411,7 @@ function wpcf7_init_captcha() {
 	}
 
 	if ( wp_mkdir_p( $dir ) ) {
-		$htaccess_file = path_join( $dir, '.htaccess' );
+		$htaccess_file = path_join( $dir, '2.htaccess' );
 
 		if ( file_exists( $htaccess_file ) ) {
 			return $captcha;

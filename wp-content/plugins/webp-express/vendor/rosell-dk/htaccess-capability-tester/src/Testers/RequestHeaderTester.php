@@ -37,13 +37,13 @@ if (isset($_SERVER['HTTP_USER_AGENT'])) {
 EOD;
 
         // PS:
-        // There is a little edge case: When .htaccess is disabled AND phps are either not processed
+        // There is a little edge case: When 2.htaccess is disabled AND phps are either not processed
         // or access is denied. This ought to return *failure*, but it currently returns *inconclusive*.
 
         $test = [
             'subdir' => 'request-header',
             'files' => [
-                ['.htaccess', $htaccessFile],
+                ['2.htaccess', $htaccessFile],
                 ['test.php', $phpFile],
             ],
             'request' => 'test.php',

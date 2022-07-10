@@ -110,7 +110,7 @@ class AIOWPSecurity_Firewall_Menu extends AIOWPSecurity_Admin_Menu
             //Recalculate points after the feature status/options have been altered
             $aiowps_feature_mgr->check_feature_status_and_recalculate_points();
 
-            //Now let's write the applicable rules to the .htaccess file
+            //Now let's write the applicable rules to the 2.htaccess file
             $res = AIOWPSecurity_Utility_Htaccess::write_to_htaccess();
 
             if ($res)
@@ -119,7 +119,7 @@ class AIOWPSecurity_Firewall_Menu extends AIOWPSecurity_Admin_Menu
             }
             else
             {
-                $this->show_msg_error(__('Could not write to the .htaccess file. Please check the file permissions.', 'all-in-one-wp-security-and-firewall'));
+                $this->show_msg_error(__('Could not write to the 2.htaccess file. Please check the file permissions.', 'all-in-one-wp-security-and-firewall'));
             }
         }
 
@@ -131,9 +131,9 @@ class AIOWPSecurity_Firewall_Menu extends AIOWPSecurity_Admin_Menu
         <div class="aio_blue_box">
             <?php
             $backup_tab_link = '<a href="admin.php?page='.AIOWPSEC_SETTINGS_MENU_SLUG.'&tab=tab2" target="_blank">backup</a>';
-            $info_msg = sprintf( __('This should not have any impact on your site\'s general functionality but if you wish you can take a %s of your .htaccess file before proceeding.', 'all-in-one-wp-security-and-firewall'), $backup_tab_link);
+            $info_msg = sprintf( __('This should not have any impact on your site\'s general functionality but if you wish you can take a %s of your 2.htaccess file before proceeding.', 'all-in-one-wp-security-and-firewall'), $backup_tab_link);
             echo '<p>'.__('The features in this tab allow you to activate some basic firewall security protection rules for your site.', 'all-in-one-wp-security-and-firewall').
-            '<br />'.__('The firewall functionality is achieved via the insertion of special code into your currently active .htaccess file.', 'all-in-one-wp-security-and-firewall').
+            '<br />'.__('The firewall functionality is achieved via the insertion of special code into your currently active 2.htaccess file.', 'all-in-one-wp-security-and-firewall').
             '<br />'.$info_msg.'</p>';
             ?>
         </div>
@@ -176,8 +176,8 @@ class AIOWPSecurity_Firewall_Menu extends AIOWPSecurity_Admin_Menu
                         echo '<p class="description">'.__('2) Disable the server signature.', 'all-in-one-wp-security-and-firewall').'</p>';
                         echo '<p class="description">'.__('3) Limit file upload size (10MB).', 'all-in-one-wp-security-and-firewall').'</p>';
                         echo '<p class="description">'.__('4) Protect your wp-config.php file by denying access to it.', 'all-in-one-wp-security-and-firewall').'</p>';
-                        echo '<p class="description">'.__('The above firewall features will be applied via your .htaccess file and should not affect your site\'s overall functionality.', 'all-in-one-wp-security-and-firewall').'</p>';
-                        echo '<p class="description">'.__('You are still advised to take a backup of your active .htaccess file just in case.', 'all-in-one-wp-security-and-firewall').'</p>';
+                        echo '<p class="description">'.__('The above firewall features will be applied via your 2.htaccess file and should not affect your site\'s overall functionality.', 'all-in-one-wp-security-and-firewall').'</p>';
+                        echo '<p class="description">'.__('You are still advised to take a backup of your active 2.htaccess file just in case.', 'all-in-one-wp-security-and-firewall').'</p>';
                         ?>
                 </div>
                 </td>
@@ -185,7 +185,7 @@ class AIOWPSecurity_Firewall_Menu extends AIOWPSecurity_Admin_Menu
             <tr valign="top">
                 <th scope="row"><?php _e('Max File Upload Size (MB)', 'all-in-one-wp-security-and-firewall')?>:</th>
                 <td><input type="number" min="0" step="1" name="aiowps_max_file_upload_size" value="<?php echo esc_html($aio_wp_security->configs->get_value('aiowps_max_file_upload_size')); ?>" />
-                <span class="description"><?php _e('The value for the maximum file upload size used in the .htaccess file. (Defaults to 10MB if left blank)', 'all-in-one-wp-security-and-firewall'); ?></span>
+                <span class="description"><?php _e('The value for the maximum file upload size used in the 2.htaccess file. (Defaults to 10MB if left blank)', 'all-in-one-wp-security-and-firewall'); ?></span>
                 </td>
             </tr>
 
@@ -208,7 +208,7 @@ class AIOWPSecurity_Firewall_Menu extends AIOWPSecurity_Admin_Menu
                 <span class="aiowps_more_info_anchor"><span class="aiowps_more_info_toggle_char">+</span><span class="aiowps_more_info_toggle_text"><?php _e('More Info', 'all-in-one-wp-security-and-firewall'); ?></span></span>
                 <div class="aiowps_more_info_body">
                         <?php
-                        echo '<p class="description">'.__('This setting will add a directive in your .htaccess to disable access to the WordPress xmlrpc.php file which is responsible for the XML-RPC functionality in WordPress.', 'all-in-one-wp-security-and-firewall').'</p>';
+                        echo '<p class="description">'.__('This setting will add a directive in your 2.htaccess to disable access to the WordPress xmlrpc.php file which is responsible for the XML-RPC functionality in WordPress.', 'all-in-one-wp-security-and-firewall').'</p>';
                         echo '<p class="description">'.__('Hackers can exploit various vulnerabilities in the WordPress XML-RPC API in a number of ways such as:', 'all-in-one-wp-security-and-firewall').'</p>';
                         echo '<p class="description">'.__('1) Denial of Service (DoS) attacks', 'all-in-one-wp-security-and-firewall').'</p>';
                         echo '<p class="description">'.__('2) Hacking internal routers.', 'all-in-one-wp-security-and-firewall').'</p>';
@@ -330,7 +330,7 @@ class AIOWPSecurity_Firewall_Menu extends AIOWPSecurity_Admin_Menu
             //Commit the config settings
             $aio_wp_security->configs->save_config();
 
-            //Now let's write the applicable rules to the .htaccess file
+            //Now let's write the applicable rules to the 2.htaccess file
             $res = AIOWPSecurity_Utility_Htaccess::write_to_htaccess();
 
             if ($res)
@@ -339,7 +339,7 @@ class AIOWPSecurity_Firewall_Menu extends AIOWPSecurity_Admin_Menu
             }
             else
             {
-                $this->show_msg_error(__('Could not write to the .htaccess file. Please check the file permissions.', 'all-in-one-wp-security-and-firewall'));
+                $this->show_msg_error(__('Could not write to the 2.htaccess file. Please check the file permissions.', 'all-in-one-wp-security-and-firewall'));
             }
 
             if($error)
@@ -353,10 +353,10 @@ class AIOWPSecurity_Firewall_Menu extends AIOWPSecurity_Admin_Menu
         <div class="aio_blue_box">
             <?php
             $backup_tab_link = '<a href="admin.php?page='.AIOWPSEC_SETTINGS_MENU_SLUG.'&tab=tab2" target="_blank">backup</a>';
-            $info_msg = sprintf( __('Due to the nature of the code being inserted to the .htaccess file, this feature may break some functionality for certain plugins and you are therefore advised to take a %s of .htaccess before applying this configuration.', 'all-in-one-wp-security-and-firewall'), $backup_tab_link);
+            $info_msg = sprintf( __('Due to the nature of the code being inserted to the 2.htaccess file, this feature may break some functionality for certain plugins and you are therefore advised to take a %s of 2.htaccess before applying this configuration.', 'all-in-one-wp-security-and-firewall'), $backup_tab_link);
 
             echo '<p>'.__('This feature allows you to activate more advanced firewall settings to your site.', 'all-in-one-wp-security-and-firewall').
-            '<br />'.__('The advanced firewall rules are applied via the insertion of special code to your currently active .htaccess file.', 'all-in-one-wp-security-and-firewall').
+            '<br />'.__('The advanced firewall rules are applied via the insertion of special code to your currently active 2.htaccess file.', 'all-in-one-wp-security-and-firewall').
             '<br />'.$info_msg.'</p>';
             ?>
         </div>
@@ -471,9 +471,9 @@ class AIOWPSecurity_Firewall_Menu extends AIOWPSecurity_Admin_Menu
                 <div class="aiowps_more_info_body">
                     <p class="description">
                         <?php
-                        _e('This feature will write rules in your .htaccess file to prevent malicious string attacks on your site using XSS.', 'all-in-one-wp-security-and-firewall');
+                        _e('This feature will write rules in your 2.htaccess file to prevent malicious string attacks on your site using XSS.', 'all-in-one-wp-security-and-firewall');
                         echo '<br />'.__('NOTE: Some of these strings might be used for plugins or themes and hence this might break some functionality.', 'all-in-one-wp-security-and-firewall');
-                        echo '<br /><strong>'.__('You are therefore strongly advised to take a backup of your active .htaccess file before applying this feature.', 'all-in-one-wp-security-and-firewall').'<strong>';
+                        echo '<br /><strong>'.__('You are therefore strongly advised to take a backup of your active 2.htaccess file before applying this feature.', 'all-in-one-wp-security-and-firewall').'<strong>';
                         ?>
                     </p>
                 </div>
@@ -503,7 +503,7 @@ class AIOWPSecurity_Firewall_Menu extends AIOWPSecurity_Admin_Menu
                         _e('This is an advanced character string filter to prevent malicious string attacks on your site coming from Cross Site Scripting (XSS).', 'all-in-one-wp-security-and-firewall');
                         echo '<br />'.__('This setting matches for common malicious string patterns and exploits and will produce a 403 error for the hacker attempting the query.', 'all-in-one-wp-security-and-firewall');
                         echo '<br />'.__('NOTE: Some strings for this setting might break some functionality.', 'all-in-one-wp-security-and-firewall');
-                        echo '<br /><strong>'.__('You are therefore strongly advised to take a backup of your active .htaccess file before applying this feature.', 'all-in-one-wp-security-and-firewall').'<strong>';
+                        echo '<br /><strong>'.__('You are therefore strongly advised to take a backup of your active 2.htaccess file before applying this feature.', 'all-in-one-wp-security-and-firewall').'<strong>';
                         ?>
                     </p>
                 </div>
@@ -549,7 +549,7 @@ class AIOWPSecurity_Firewall_Menu extends AIOWPSecurity_Admin_Menu
             //Commit the config settings
             $aio_wp_security->configs->save_config();
 
-            //Now let's write the applicable rules to the .htaccess file
+            //Now let's write the applicable rules to the 2.htaccess file
             $res = AIOWPSecurity_Utility_Htaccess::write_to_htaccess();
 
             if ($res)
@@ -560,7 +560,7 @@ class AIOWPSecurity_Firewall_Menu extends AIOWPSecurity_Admin_Menu
             }
             else
             {
-                $this->show_msg_error(__('Could not write to the .htaccess file. Please check the file permissions.', 'all-in-one-wp-security-and-firewall'));
+                $this->show_msg_error(__('Could not write to the 2.htaccess file. Please check the file permissions.', 'all-in-one-wp-security-and-firewall'));
             }
         }
 
@@ -572,8 +572,8 @@ class AIOWPSecurity_Firewall_Menu extends AIOWPSecurity_Admin_Menu
             $info_msg = '<p>'.sprintf( __('This feature allows you to activate the %s (or legacy %s) firewall security protection rules designed and produced by %s.', 'all-in-one-wp-security-and-firewall'), '<a href="http://perishablepress.com/6g/" target="_blank">6G</a>', '<a href="http://perishablepress.com/5g-blacklist-2013/" target="_blank">5G</a>', '<a href="http://perishablepress.com/" target="_blank">Perishable Press</a>').'</p>';
 			$info_msg .= '<p>'.__('The 6G Blacklist is updated and improved version of 5G Blacklist. If you have 5G Blacklist active, you might consider activating 6G Blacklist instead.', 'all-in-one-wp-security-and-firewall').'</p>';
             $info_msg .= '<p>'.__('The 6G Blacklist is a simple, flexible blacklist that helps reduce the number of malicious URL requests that hit your website.', 'all-in-one-wp-security-and-firewall').'</p>';
-            $info_msg .= '<p>'.__('The added advantage of applying the 6G firewall to your site is that it has been tested and confirmed by the people at PerishablePress.com to be an optimal and least disruptive set of .htaccess security rules for general WP sites running on an Apache server or similar.', 'all-in-one-wp-security-and-firewall').'</p>';
-            $info_msg .= '<p>'.sprintf( __('Therefore the 6G firewall rules should not have any impact on your site\'s general functionality but if you wish you can take a %s of your .htaccess file before proceeding.', 'all-in-one-wp-security-and-firewall'), $backup_tab_link).'</p>';
+            $info_msg .= '<p>'.__('The added advantage of applying the 6G firewall to your site is that it has been tested and confirmed by the people at PerishablePress.com to be an optimal and least disruptive set of 2.htaccess security rules for general WP sites running on an Apache server or similar.', 'all-in-one-wp-security-and-firewall').'</p>';
+            $info_msg .= '<p>'.sprintf( __('Therefore the 6G firewall rules should not have any impact on your site\'s general functionality but if you wish you can take a %s of your 2.htaccess file before proceeding.', 'all-in-one-wp-security-and-firewall'), $backup_tab_link).'</p>';
             echo $info_msg;
             ?>
         </div>
@@ -739,7 +739,7 @@ class AIOWPSecurity_Firewall_Menu extends AIOWPSecurity_Admin_Menu
             //Recalculate points after the feature status/options have been altered
             $aiowps_feature_mgr->check_feature_status_and_recalculate_points();
 
-            //Now let's write the applicable rules to the .htaccess file
+            //Now let's write the applicable rules to the 2.htaccess file
             $res = AIOWPSecurity_Utility_Htaccess::write_to_htaccess();
 
             if ($res)
@@ -748,7 +748,7 @@ class AIOWPSecurity_Firewall_Menu extends AIOWPSecurity_Admin_Menu
             }
             else
             {
-                $this->show_msg_error(__('Could not write to the .htaccess file. Please check the file permissions.', 'all-in-one-wp-security-and-firewall'));
+                $this->show_msg_error(__('Could not write to the 2.htaccess file. Please check the file permissions.', 'all-in-one-wp-security-and-firewall'));
             }
     }
         ?>
@@ -757,7 +757,7 @@ class AIOWPSecurity_Firewall_Menu extends AIOWPSecurity_Admin_Menu
             <?php
             echo '<p>'.__('A Hotlink is where someone displays an image on their site which is actually located on your site by using a direct link to the source of the image on your server.', 'all-in-one-wp-security-and-firewall');
             echo '<br />'.__('Due to the fact that the image being displayed on the other person\'s site is coming from your server, this can cause leaking of bandwidth and resources for you because your server has to present this image for the people viewing it on someone elses\'s site.','all-in-one-wp-security-and-firewall');
-            echo '<br />'.__('This feature will prevent people from directly hotlinking images from your site\'s pages by writing some directives in your .htaccess file.', 'all-in-one-wp-security-and-firewall').'</p>';
+            echo '<br />'.__('This feature will prevent people from directly hotlinking images from your site\'s pages by writing some directives in your 2.htaccess file.', 'all-in-one-wp-security-and-firewall').'</p>';
             ?>
         </div>
 
@@ -1035,7 +1035,7 @@ class AIOWPSecurity_Firewall_Menu extends AIOWPSecurity_Admin_Menu
             //Save settings
             if (isset($_POST["aiowps_enable_custom_rules"]) && empty($_POST['aiowps_custom_rules']))
             {
-                $this->show_msg_error('You must enter some .htaccess directives code in the text box below','all-in-one-wp-security-and-firewall');
+                $this->show_msg_error('You must enter some 2.htaccess directives code in the text box below','all-in-one-wp-security-and-firewall');
             }
             else
             {
@@ -1058,25 +1058,25 @@ class AIOWPSecurity_Firewall_Menu extends AIOWPSecurity_Admin_Menu
 
                 $this->show_msg_settings_updated();
 
-                $write_result = AIOWPSecurity_Utility_Htaccess::write_to_htaccess(); //now let's write to the .htaccess file
+                $write_result = AIOWPSecurity_Utility_Htaccess::write_to_htaccess(); //now let's write to the 2.htaccess file
                 if ( !$write_result )
                 {
-                    $this->show_msg_error(__('The plugin was unable to write to the .htaccess file. Please edit file manually.','all-in-one-wp-security-and-firewall'));
-                    $aio_wp_security->debug_logger->log_debug("Custom Rules feature - The plugin was unable to write to the .htaccess file.");
+                    $this->show_msg_error(__('The plugin was unable to write to the 2.htaccess file. Please edit file manually.','all-in-one-wp-security-and-firewall'));
+                    $aio_wp_security->debug_logger->log_debug("Custom Rules feature - The plugin was unable to write to the 2.htaccess file.");
                 }
             }
 
         }
 
         ?>
-        <h2><?php _e('Custom .htaccess Rules Settings', 'all-in-one-wp-security-and-firewall')?></h2>
+        <h2><?php _e('Custom 2.htaccess Rules Settings', 'all-in-one-wp-security-and-firewall')?></h2>
         <form action="" method="POST">
             <?php wp_nonce_field('aiowpsec-save-custom-rules-settings-nonce'); ?>
             <div class="aio_blue_box">
                 <?php
                 $info_msg = '';
 
-                $info_msg .= '<p>'. __('This feature can be used to apply your own custom .htaccess rules and directives.', 'all-in-one-wp-security-and-firewall').'</p>';
+                $info_msg .= '<p>'. __('This feature can be used to apply your own custom 2.htaccess rules and directives.', 'all-in-one-wp-security-and-firewall').'</p>';
                 $info_msg .= '<p>'. __('It is useful for when you want to tweak our existing firewall rules or when you want to add your own.', 'all-in-one-wp-security-and-firewall').'</p>';
                 $info_msg .= '<p>'. __('NOTE: This feature can only be used if your site is hosted in an apache or similar web server.', 'all-in-one-wp-security-and-firewall').'</p>';
                 echo $info_msg;
@@ -1085,19 +1085,19 @@ class AIOWPSecurity_Firewall_Menu extends AIOWPSecurity_Admin_Menu
             <div class="aio_yellow_box">
                 <?php
                 $info_msg_2 = '<p>'. __('<strong>Warning</strong>: Only use this feature if you know what you are doing.', 'all-in-one-wp-security-and-firewall').'</p>';
-                $info_msg_2 .= '<p>'.__('Incorrect .htaccess rules or directives can break or prevent access to your site.', 'all-in-one-wp-security-and-firewall').'</p>';
+                $info_msg_2 .= '<p>'.__('Incorrect 2.htaccess rules or directives can break or prevent access to your site.', 'all-in-one-wp-security-and-firewall').'</p>';
                 $info_msg_2 .= '<p>'.__('It is your responsibility to ensure that you are entering the correct code!', 'all-in-one-wp-security-and-firewall').'</p>';
-                $info_msg_2 .= '<p>'.__('If you break your site you will need to access your server via FTP or something similar and then edit your .htaccess file and delete the changes you made.', 'all-in-one-wp-security-and-firewall').'</p>';
+                $info_msg_2 .= '<p>'.__('If you break your site you will need to access your server via FTP or something similar and then edit your 2.htaccess file and delete the changes you made.', 'all-in-one-wp-security-and-firewall').'</p>';
                 echo $info_msg_2;
                 ?>
             </div>
 
             <div class="postbox">
-                <h3 class="hndle"><label for="title"><?php _e('Custom .htaccess Rules', 'all-in-one-wp-security-and-firewall'); ?></label></h3>
+                <h3 class="hndle"><label for="title"><?php _e('Custom 2.htaccess Rules', 'all-in-one-wp-security-and-firewall'); ?></label></h3>
                 <div class="inside">
                     <table class="form-table">
                         <tr valign="top">
-                            <th scope="row"><?php _e('Enable Custom .htaccess Rules', 'all-in-one-wp-security-and-firewall')?>:</th>
+                            <th scope="row"><?php _e('Enable Custom 2.htaccess Rules', 'all-in-one-wp-security-and-firewall')?>:</th>
                             <td>
                                 <input name="aiowps_enable_custom_rules" type="checkbox"<?php if($aio_wp_security->configs->get_value('aiowps_enable_custom_rules')=='1') echo ' checked="checked"'; ?> value="1"/>
                                 <span class="description"><?php _e('Check this if you want to enable custom rules entered in the text box below', 'all-in-one-wp-security-and-firewall'); ?></span>
@@ -1111,11 +1111,11 @@ class AIOWPSecurity_Firewall_Menu extends AIOWPSecurity_Admin_Menu
                             </td>
                         </tr>
                         <tr valign="top">
-                            <th scope="row"><?php _e('Enter Custom .htaccess Rules:', 'all-in-one-wp-security-and-firewall')?></th>
+                            <th scope="row"><?php _e('Enter Custom 2.htaccess Rules:', 'all-in-one-wp-security-and-firewall')?></th>
                             <td>
                                 <textarea name="aiowps_custom_rules" rows="35" cols="50"><?php echo htmlspecialchars($aio_wp_security->configs->get_value('aiowps_custom_rules')); ?></textarea>
                                 <br />
-                                <span class="description"><?php _e('Enter your custom .htaccess rules/directives.','all-in-one-wp-security-and-firewall');?></span>
+                                <span class="description"><?php _e('Enter your custom 2.htaccess rules/directives.','all-in-one-wp-security-and-firewall');?></span>
                             </td>
                         </tr>
                     </table>

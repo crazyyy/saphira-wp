@@ -47,7 +47,7 @@ class AIOWPSecurity_Installer {
 			$aiowps_global_meta_tbl_name = $wpdb->prefix.'aiowps_global_meta';
 			$aiowps_event_tbl_name = $wpdb->prefix.'aiowps_events';
 			$perm_block_tbl_name = $wpdb->prefix.'aiowps_permanent_block';
-			
+
 		} else {
 			$lockdown_tbl_name = AIOWPSEC_TBL_LOGIN_LOCKDOWN;
 			$failed_login_tbl_name = AIOWPSEC_TBL_FAILED_LOGINS;
@@ -161,9 +161,9 @@ class AIOWPSecurity_Installer {
 			fclose($handle);
 		}
 		$server_type = AIOWPSecurity_Utility::get_server_type();
-		//Only create .htaccess if server is the right type
+		//Only create 2.htaccess if server is the right type
 		if ('apache' == $server_type || 'litespeed' == $server_type) {
-			$file = $aiowps_dir . '/.htaccess';
+			$file = $aiowps_dir . '/2.htaccess';
 			if (!file_exists($file)) {
 				//Create an .htacces file
 				//Write some rules which will only allow people originating from wp admin page to download the DB backup
@@ -172,7 +172,7 @@ class AIOWPSecurity_Installer {
 				$rules .= 'deny from all' . PHP_EOL;
 				$write_result = file_put_contents($file, $rules);
 				if (false === $write_result) {
-					$aio_wp_security->debug_logger->log_debug("Creation of .htaccess file in " . AIO_WP_SECURITY_BACKUPS_DIR_NAME . " directory failed!", 4);
+					$aio_wp_security->debug_logger->log_debug("Creation of 2.htaccess file in " . AIO_WP_SECURITY_BACKUPS_DIR_NAME . " directory failed!", 4);
 				}
 			}
 		}
@@ -189,11 +189,11 @@ class AIOWPSecurity_Installer {
 				$aio_wp_security->debug_logger->log_debug("AIOWPSecurity_Installer::reactivation_tasks() - Update of option settings failed upon plugin activation!", 4);
 			}
 			$aio_wp_security->configs->configs = $temp_cfgs; //copy the original configs to memory
-			//Now let's write any rules to the .htaccess file if necessary
+			//Now let's write any rules to the 2.htaccess file if necessary
 			$res = AIOWPSecurity_Utility_Htaccess::write_to_htaccess();
 
 			if (!$res) {
-				$aio_wp_security->debug_logger->log_debug("AIOWPSecurity_Installer::reactivation_tasks() - Could not write to the .htaccess file. Please check the file permissions.", 4);
+				$aio_wp_security->debug_logger->log_debug("AIOWPSecurity_Installer::reactivation_tasks() - Could not write to the 2.htaccess file. Please check the file permissions.", 4);
 				return false;
 			}
 			delete_option('aiowps_temp_configs');
@@ -203,7 +203,7 @@ class AIOWPSecurity_Installer {
 			return false;
 		}
 	}
-	
+
 	/**
 	 * Setup aiowps cron tasks
 	 * Handles both single and multi-site (NW activation) cases
@@ -227,7 +227,7 @@ class AIOWPSecurity_Installer {
 			do_action('aiowps_activation_complete');
 		}
 	}
-	
+
 	/**
 	 * Helper function for scheduling aiowps cron events
 	 */

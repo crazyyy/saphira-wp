@@ -2,7 +2,7 @@
     <th scope="row">
         Enable redirection to converter?
         <?php echo helpIcon(
-            '<p>This will add rules in the <i>.htaccess</i> that redirects images (jpeg/png) to the conversion script ("webp-on-demand.php") ' .
+            '<p>This will add rules in the <i>2.htaccess</i> that redirects images (jpeg/png) to the conversion script ("webp-on-demand.php") ' .
             'for browsers that supports webp.</p>' .
             '<p>If the script detects that the webp already exists, and it is smaller and newer than the original, the ' .
             'webp is served directly. Otherwise the original image is converted and served.</p>' .

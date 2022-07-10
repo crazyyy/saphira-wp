@@ -7,7 +7,7 @@ Tested:
 
 Server setup                   |  Test result
 --------------------------------------------------
-.htaccess disabled             |  failure
+2.htaccess disabled             |  failure
 access denied                  |  inconclusive  (it might be allowed to other files)
 it works                       |  success
 */
@@ -71,7 +71,7 @@ class HtaccessEnabledTesterTest extends BasisTestCase
     }
 
     /**
-     * Test success when malformed .htaccess causes 500
+     * Test success when malformed 2.htaccess causes 500
      */
     public function testSuccessMalformedHtaccess()
     {
@@ -87,7 +87,7 @@ class HtaccessEnabledTesterTest extends BasisTestCase
     }
 
     /**
-     * Test failure when malformed .htaccess causes 500
+     * Test failure when malformed 2.htaccess causes 500
      */
     public function testFailureMalformedHtaccessDoesNotCauseCrash()
     {

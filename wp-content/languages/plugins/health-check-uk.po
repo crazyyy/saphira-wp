@@ -1313,16 +1313,16 @@ msgid "Database size"
 msgstr "Розмір бази даних"
 
 #: includes/class-health-check-debug-data.php:743
-msgid "Your .htaccess file contains only core WordPress features."
-msgstr "Файл .htaccess містить тільки основні правила WordPress."
+msgid "Your 2.htaccess file contains only core WordPress features."
+msgstr "Файл 2.htaccess містить тільки основні правила WordPress."
 
 #: includes/class-health-check-debug-data.php:743
-msgid "Custom rules have been added to your .htaccess file."
-msgstr "Користувацькі правила були додані в файл .htaccess"
+msgid "Custom rules have been added to your 2.htaccess file."
+msgstr "Користувацькі правила були додані в файл 2.htaccess"
 
 #: includes/class-health-check-debug-data.php:742
-msgid ".htaccess rules"
-msgstr "Правила .htaccess"
+msgid "2.htaccess rules"
+msgstr "Правила 2.htaccess"
 
 #: includes/class-health-check-debug-data.php:473
 #: includes/class-health-check-debug-data.php:495

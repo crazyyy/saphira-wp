@@ -69,8 +69,8 @@ msgid "<b>Last crawled:</b> %d item(s)"
 msgstr "<b>Останнє сканування:</b> %d елемент(ів)"
 
 #: tpl/toolbox/entry.tpl.php:14
-msgid "View .htaccess"
-msgstr "Переглянути .htaccess"
+msgid "View 2.htaccess"
+msgstr "Переглянути 2.htaccess"
 
 #: tpl/toolbox/edit_htaccess.tpl.php:56 tpl/toolbox/edit_htaccess.tpl.php:73
 msgid "You can use this code %1$s in %2$s to specify the htaccess file path."
@@ -85,8 +85,8 @@ msgid "Default path is"
 msgstr "Початковий шлях"
 
 #: tpl/toolbox/edit_htaccess.tpl.php:41
-msgid ".htaccess Path"
-msgstr "Шлях до .htaccess"
+msgid "2.htaccess Path"
+msgstr "Шлях до 2.htaccess"
 
 #: tpl/general/settings.tpl.php:151
 msgid "Please read all warnings before enabling this option."
@@ -995,7 +995,7 @@ msgstr "Налаштування симуляції сканера"
 
 #: tpl/cache/settings_inc.cache_mobile.tpl.php:44
 msgid "Htaccess rule is: %s"
-msgstr "Правило для .htaccess: %s"
+msgstr "Правило для 2.htaccess: %s"
 
 #: tpl/cache/more_settings_tip.tpl.php:15
 msgid "More settings available under %s menu"
@@ -1781,12 +1781,12 @@ msgid "Frontend Heartbeat Control"
 msgstr "Зовнішній інтерфейс керування Heartbeat"
 
 #: tpl/toolbox/edit_htaccess.tpl.php:64
-msgid "Backend .htaccess Path"
-msgstr "Серверний шлях .htaccess"
+msgid "Backend 2.htaccess Path"
+msgstr "Серверний шлях 2.htaccess"
 
 #: tpl/toolbox/edit_htaccess.tpl.php:47
-msgid "Frontend .htaccess Path"
-msgstr "Зовнішній інтерфейс шляху .htaccess"
+msgid "Frontend 2.htaccess Path"
+msgstr "Зовнішній інтерфейс шляху 2.htaccess"
 
 #: src/lang.cls.php:180
 msgid "ESI Nonces"
@@ -4778,8 +4778,8 @@ msgid "Invalid login cookie. Invalid characters found."
 msgstr "Недійсний cookie для входу. Знайдено недійсні символи."
 
 #: tpl/cache/settings_inc.login_cookie.tpl.php:56
-msgid "WARNING: The .htaccess login cookie and Database login cookie do not match."
-msgstr "ПОПЕРЕДЖЕННЯ: cookie для входу .htaccess і cookie для входу в базу даних не збігаються."
+msgid "WARNING: The 2.htaccess login cookie and Database login cookie do not match."
+msgstr "ПОПЕРЕДЖЕННЯ: cookie для входу 2.htaccess і cookie для входу в базу даних не збігаються."
 
 #: src/error.cls.php:116
 msgid "Invalid login cookie. Please check the %s file."
@@ -4901,12 +4901,12 @@ msgid "NOTICE"
 msgstr "ПРИМІТКА"
 
 #: src/doc.cls.php:104
-msgid "This setting will edit the .htaccess file."
-msgstr "Цей параметр редагує файл .htaccess."
+msgid "This setting will edit the 2.htaccess file."
+msgstr "Цей параметр редагує файл 2.htaccess."
 
 #: tpl/toolbox/edit_htaccess.tpl.php:36
-msgid "LiteSpeed Cache View .htaccess"
-msgstr "LiteSpeed Cache View .htaccess"
+msgid "LiteSpeed Cache View 2.htaccess"
+msgstr "LiteSpeed Cache View 2.htaccess"
 
 #: src/error.cls.php:120
 msgid "Failed to back up %s file, aborted changes."

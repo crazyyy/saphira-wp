@@ -2,12 +2,12 @@
     <th scope="row">
         Create webp files upon request?
         <?php echo helpIcon(
-            '<p>Enabling this option will add lines in the .htaccess which redirects requests for non-existing webp-files to ' .
+            '<p>Enabling this option will add lines in the 2.htaccess which redirects requests for non-existing webp-files to ' .
             'the converter script (webp-realizer.php). ' .
             '<i>This way you can reference webps before they actually exists.</i></p>' .
             '<p>The feature works the following way:' .
             '<ol>' .
-            '<li>WebP adds rules in the <i>.htaccess</i> that redirects requests for non-existing webp files to <i>webp-realizer.php</i></li>' .
+            '<li>WebP adds rules in the <i>2.htaccess</i> that redirects requests for non-existing webp files to <i>webp-realizer.php</i></li>' .
             '<li><i>webp-realizer.php</i> looks for a corresponding jpg/png. ' .
             'If found, it is converted, saved and served. In case no corresponding jpg/png is found, a 404 is issued</li>' .
             '</ol>' .

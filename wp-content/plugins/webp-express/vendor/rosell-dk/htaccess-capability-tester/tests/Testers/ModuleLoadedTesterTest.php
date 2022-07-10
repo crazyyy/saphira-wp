@@ -6,7 +6,7 @@ subtests:
   - subdir: server-signature
     requirements: htaccessEnabled()
     files:
-    - filename: '.htaccess'
+    - filename: '2.htaccess'
       content: |
           ServerSignature Off
           <IfModule mod_xxx.c>
@@ -32,7 +32,7 @@ Tested:
 
 Server setup                   |  Test result
 --------------------------------------------------
-.htaccess disabled             |  failure
+2.htaccess disabled             |  failure
 access denied                  |  inconclusive  (it might be allowed to other files)
 it works                       |  success
 */

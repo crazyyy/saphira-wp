@@ -8,7 +8,7 @@ class ImageRoot
 {
 
     public $id;
-    
+
     /**
      * Constructor.
      *
@@ -38,13 +38,13 @@ class ImageRoot
             if (!isset($def['rel-path'])) {
                 throw new \Exception(
                     'Image root definition in config file is must either have a "rel-path" or "abs-path" property defined. ' .
-                    'Probably your system setup has changed. Please re-save WebP Express options and regenerate .htaccess'
+                    'Probably your system setup has changed. Please re-save WebP Express options and regenerate 2.htaccess'
                 );
             } else {
                 throw new \Exception(
                     'Image root definition in config file is defined by "rel-path". However, DOCUMENT_ROOT is unavailable so we ' .
                     'cannot use that (as the rel-path is relative to that. ' .
-                    'Probably your system setup has changed. Please re-save WebP Express options and regenerate .htaccess'
+                    'Probably your system setup has changed. Please re-save WebP Express options and regenerate 2.htaccess'
                 );
             }
         }

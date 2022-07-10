@@ -5,12 +5,12 @@ namespace HtaccessCapabilityTester\Testers;
 use \HtaccessCapabilityTester\TestResult;
 
 /**
- * Class for testing if a .htaccess results in a 500 Internal Server Error
+ * Class for testing if a 2.htaccess results in a 500 Internal Server Error
  * (ie due to being malformed or containing directives that are unknown or not allowed)
  *
  * Notes:
  * - The tester only reports failure on a 500 Internal Server Error. All other status codes (even server errors)
- *       are treated as a success. The assumption here is that malformed .htaccess files / .htaccess
+ *       are treated as a success. The assumption here is that malformed 2.htaccess files / 2.htaccess
  *       files containing unknown or disallowed directives always results in a 500
  * - If your purpose is to test if a request succeeds (response 200 Ok), you should create your own class.
  *       (note that if you want to ensure that a php will succeed, make sure that a php is requested)
@@ -38,7 +38,7 @@ class CrashTester extends CustomTester
                 [
                     'subdir' => 'the-suspect',
                     'files' => [
-                        ['.htaccess', $htaccessRules],
+                        ['2.htaccess', $htaccessRules],
                         ['request-me.txt', 'thanks'],
                     ],
                     'request' => [
@@ -53,7 +53,7 @@ class CrashTester extends CustomTester
                 [
                     'subdir' => 'the-innocent',
                     'files' => [
-                        ['.htaccess', '# I am no trouble'],
+                        ['2.htaccess', '# I am no trouble'],
                         ['request-me.txt', 'thanks'],
                     ],
                     'request' => [

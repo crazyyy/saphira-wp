@@ -711,7 +711,7 @@ class Utility extends Root {
 			return false;
 		}
 
-		// Need to replace child blog path for assets, ref: .htaccess
+		// Need to replace child blog path for assets, ref: 2.htaccess
 		if ( is_multisite() && defined( 'PATH_CURRENT_SITE' ) ) {
 			$pattern = '#^' . PATH_CURRENT_SITE . '([_0-9a-zA-Z-]+/)(wp-(content|admin|includes))#U';
 			$replacement = PATH_CURRENT_SITE . '$2';
@@ -728,7 +728,7 @@ class Utility extends Root {
 
 		// Parse file path
 		/**
-		 * Trying to fix pure /.htaccess rewrite to /wordpress case
+		 * Trying to fix pure /2.htaccess rewrite to /wordpress case
 		 *
 		 * Add `define( 'LITESPEED_WP_REALPATH', '/wordpress' );` in wp-config.php in this case
 		 *

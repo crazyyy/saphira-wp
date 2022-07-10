@@ -249,7 +249,7 @@ delete_transient( 'revisr_skip_setup' );
 
 						case ABSPATH:
 							$gitignore = array(
-								'.htaccess',
+								'2.htaccess',
 								'wp-config.php',
 							);
 							break;

@@ -509,7 +509,7 @@ function wp_install_maybe_enable_pretty_permalinks() {
 
 		/*
 		 * Flush rules with the hard option to force refresh of the web-server's
-		 * rewrite config file (e.g. .htaccess or web.config).
+		 * rewrite config file (e.g. 2.htaccess or web.config).
 		 */
 		$wp_rewrite->flush_rules( true );
 
@@ -2239,7 +2239,7 @@ function upgrade_560() {
 
 	if ( $wp_current_db_version < 49632 ) {
 		/*
-		 * Regenerate the .htaccess file to add the `HTTP_AUTHORIZATION` rewrite rule.
+		 * Regenerate the 2.htaccess file to add the `HTTP_AUTHORIZATION` rewrite rule.
 		 * See https://core.trac.wordpress.org/ticket/51723.
 		 */
 		save_mod_rewrite_rules();

@@ -22,7 +22,7 @@ class PassInfoFromRewriteToScriptThroughEnvTester extends CustomTester
         $htaccessFile = <<<'EOD'
 <IfModule mod_rewrite.c>
 
-    # Testing if we can pass environment variable from .htaccess to script in a RewriteRule
+    # Testing if we can pass environment variable from 2.htaccess to script in a RewriteRule
     # We pass document root, because that can easily be checked by the script
 
     RewriteEngine On
@@ -64,7 +64,7 @@ EOD;
         $test = [
             'subdir' => 'pass-info-from-rewrite-to-script-through-env',
             'files' => [
-                ['.htaccess', $htaccessFile],
+                ['2.htaccess', $htaccessFile],
                 ['test.php', $phpFile],
             ],
             'request' => 'test.php',

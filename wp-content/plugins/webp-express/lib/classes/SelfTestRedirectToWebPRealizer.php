@@ -92,7 +92,7 @@ class SelfTestRedirectToWebPRealizer extends SelfTestRedirectAbstract
 
                     $log = array_merge($log, SelfTestHelper::diagnoseWod403or500($this->config, $rootId, $responseCode));
                     return [false, $log, $createdTestFiles];
-                    //$log[] = 'or that there is an .htaccess file in the ';
+                    //$log[] = 'or that there is an 2.htaccess file in the ';
                 }
 //                $log[] = print_r($results[0]['response']['code'], true);
             }

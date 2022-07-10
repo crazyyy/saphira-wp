@@ -163,10 +163,10 @@ if (Config::isConfigFileThereAndOk() ) { // && PlatformInfo::definitelyGotModEnv
     if (!isset($_SERVER['HTACCESS'])) {
         Messenger::printMessage(
             'warning',
-            "Using rewrite rules in <i>.htaccess</i> files seems to be disabled " .
+            "Using rewrite rules in <i>2.htaccess</i> files seems to be disabled " .
                 "(The <i>AllowOverride</i> directive is probably set to <i>None</i>. " .
-                "It needs to be set to <i>All</i>, or at least <i>FileInfo</i> to allow rewrite rules in <i>.htaccess</i> files.)<br>" .
-                "Disabled <i>.htaccess</i> files is actually a good thing, both performance-wise and security-wise. <br> " .
+                "It needs to be set to <i>All</i>, or at least <i>FileInfo</i> to allow rewrite rules in <i>2.htaccess</i> files.)<br>" .
+                "Disabled <i>2.htaccess</i> files is actually a good thing, both performance-wise and security-wise. <br> " .
                 "But it means you will have to insert the following rules into your apache configuration manually:" .
                 "<pre>" . htmlentities(print_r(Config::hmmm(), true)) . "</pre>"
         );
@@ -220,7 +220,7 @@ if (Config::isConfigFileThere()) {
             if (PlatformInfo::isApacheOrLiteSpeed() && !(HTAccessCapabilityTestRunner::modHeaderWorking())) {
                 Messenger::printMessage(
                     'warning',
-                    'It seems your server setup does not support headers in <i>.htaccess</i>. You should either fix this (install <i>mod_headers</i>) <i>or</i> ' .
+                    'It seems your server setup does not support headers in <i>2.htaccess</i>. You should either fix this (install <i>mod_headers</i>) <i>or</i> ' .
                         'deactivate the "Enable direct redirection to existing converted images?" option. Otherwise the <i>Vary:Accept</i> header ' .
                         'will not be added and this can result in problems for users behind proxy servers (ie used in larger companies)'
                 );
@@ -268,12 +268,12 @@ if (Config::isConfigFileThere()) {
                     ' or <a href="' . Paths::getWebPExpressPluginUrl() . '/wod2/ping.php" target="_blank">wod2-test</a>' .
                     '. The problem will typically be found in the server configuration or a security plugin. ' .
                     'If one of the links results in a 403 Permission denied, look out for "deny" and "denied" in ' .
-                    'httpd.conf, /etc/apache/sites-enabled/your-site.conf and in parent .htaccess files.' .
+                    'httpd.conf, /etc/apache/sites-enabled/your-site.conf and in parent 2.htaccess files.' .
                     '</p>.'
                 );
             }
             // We currently allow the "canRunTestScriptInWOD" test not to be stored,
-            // If it is not stored, it means .htaccess files are pointing to "wod"
+            // If it is not stored, it means 2.htaccess files are pointing to "wod"
             // PS: the logic of where it is stored happens in HTAccessRules::getWodUrlPath
             // - we mimic it here.
             $pointingToWod = true;  // true = pointing to "wod", false = pointing to "wod2"
@@ -286,7 +286,7 @@ if (Config::isConfigFileThere()) {
                 Messenger::printMessage(
                     'warning',
                     'The conversion script cannot currently be run. ' .
-                    'However, simply click "Save settings <b>and force new .htaccess rules</b>" to fix it. ' .
+                    'However, simply click "Save settings <b>and force new 2.htaccess rules</b>" to fix it. ' .
                     '(this will point to the script in the "wod" folder rather than "wod2")'
                 );
             }
@@ -296,7 +296,7 @@ if (Config::isConfigFileThere()) {
                 Messenger::printMessage(
                     'warning',
                     'The conversion script cannot currently be run. ' .
-                    'However, simply click "Save settings <b>and force new .htaccess rules</b>" to fix it. ' .
+                    'However, simply click "Save settings <b>and force new 2.htaccess rules</b>" to fix it. ' .
                     '(this will point to the script in the "wod2" folder rather than "wod")'
                 );
             }
@@ -339,34 +339,34 @@ if (Config::isConfigFileThere()) {
     }
 }
 
-$haveRulesInIndexDir = HTAccess::haveWeRulesInThisHTAccessBestGuess(Paths::getIndexDirAbs() . '/.htaccess');
-$haveRulesInContentDir = HTAccess::haveWeRulesInThisHTAccessBestGuess(Paths::getContentDirAbs() . '/.htaccess');
+$haveRulesInIndexDir = HTAccess::haveWeRulesInThisHTAccessBestGuess(Paths::getIndexDirAbs() . '/2.htaccess');
+$haveRulesInContentDir = HTAccess::haveWeRulesInThisHTAccessBestGuess(Paths::getContentDirAbs() . '/2.htaccess');
 
 if ($haveRulesInIndexDir && $haveRulesInContentDir) {
     // TODO: Use new method for determining if htaccess contains rules.
     // (either haveWeRulesInThisHTAccessBestGuess($filename) or haveWeRulesInThisHTAccess($filename))
-    if (!HTAccess::saveHTAccessRulesToFile(Paths::getIndexDirAbs() . '/.htaccess', '# WebP Express has placed its rules in your wp-content dir. Go there.', false)) {
+    if (!HTAccess::saveHTAccessRulesToFile(Paths::getIndexDirAbs() . '/2.htaccess', '# WebP Express has placed its rules in your wp-content dir. Go there.', false)) {
         Messenger::printMessage(
             'warning',
             'Warning: WebP Express have rules in both your wp-content folder and in your Wordpress folder.<br>' .
-                'Please remove those in the <i>.htaccess</i> in your Wordress folder manually, or let us handle it, by granting us write access'
+                'Please remove those in the <i>2.htaccess</i> in your Wordress folder manually, or let us handle it, by granting us write access'
         );
     }
 }
 
-$ht = FileHelper::loadFile(Paths::getIndexDirAbs() . '/.htaccess');
+$ht = FileHelper::loadFile(Paths::getIndexDirAbs() . '/2.htaccess');
 if ($ht !== false) {
     $posWe = strpos($ht, '# BEGIN WebP Express');
     $posWo = strpos($ht, '# BEGIN WordPress');
     if (($posWe !== false) && ($posWo !== false) && ($posWe > $posWo)) {
 
-        $haveRulesInIndexDir = HTAccess::haveWeRulesInThisHTAccessBestGuess(Paths::getIndexDirAbs() . '/.htaccess');
+        $haveRulesInIndexDir = HTAccess::haveWeRulesInThisHTAccessBestGuess(Paths::getIndexDirAbs() . '/2.htaccess');
         if ($haveRulesInIndexDir) {
             Messenger::printMessage(
                 'warning',
                 'Problem detected. ' .
                     'In order for the "Convert non-existing webp-files upon request" functionality to work, you need to either:<br>' .
-                    '- Move the WebP Express rules above the Wordpress rules in the .htaccess file located in your root dir<br>' .
+                    '- Move the WebP Express rules above the Wordpress rules in the 2.htaccess file located in your root dir<br>' .
                     '- Grant the webserver permission to your wp-content dir, so it can create its rules there instead.'
             );
         }

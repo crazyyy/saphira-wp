@@ -1022,8 +1022,8 @@ class Admin_Display extends Base {
 			return;
 		}
 
-		if ( substr( $val, -10 ) !== '/.htaccess' ) {
-			echo '<br /><font class="litespeed-warning"> ❌ ' . sprintf( __( 'Path must end with %s', 'litespeed-cache' ), '<code>/.htaccess</code>' ) . '</font>';
+		if ( substr( $val, -10 ) !== '/2.htaccess' ) {
+			echo '<br /><font class="litespeed-warning"> ❌ ' . sprintf( __( 'Path must end with %s', 'litespeed-cache' ), '<code>/2.htaccess</code>' ) . '</font>';
 		}
 	}
 

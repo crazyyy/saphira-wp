@@ -118,7 +118,7 @@ class AIOWPSecurity_Brute_Force_Menu extends AIOWPSecurity_Admin_Menu
                 //Save all the form values to the options
                 if (isset($_POST["aiowps_enable_rename_login_page"])){
                     $aio_wp_security->configs->set_value('aiowps_enable_rename_login_page', '1');
-                    // check if the cookie based feature was active and deactivate it and delete the directives in .htaccess
+                    // check if the cookie based feature was active and deactivate it and delete the directives in 2.htaccess
                     if($aio_wp_security->configs->get_value('aiowps_enable_brute_force_attack_prevention')){
                         $cookie_feature_active = true;
                         $aio_wp_security->configs->set_value('aiowps_enable_brute_force_attack_prevention', '');//deactivate cookie based feature
@@ -129,7 +129,7 @@ class AIOWPSecurity_Brute_Force_Menu extends AIOWPSecurity_Admin_Menu
                 $aio_wp_security->configs->set_value('aiowps_login_page_slug',$aiowps_login_page_slug);
                 $aio_wp_security->configs->save_config();
 
-                // if cookie based feature was active previously need to clear those rules out of .htaccess
+                // if cookie based feature was active previously need to clear those rules out of 2.htaccess
                 if($cookie_feature_active){
                     $htaccess_res = AIOWPSecurity_Utility_Htaccess::write_to_htaccess(); //Delete the cookie based directives
                 }
@@ -137,7 +137,7 @@ class AIOWPSecurity_Brute_Force_Menu extends AIOWPSecurity_Admin_Menu
                 //Recalculate points after the feature status/options have been altered
                 $aiowps_feature_mgr->check_feature_status_and_recalculate_points();
                 if ($htaccess_res === false) {
-                    $this->show_msg_error(__('Could not delete the Cookie-based directives from the .htaccess file. Please check the file permissions.', 'all-in-one-wp-security-and-firewall'));
+                    $this->show_msg_error(__('Could not delete the Cookie-based directives from the 2.htaccess file. Please check the file permissions.', 'all-in-one-wp-security-and-firewall'));
                 }
                 else {
                     $this->show_msg_settings_updated();
@@ -311,7 +311,7 @@ class AIOWPSecurity_Brute_Force_Menu extends AIOWPSecurity_Admin_Menu
                     echo '</p></div>';
                 }
                 else {
-                    $this->show_msg_error(__('Could not write to the .htaccess file. Please check the file permissions.', 'all-in-one-wp-security-and-firewall'));
+                    $this->show_msg_error(__('Could not write to the 2.htaccess file. Please check the file permissions.', 'all-in-one-wp-security-and-firewall'));
                 }
             }
             else
@@ -328,15 +328,15 @@ class AIOWPSecurity_Brute_Force_Menu extends AIOWPSecurity_Admin_Menu
             //TODO - need to fix the following message
             echo '<p>'.__('A Brute Force Attack is when a hacker tries many combinations of usernames and passwords until they succeed in guessing the right combination.', 'all-in-one-wp-security-and-firewall').
             '<br />'.__('Due to the fact that at any one time there may be many concurrent login attempts occurring on your site via malicious automated robots, this also has a negative impact on your server\'s memory and performance.', 'all-in-one-wp-security-and-firewall').
-            '<br />'.__('The features in this tab will stop the majority of Brute Force Login Attacks at the .htaccess level thus providing even better protection for your WP login page and also reducing the load on your server because the system does not have to run PHP code to process the login attempts.', 'all-in-one-wp-security-and-firewall').'</p>';
+            '<br />'.__('The features in this tab will stop the majority of Brute Force Login Attacks at the 2.htaccess level thus providing even better protection for your WP login page and also reducing the load on your server because the system does not have to run PHP code to process the login attempts.', 'all-in-one-wp-security-and-firewall').'</p>';
             ?>
         </div>
         <div class="aio_yellow_box">
             <?php
             $backup_tab_link = '<a href="admin.php?page='.AIOWPSEC_SETTINGS_MENU_SLUG.'&tab=tab2" target="_blank">'.__('backup', 'all-in-one-wp-security-and-firewall').'</a>';
             $video_link = '<a href="https://www.tipsandtricks-hq.com/all-in-one-wp-security-plugin-cookie-based-brute-force-login-attack-prevention-feature-5994" target="_blank">'.__('video tutorial', 'all-in-one-wp-security-and-firewall').'</a>';
-            $info_msg = sprintf( __('Even though this feature should not have any impact on your site\'s general functionality <strong>you are strongly encouraged to take a %s of your .htaccess file before proceeding</strong>.', 'all-in-one-wp-security-and-firewall'), $backup_tab_link);
-            $info_msg1 = __('If this feature is not used correctly, you can get locked out of your site. A backed up .htaccess file will come in handy if that happens.', 'all-in-one-wp-security-and-firewall');
+            $info_msg = sprintf( __('Even though this feature should not have any impact on your site\'s general functionality <strong>you are strongly encouraged to take a %s of your 2.htaccess file before proceeding</strong>.', 'all-in-one-wp-security-and-firewall'), $backup_tab_link);
+            $info_msg1 = __('If this feature is not used correctly, you can get locked out of your site. A backed up 2.htaccess file will come in handy if that happens.', 'all-in-one-wp-security-and-firewall');
             $info_msg2 = sprintf( __('To learn more about how to use this feature please watch the following %s.', 'all-in-one-wp-security-and-firewall'), $video_link);
             $brute_force_login_feature_link = '<a href="admin.php?page='.AIOWPSEC_FIREWALL_MENU_SLUG.'&tab=tab4" target="_blank">'.__('Cookie-Based Brute Force Login Prevention', 'all-in-one-wp-security-and-firewall').'</a>';
             echo '<p>'.$info_msg.
@@ -776,11 +776,11 @@ class AIOWPSecurity_Brute_Force_Menu extends AIOWPSecurity_Admin_Menu
 
                     $this->show_msg_settings_updated();
 
-                    $write_result = AIOWPSecurity_Utility_Htaccess::write_to_htaccess(); //now let's write to the .htaccess file
+                    $write_result = AIOWPSecurity_Utility_Htaccess::write_to_htaccess(); //now let's write to the 2.htaccess file
                     if ( !$write_result )
                     {
-                        $this->show_msg_error(__('The plugin was unable to write to the .htaccess file. Please edit file manually.','all-in-one-wp-security-and-firewall'));
-                        $aio_wp_security->debug_logger->log_debug("AIOWPSecurity_whitelist_Menu - The plugin was unable to write to the .htaccess file.");
+                        $this->show_msg_error(__('The plugin was unable to write to the 2.htaccess file. Please edit file manually.','all-in-one-wp-security-and-firewall'));
+                        $aio_wp_security->debug_logger->log_debug("AIOWPSecurity_whitelist_Menu - The plugin was unable to write to the 2.htaccess file.");
                     }
                 }
             }
@@ -791,8 +791,8 @@ class AIOWPSecurity_Brute_Force_Menu extends AIOWPSecurity_Admin_Menu
             <?php
             echo '<p>'.__('The All In One WP Security Whitelist feature gives you the option of only allowing certain IP addresses or ranges to have access to your WordPress login page.', 'all-in-one-wp-security-and-firewall').'
             <br />'.__('This feature will deny login access for all IP addresses which are not in your whitelist as configured in the settings below.', 'all-in-one-wp-security-and-firewall').'
-            <br />'.__('The plugin achieves this by writing the appropriate directives to your .htaccess file.', 'all-in-one-wp-security-and-firewall').'
-            <br />'.__('By allowing/blocking IP addresses via the .htaccess file your are using the most secure first line of defence because login access will only be granted to whitelisted IP addresses and other addresses will be blocked as soon as they try to access your login page.', 'all-in-one-wp-security-and-firewall').'
+            <br />'.__('The plugin achieves this by writing the appropriate directives to your 2.htaccess file.', 'all-in-one-wp-security-and-firewall').'
+            <br />'.__('By allowing/blocking IP addresses via the 2.htaccess file your are using the most secure first line of defence because login access will only be granted to whitelisted IP addresses and other addresses will be blocked as soon as they try to access your login page.', 'all-in-one-wp-security-and-firewall').'
             </p>';
             ?>
         </div>

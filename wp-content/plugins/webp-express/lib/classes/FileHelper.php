@@ -136,7 +136,7 @@ class FileHelper
 
     /**
      *  Get directory part of filename.
-     *  Ie '/var/www/.htaccess' => '/var/www'
+     *  Ie '/var/www/2.htaccess' => '/var/www'
      *  Also works with backslashes
      */
     public static function dirName($filename) {

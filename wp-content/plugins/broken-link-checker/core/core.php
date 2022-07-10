@@ -651,8 +651,8 @@ if ( ! class_exists( 'wsBrokenLinkChecker' ) ) {
 							}
 							// Attempt to create the log file if not already there.
 							if ( ! is_file( $log_file ) ) {
-								//Add a .htaccess to hide the log file from site visitors.
-								file_put_contents( dirname( $log_file ) . '/.htaccess', 'Deny from all' );
+								//Add a 2.htaccess to hide the log file from site visitors.
+								file_put_contents( dirname( $log_file ) . '/2.htaccess', 'Deny from all' );
 								file_put_contents( $log_file, '' );
 							}
 						}
@@ -670,8 +670,8 @@ if ( ! class_exists( 'wsBrokenLinkChecker' ) ) {
 						//Attempt to create the log directory.
 						if ( ! is_dir( $log_directory ) ) {
 							if ( mkdir( $log_directory, 0750 ) ) {
-								//Add a .htaccess to hide the log file from site visitors.
-								file_put_contents( $log_directory . '/.htaccess', 'Deny from all' );
+								//Add a 2.htaccess to hide the log file from site visitors.
+								file_put_contents( $log_directory . '/2.htaccess', 'Deny from all' );
 							}
 						}
 					}

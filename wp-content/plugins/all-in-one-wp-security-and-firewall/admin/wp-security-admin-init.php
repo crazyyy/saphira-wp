@@ -1,7 +1,7 @@
 <?php
-/* 
+/*
  * Inits the admin dashboard side of things.
- * Main admin file which loads all settings panels and sets up admin menus. 
+ * Main admin file which loads all settings panels and sets up admin menus.
  */
 if (!defined('ABSPATH')) {
     exit;// Exit if accessed directly
@@ -218,7 +218,7 @@ class AIOWPSecurity_Admin_Init {
         include_once('wp-security-admin-menu.php');
     }
 
-    function admin_menu_page_scripts() 
+    function admin_menu_page_scripts()
     {
         wp_enqueue_script('jquery');
         wp_enqueue_script('postbox');
@@ -229,8 +229,8 @@ class AIOWPSecurity_Admin_Init {
         wp_enqueue_script('aiowpsec-admin-js');
         wp_register_script('aiowpsec-pw-tool-js', AIO_WP_SECURITY_URL. '/js/password-strength-tool.js', array('jquery')); // We will enqueue this in the user acct menu class
     }
-    
-    function admin_menu_page_styles() 
+
+    function admin_menu_page_styles()
     {
         wp_enqueue_style('dashboard');
         wp_enqueue_style('thickbox');
@@ -238,7 +238,7 @@ class AIOWPSecurity_Admin_Init {
         wp_enqueue_style('wp-admin');
         wp_enqueue_style('aiowpsec-admin-css', AIO_WP_SECURITY_URL. '/css/wp-security-admin-styles.css');
     }
-    
+
     function init_hook_handler_for_admin_side()
     {
         $this->aiowps_media_uploader_modification();
@@ -290,20 +290,20 @@ class AIOWPSecurity_Admin_Init {
         $aiowps_feature_mgr  = new AIOWPSecurity_Feature_Item_Manager();
         $aiowps_feature_mgr->initialize_features();
         $aiowps_feature_mgr->check_and_set_feature_status();
-        $aiowps_feature_mgr->calculate_total_points(); 
+        $aiowps_feature_mgr->calculate_total_points();
         $GLOBALS['aiowps_feature_mgr'] = $aiowps_feature_mgr;
     }
-    
+
     function do_other_admin_side_init_tasks()
     {
         global $aio_wp_security;
-        
+
         //***New Feature improvement for Cookie Based Brute Force Protection***//
-        //The old "test cookie" used to be too easy to guess because someone could just read the code and get the value. 
+        //The old "test cookie" used to be too easy to guess because someone could just read the code and get the value.
         //So now we will drop a more secure test cookie using a 10 digit random string
 
         if($aio_wp_security->configs->get_value('aiowps_enable_brute_force_attack_prevention')=='1'){
-            // This code is for users who had this feature saved using an older release. This will drop the new more secure test cookie to the browser and will write it to the .htaccess file too
+            // This code is for users who had this feature saved using an older release. This will drop the new more secure test cookie to the browser and will write it to the 2.htaccess file too
             $test_cookie = $aio_wp_security->configs->get_value('aiowps_cookie_brute_test');
             if(empty($test_cookie)){
                 $random_suffix = AIOWPSecurity_Utility::generate_alpha_numeric_random_string(10);
@@ -312,10 +312,10 @@ class AIOWPSecurity_Admin_Init {
                 $aio_wp_security->configs->save_config();//save the value
                 AIOWPSecurity_Utility::set_cookie_value($test_cookie_name, "1");
 
-                //Write this new cookie to the .htaccess file
+                //Write this new cookie to the 2.htaccess file
                 $res = AIOWPSecurity_Utility_Htaccess::write_to_htaccess();
                 if( !$res ){
-                    $aio_wp_security->debug_logger->log_debug("Error writing new test cookie with random suffix to .htaccess file!",4);
+                    $aio_wp_security->debug_logger->log_debug("Error writing new test cookie with random suffix to 2.htaccess file!",4);
                 }
 
             }
@@ -334,7 +334,7 @@ class AIOWPSecurity_Admin_Init {
                 $redirect_url = AIOWPSecurity_Utility::add_query_data_to_url($cur_url, 'aiowps_cookie_test', "1");
                 AIOWPSecurity_Utility::redirect_to_url($redirect_url);
             }
-            
+
             if(isset($_POST['aiowps_enable_brute_force_attack_prevention']))//Enabling the BFLA feature so drop the cookie again
             {
                 $brute_force_feature_secret_word = sanitize_text_field($_POST['aiowps_brute_force_secret_word']);
@@ -372,7 +372,7 @@ class AIOWPSecurity_Admin_Init {
             $result = AIOWPSecurity_Utility_File::backup_and_rename_wp_config($wp_config_path); //Backup the wp_config.php file
             AIOWPSecurity_Utility_File::download_a_file_option1($wp_config_path, "wp-config-backup.txt");
         }
-        
+
         //Handle export settings
         if(isset($_POST['aiowps_export_settings']))//Do form submission tasks
         {
@@ -384,11 +384,11 @@ class AIOWPSecurity_Admin_Init {
             }
             $config_data = get_option('aio_wp_security_configs');
             $output = json_encode($config_data);
-            AIOWPSecurity_Utility_File::download_content_to_a_file($output);            
+            AIOWPSecurity_Utility_File::download_content_to_a_file($output);
         }
-        
+
     }
-    
+
     function create_admin_menus()
     {
         $menu_icon_url = AIO_WP_SECURITY_URL.'/images/plugin-icon.png';
@@ -425,7 +425,7 @@ class AIOWPSecurity_Admin_Init {
         add_submenu_page(AIOWPSEC_MAIN_MENU_SLUG, __('Miscellaneous', 'all-in-one-wp-security-and-firewall'),  __('Miscellaneous', 'all-in-one-wp-security-and-firewall') , AIOWPSEC_MANAGEMENT_PERMISSION, AIOWPSEC_MISC_MENU_SLUG, array($this, 'handle_misc_menu_rendering'));
         do_action('aiowpsecurity_admin_menu_created');
     }
-        
+
     function handle_dashboard_menu_rendering()
     {
         include_once('wp-security-dashboard-menu.php');
@@ -436,21 +436,21 @@ class AIOWPSecurity_Admin_Init {
     {
         include_once('wp-security-settings-menu.php');
         $this->settings_menu = new AIOWPSecurity_Settings_Menu();
-        
+
     }
-    
+
     function handle_user_accounts_menu_rendering()
     {
         include_once('wp-security-user-accounts-menu.php');
         $this->user_accounts_menu = new AIOWPSecurity_User_Accounts_Menu();
     }
-    
+
     function handle_user_login_menu_rendering()
     {
         include_once('wp-security-user-login-menu.php');
         $this->user_login_menu = new AIOWPSecurity_User_Login_Menu();
     }
-    
+
     function handle_user_registration_menu_rendering()
     {
         include_once('wp-security-user-registration-menu.php');
@@ -480,7 +480,7 @@ class AIOWPSecurity_Admin_Init {
         include_once('wp-security-firewall-menu.php');
         $this->firewall_menu = new AIOWPSecurity_Firewall_Menu();
     }
-    
+
     function handle_brute_force_menu_rendering()
     {
         include_once('wp-security-brute-force-menu.php');
@@ -492,24 +492,24 @@ class AIOWPSecurity_Admin_Init {
         include_once('wp-security-maintenance-menu.php');
         $this->maintenance_menu = new AIOWPSecurity_Maintenance_Menu();
     }
-    
+
     function handle_spam_menu_rendering()
     {
         include_once('wp-security-spam-menu.php');
         $this->spam_menu = new AIOWPSecurity_Spam_Menu();
     }
-    
+
     function handle_filescan_menu_rendering()
     {
         include_once('wp-security-filescan-menu.php');
         $this->filescan_menu = new AIOWPSecurity_Filescan_Menu();
     }
-    
+
     function handle_misc_menu_rendering()
     {
         include_once('wp-security-misc-options-menu.php');
         $this->misc_menu = new AIOWPSecurity_Misc_Options_Menu();
     }
-    
+
 }//End of class
 

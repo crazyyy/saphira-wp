@@ -6,7 +6,7 @@
             'If you are motivated by limiting bandwidth usage and having a fast website, keep this option enabled. ' .
             'If you are more concerned about SEO and a penalty for serving jpegs and pngs rather than webps, disable it.' .
             '</p>' .
-            '<p>The option is used both when generating .htaccess rules and in Alter HTML.</p>' .
+            '<p>The option is used both when generating 2.htaccess rules and in Alter HTML.</p>' .
             '<p>Note: If you are using Alter HTML with picture tags and have images with a srcset ' .
             'attribute, WebP Express generates a source element with type set to "image/webp". This source ' .
             'thus points to a bundle of webp images. From 0.25.5 and forward, when this option is enabled, ' .

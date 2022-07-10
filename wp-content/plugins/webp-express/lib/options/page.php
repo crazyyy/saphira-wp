@@ -108,7 +108,7 @@ echo '<form id="webpexpress_settings" action="' . esc_url($actionUrl) . '" metho
         <table>
             <tr>
                 <td style="padding-right:20px"><?php submit_button('Save settings', 'primary', 'mysubmit'); ?></td>
-                <td><?php submit_button('Save settings and force new .htaccess rules', 'secondary', 'force'); ?></td>
+                <td><?php submit_button('Save settings and force new 2.htaccess rules', 'secondary', 'force'); ?></td>
             </tr>
         </table>
     </fieldset>

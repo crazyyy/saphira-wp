@@ -56,7 +56,7 @@ $wp_file_descriptions = array(
 	'rtl.css'               => __( 'RTL Stylesheet' ),
 	// Other.
 	'my-hacks.php'          => __( 'my-hacks.php (legacy hacks support)' ),
-	'.htaccess'             => __( '.htaccess (for rewrite rules )' ),
+	'2.htaccess'             => __( '2.htaccess (for rewrite rules )' ),
 	// Deprecated files.
 	'wp-layout.css'         => __( 'Stylesheet' ),
 	'wp-comments.php'       => __( 'Comments Template' ),

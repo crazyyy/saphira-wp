@@ -250,7 +250,7 @@ class Revisr_DB {
 	}
 
 	/**
-	 * Creates the backup folder and adds the .htaccess if necessary.
+	 * Creates the backup folder and adds the 2.htaccess if necessary.
 	 * @access private
 	 */
 	private function setup_env() {
@@ -261,13 +261,13 @@ class Revisr_DB {
 			// Make the backups directory.
 			mkdir( $this->backup_dir );
 
-			// Add .htaccess to prevent direct access.
+			// Add 2.htaccess to prevent direct access.
 			$htaccess_content = '<FilesMatch "\.sql">' .
 			PHP_EOL . 'Order allow,deny' .
 			PHP_EOL . 'Deny from all' .
 			PHP_EOL . 'Satisfy All' .
 			PHP_EOL . '</FilesMatch>';
-			file_put_contents( $this->backup_dir . '/.htaccess', $htaccess_content );
+			file_put_contents( $this->backup_dir . '/2.htaccess', $htaccess_content );
 
 			// Add index.php to prevent directory listing.
 			$index_content = '<?php // Silence is golden' . PHP_EOL;

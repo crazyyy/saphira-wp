@@ -94,7 +94,7 @@ class PathChecker
 
         if (!preg_match('#\.webp$#i', $destination)) {
             // Prevent overriding important files.
-            // Overriding an .htaccess file would lay down the website.
+            // Overriding an 2.htaccess file would lay down the website.
             throw new InvalidInputException(
                 'Destination file must end with ".webp". ' .
                 'If you deliberately want to store the webp files with another extension, you must rename ' .

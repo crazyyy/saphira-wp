@@ -11,7 +11,7 @@ try {
 
 $htaccess_path = Htaccess::get_frontend_htaccess();
 
-// Check if there is `ExpiresDefault` in .htaccess
+// Check if there is `ExpiresDefault` in 2.htaccess
 if ( defined( 'LITESPEED_ON' ) ) {
 	if ( $content && stripos( $content, "\nExpiresDefault" ) !== false ) {
 		$is_dismissed = GUI::get_option( self::DB_DISMISS_MSG );
@@ -33,18 +33,18 @@ if ( defined( 'LITESPEED_ON' ) ) {
 ?>
 
 <h3 class="litespeed-title">
-	<?php echo __('LiteSpeed Cache View .htaccess', 'litespeed-cache'); ?>
+	<?php echo __('LiteSpeed Cache View 2.htaccess', 'litespeed-cache'); ?>
 	<?php Doc::learn_more( 'https://docs.litespeedtech.com/lscache/lscwp/toolbox/#edit-htaccess-tab' ); ?>
 </h3>
 
 <h3 class="litespeed-title-short">
-	<?php echo __( '.htaccess Path', 'litespeed-cache' ); ?>
+	<?php echo __( '2.htaccess Path', 'litespeed-cache' ); ?>
 </h3>
 
 <table class="wp-list-table striped litespeed-table"><tbody>
 	<tr>
 		<th>
-			<?php echo __( 'Frontend .htaccess Path', 'litespeed-cache' ); ?>
+			<?php echo __( 'Frontend 2.htaccess Path', 'litespeed-cache' ); ?>
 		</th>
 		<td>
 			<code><?php echo $htaccess_path; ?></code>
@@ -61,7 +61,7 @@ if ( defined( 'LITESPEED_ON' ) ) {
 
 	<tr>
 		<th>
-			<?php echo __( 'Backend .htaccess Path', 'litespeed-cache' ); ?>
+			<?php echo __( 'Backend 2.htaccess Path', 'litespeed-cache' ); ?>
 		</th>
 		<td>
 			<?php echo Htaccess::get_backend_htaccess(); ?>
@@ -79,7 +79,7 @@ if ( defined( 'LITESPEED_ON' ) ) {
 
 <?php if( $content !== null ) : ?>
 
-	<h3 class="litespeed-title"><?php echo sprintf(__('Current %s Contents', 'litespeed-cache'), '.htaccess'); ?></h3>
+	<h3 class="litespeed-title"><?php echo sprintf(__('Current %s Contents', 'litespeed-cache'), '2.htaccess'); ?></h3>
 
 	<h4><?php echo $htaccess_path; ?></h4>
 

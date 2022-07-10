@@ -14,7 +14,7 @@ function webpexpress_migrate14() {
     $config = Config::loadConfigAndFix(false);    // false means we do not need the check if quality detection is supported
     if (($config['enable-redirection-to-converter']) || ($config['redirect-to-existing-in-htaccess'])) {
 
-        // We need to regenerate .htaccess files in case redirection to webp is enabled. Two reasons:
+        // We need to regenerate 2.htaccess files in case redirection to webp is enabled. Two reasons:
         // 1: WebP On Demand rules needs fixing (#520)
         // 2: The new escape hatch (#522), which is needed for the File Manager (#521)
         wp_schedule_single_event(time() + 10, 'webp_express_task_regenerate_config_and_htaccess');

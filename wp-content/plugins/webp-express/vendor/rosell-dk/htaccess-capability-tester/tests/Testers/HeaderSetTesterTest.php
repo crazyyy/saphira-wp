@@ -2,7 +2,7 @@
 /*
 subdir: header-set
 files:
-    - filename: '.htaccess'
+    - filename: '2.htaccess'
       content: |
           <IfModule mod_headers.c>
               Header set X-Response-Header-Test: test
@@ -24,7 +24,7 @@ Tested:
 
 Server setup                   |  Test result
 --------------------------------------------------
-.htaccess disabled             |  failure
+2.htaccess disabled             |  failure
 forbidden directives (fatal)   |  failure
 access denied                  |  inconclusive  (it might be allowed to other files)
 directive has no effect        |  failure

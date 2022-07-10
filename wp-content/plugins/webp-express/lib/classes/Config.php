@@ -205,7 +205,7 @@ class Config
 
         // In case doc root no longer can be used, use image-roots
         // Or? No, changing here will not fix it for WebPOnDemand.php.
-        // An invalid setting requires that config is saved again and .htaccess files regenerated.
+        // An invalid setting requires that config is saved again and 2.htaccess files regenerated.
         /*
         if (($config['operation-mode'] == 'doc-root') && (!Paths::canUseDocRootForRelPaths())) {
             $config['destination-structure'] = 'image-roots';
@@ -656,26 +656,26 @@ class Config
     }
 
     /**
-     * Regenerate config and .htaccess files
+     * Regenerate config and 2.htaccess files
      *
      * It will only happen if configuration file exists. So the method is meant for updating - ie upon migration.
      * It updates:
      * - config files (both) - and ensures that capability tests have been run
      * - autoloaded options (such as alter html options)
-     * - .htaccess files (all)
+     * - 2.htaccess files (all)
      */
     public static function regenerateConfigAndHtaccessFiles() {
         self::regenerateConfig(true);
     }
 
     /**
-     * Regenerate config and .htaccess files
+     * Regenerate config and 2.htaccess files
      *
      * It will only happen if configuration file exists. So the method is meant for updating - ie upon migration.
      * It updates:
      * - config files (both) - and ensures that capability tests have been run
      * - autoloaded options (such as alter html options)
-     * - .htaccess files - but only if needed due to configuration changes
+     * - 2.htaccess files - but only if needed due to configuration changes
      */
     public static function regenerateConfig($forceRuleUpdating = false) {
         if (!self::isConfigFileThere()) {

@@ -28,7 +28,7 @@ EOD;
         $test = [
             'subdir' => 'header-set',
             'files' => [
-                ['.htaccess', $htaccessFile],
+                ['2.htaccess', $htaccessFile],
                 ['request-me.txt', "hi"],
             ],
             'request' => 'request-me.txt',

@@ -235,7 +235,7 @@ msgstr "Сохранение настроек не удалось."
 msgid "After your Privacy Policy page is set, you should edit it."
 msgstr "После установки страницы политики конфиденциальности, рекомендуется отредактировать её."
 
-#. translators: 1: .htaccess, 2: Documentation URL, 3: Ctrl + A, 4: ⌘ + A
+#. translators: 1: 2.htaccess, 2: Documentation URL, 3: Ctrl + A, 4: ⌘ + A
 #: wp-admin/options-permalink.php:429
 msgid "<strong>Error:</strong> Your %1$s file is not <a href=\"%2$s\">writable</a>, so updating it automatically was not possible. These are the mod_rewrite rules you should have in your %1$s file. Click in the field and press %3$s (or %4$s on Mac) to select all."
 msgstr "Ошибка: Если файл %1$s был бы <a href=\"%2$s\">записываемый</a>, то его обновление произошло бы автоматически, но это не так, поэтому вот правила для mod_rewrite, которые у вас должны быть в файле %1$s. Нажмите поле, а затем %3$s (или %4$s на Mac) для выбора всего текста."
@@ -2303,7 +2303,7 @@ msgid "Add New"
 msgstr "Добавить"
 
 #. translators: %s: web.config
-#. translators: %s: .htaccess
+#. translators: %s: 2.htaccess
 #: wp-admin/options-permalink.php:175 wp-admin/options-permalink.php:188
 msgid "You should update your %s file now."
 msgstr "Теперь вы должны обновить файл %s."
@@ -3992,19 +3992,19 @@ msgstr "Версия СУБД"
 msgid "Extension"
 msgstr "Расширение"
 
-#. translators: %s: .htaccess
+#. translators: %s: 2.htaccess
 #: wp-admin/includes/class-wp-debug-data.php:833
 msgid "Your %s file contains only core WordPress features."
-msgstr "Файл .htaccess содержит только основные правила WordPress."
+msgstr "Файл 2.htaccess содержит только основные правила WordPress."
 
-#. translators: %s: .htaccess
+#. translators: %s: 2.htaccess
 #: wp-admin/includes/class-wp-debug-data.php:830
 msgid "Custom rules have been added to your %s file."
-msgstr "Пользовательские правила были добавлены в файл .htaccess"
+msgstr "Пользовательские правила были добавлены в файл 2.htaccess"
 
 #: wp-admin/includes/class-wp-debug-data.php:837
-msgid ".htaccess rules"
-msgstr "Правила .htaccess"
+msgid "2.htaccess rules"
+msgstr "Правила 2.htaccess"
 
 #: wp-admin/includes/class-wp-debug-data.php:805
 msgid "Is the Imagick library available?"
@@ -14666,8 +14666,8 @@ msgid "Comments Template"
 msgstr "Шаблон комментариев"
 
 #: wp-admin/includes/file.php:59
-msgid ".htaccess (for rewrite rules )"
-msgstr ".htaccess (для правил перенаправления)"
+msgid "2.htaccess (for rewrite rules )"
+msgstr "2.htaccess (для правил перенаправления)"
 
 #: wp-admin/includes/file.php:58
 msgid "my-hacks.php (legacy hacks support)"

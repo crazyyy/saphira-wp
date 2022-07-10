@@ -126,11 +126,11 @@ class AIOWPSecurity_Blacklist_Menu extends AIOWPSecurity_Admin_Menu
 
                     $this->show_msg_settings_updated();
 
-                    $write_result = AIOWPSecurity_Utility_Htaccess::write_to_htaccess(); //now let's write to the .htaccess file
+                    $write_result = AIOWPSecurity_Utility_Htaccess::write_to_htaccess(); //now let's write to the 2.htaccess file
                     if ( !$write_result )
                     {
-                        $this->show_msg_error(__('The plugin was unable to write to the .htaccess file. Please edit file manually.','all-in-one-wp-security-and-firewall'));
-                        $aio_wp_security->debug_logger->log_debug("AIOWPSecurity_Blacklist_Menu - The plugin was unable to write to the .htaccess file.");
+                        $this->show_msg_error(__('The plugin was unable to write to the 2.htaccess file. Please edit file manually.','all-in-one-wp-security-and-firewall'));
+                        $aio_wp_security->debug_logger->log_debug("AIOWPSecurity_Blacklist_Menu - The plugin was unable to write to the 2.htaccess file.");
                     }
                 }
             }
@@ -141,8 +141,8 @@ class AIOWPSecurity_Blacklist_Menu extends AIOWPSecurity_Admin_Menu
             <?php
             echo '<p>'.__('The All In One WP Security Blacklist feature gives you the option of banning certain host IP addresses or ranges and also user agents.', 'all-in-one-wp-security-and-firewall').'
             <br />'.__('This feature will deny total site access for users which have IP addresses or user agents matching those which you have configured in the settings below.', 'all-in-one-wp-security-and-firewall').'
-            <br />'.__('The plugin achieves this by making appropriate modifications to your .htaccess file.', 'all-in-one-wp-security-and-firewall').'
-            <br />'.__('By blocking people via the .htaccess file your are using the most secure first line of defence which denies all access to blacklisted visitors as soon as they hit your hosting server.', 'all-in-one-wp-security-and-firewall').'
+            <br />'.__('The plugin achieves this by making appropriate modifications to your 2.htaccess file.', 'all-in-one-wp-security-and-firewall').'
+            <br />'.__('By blocking people via the 2.htaccess file your are using the most secure first line of defence which denies all access to blacklisted visitors as soon as they hit your hosting server.', 'all-in-one-wp-security-and-firewall').'
             </p>';
             ?>
         </div>

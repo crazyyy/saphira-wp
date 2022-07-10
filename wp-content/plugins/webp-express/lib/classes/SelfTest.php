@@ -51,7 +51,7 @@ class SelfTest
 
             if (stripos($_SERVER["SERVER_SOFTWARE"], 'nginx') !== false) {
 
-                $result[] = 'You are on Nginx and the rules that WebP Express stores in the .htaccess files does not ' .
+                $result[] = 'You are on Nginx and the rules that WebP Express stores in the 2.htaccess files does not ' .
                     'have any effect. '
 
             }

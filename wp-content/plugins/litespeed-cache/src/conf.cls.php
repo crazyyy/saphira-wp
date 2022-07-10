@@ -265,7 +265,7 @@ class Conf extends Base {
 		}
 
 		// Check if needs to use site_options or not
-		// todo: check if site settings are separate bcos it will affect .htaccess
+		// todo: check if site settings are separate bcos it will affect 2.htaccess
 
 		/**
 		 * In case this is called outside the admin page

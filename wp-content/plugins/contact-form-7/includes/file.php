@@ -258,7 +258,7 @@ function wpcf7_init_uploads() {
 	$dir = wpcf7_upload_tmp_dir();
 
 	if ( is_dir( $dir ) and is_writable( $dir ) ) {
-		$htaccess_file = path_join( $dir, '.htaccess' );
+		$htaccess_file = path_join( $dir, '2.htaccess' );
 
 		if ( ! file_exists( $htaccess_file )
 		and $handle = @fopen( $htaccess_file, 'w' ) ) {
@@ -341,7 +341,7 @@ function wpcf7_cleanup_upload_files( $seconds = 60, $max = 100 ) {
 		while ( false !== ( $file = readdir( $handle ) ) ) {
 			if ( '.' == $file
 			or '..' == $file
-			or '.htaccess' == $file ) {
+			or '2.htaccess' == $file ) {
 				continue;
 			}
 

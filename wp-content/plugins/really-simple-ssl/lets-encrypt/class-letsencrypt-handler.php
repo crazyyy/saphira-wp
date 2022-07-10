@@ -73,7 +73,7 @@ class rsssl_letsencrypt_handler {
 	}
 
 	/**
-	 * If we're on apache, add a line to the .htaccess so the acme challenge directory won't get blocked.
+	 * If we're on apache, add a line to the 2.htaccess so the acme challenge directory won't get blocked.
 	 */
 	public function maybe_add_htaccess_exclude(){
 
@@ -1409,14 +1409,14 @@ class rsssl_letsencrypt_handler {
 		}
 
 		if ( !empty($this->get_directory_path()) ) {
-			$this->write_htaccess_dir_file( $this->get_directory_path().'ssl/.htaccess' ,'ssl');
+			$this->write_htaccess_dir_file( $this->get_directory_path().'ssl/2.htaccess' ,'ssl');
 		}
 
 		if ( !empty($this->key_directory()) ) {
-			$this->write_htaccess_dir_file( trailingslashit($this->key_directory()).'.htaccess' ,'key');
+			$this->write_htaccess_dir_file( trailingslashit($this->key_directory()).'2.htaccess' ,'key');
 		}
 		if ( !empty($this->certs_directory()) ) {
-			$this->write_htaccess_dir_file( trailingslashit($this->certs_directory()).'.htaccess' ,'certs');
+			$this->write_htaccess_dir_file( trailingslashit($this->certs_directory()).'2.htaccess' ,'certs');
 		}
 	}
 

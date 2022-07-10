@@ -28,14 +28,14 @@ use HtaccessCapabilityTester\HtaccessCapabilityTester;
 $hct = new HtaccessCapabilityTester($baseDir, $baseUrl);
 
 if ($hct->moduleLoaded('headers')) {
-    // mod_headers is loaded (tested in a real .htaccess by using the "IfModule" directive)
+    // mod_headers is loaded (tested in a real 2.htaccess by using the "IfModule" directive)
 }
 if ($hct->rewriteWorks()) {    
     // rewriting works
 
 }
 if ($hct->htaccessEnabled() === false) {
-    // Apache has been configured to ignore .htaccess files
+    // Apache has been configured to ignore 2.htaccess files
 }
 
 // A bunch of other tests are available - see API
@@ -67,7 +67,7 @@ Implementation (YAML definition):
 ```yaml
 subdir: add-type
 files:
-  - filename: '.htaccess'
+  - filename: '2.htaccess'
     content: |
       <IfModule mod_mime.c>
           AddType image/gif .test
@@ -96,7 +96,7 @@ subdir: content-digest
 subtests:
   - subdir: on
     files:
-    - filename: '.htaccess'
+    - filename: '2.htaccess'
       content: |
         ContentDigest On
     - filename: 'request-me.txt'
@@ -108,7 +108,7 @@ subtests:
 
     - subdir: off
       files:
-        - filename: '.htaccess'
+        - filename: '2.htaccess'
           content: |
              ContentDigest Off
         - filename: 'request-me.txt'
@@ -150,7 +150,7 @@ public function __construct($htaccessRules, $subSubDir = null)
             [
                 'subdir' => 'the-suspect',
                 'files' => [
-                    ['.htaccess', $htaccessRules],
+                    ['2.htaccess', $htaccessRules],
                     ['request-me.txt', 'thanks'],
                 ],
                 'request' => [
@@ -164,7 +164,7 @@ public function __construct($htaccessRules, $subSubDir = null)
             [
                 'subdir' => 'the-innocent',
                 'files' => [
-                    ['.htaccess', '# I am no trouble'],
+                    ['2.htaccess', '# I am no trouble'],
                     ['request-me.txt', 'thanks'],
                 ],
                 'request' => [
@@ -206,7 +206,7 @@ Implementation (YAML definition):
 ```yaml
 subdir: directory-index
 files:
-  - filename: '.htaccess'
+  - filename: '2.htaccess'
     content: |
       <IfModule mod_dir.c>
           DirectoryIndex index2.html
@@ -238,7 +238,7 @@ Implementation (YAML definition):
 ```yaml
 subdir: header-set
 files:
-    - filename: '.htaccess'
+    - filename: '2.htaccess'
       content: |
           <IfModule mod_headers.c>
               Header set X-Response-Header-Test: test
@@ -270,7 +270,7 @@ How does it work?
 
 Main part of implementation:
 ```php
-// If we can find anything that works, well the .htaccess must have been proccesed!
+// If we can find anything that works, well the 2.htaccess must have been proccesed!
 if ($hct->serverSignatureWorks()    // Override: None,  Status: Core, REQUIRES PHP
     || $hct->contentDigestWorks()   // Override: Options,  Status: Core
     || $hct->addTypeWorks()         // Override: FileInfo, Status: Base, Module: mime
@@ -281,7 +281,7 @@ if ($hct->serverSignatureWorks()    // Override: None,  Status: Core, REQUIRES P
     $status = true;
 } else {
     // The serverSignatureWorks() test is special because if it comes out as a failure,
-    // we can be *almost* certain that the .htaccess has been completely disabled
+    // we can be *almost* certain that the 2.htaccess has been completely disabled
 
     $serverSignatureWorks = $hct->serverSignatureWorks();
     if ($serverSignatureWorks === false) {
@@ -289,21 +289,21 @@ if ($hct->serverSignatureWorks()    // Override: None,  Status: Core, REQUIRES P
         $info = 'ServerSignature directive does not work - and it is in core';
     } else {
         // Last bullet in the gun:
-        // Try an .htaccess with syntax errors in it.
+        // Try an 2.htaccess with syntax errors in it.
         // (we do this lastly because it may generate an entry in the error log)
         $crashTestResult = $hct->crashTest('aoeu', 'htaccess-enabled-malformed-htaccess');
         if ($crashTestResult === false) {
-            // It crashed, - which means .htaccess is processed!
+            // It crashed, - which means 2.htaccess is processed!
             $status = true;
-            $info = 'syntax error in an .htaccess causes crash';
+            $info = 'syntax error in an 2.htaccess causes crash';
         } elseif ($crashTestResult === true) {
-            // It did not crash. So the .htaccess is not processed, as syntax errors
+            // It did not crash. So the 2.htaccess is not processed, as syntax errors
             // makes servers crash
             $status = false;
-            $info = 'syntax error in an .htaccess does not cause crash';
+            $info = 'syntax error in an 2.htaccess does not cause crash';
         } elseif (is_null($crashTestResult)) {
             // It did crash. But so did a request to an innocent text file in a directory
-            // without a .htaccess file in it. Something is making all requests fail and
+            // without a 2.htaccess file in it. Something is making all requests fail and
             // we cannot judge.
             $status = null;
             $info = 'all requests results in 500 Internal Server Error';
@@ -370,7 +370,7 @@ Implementation (YAML definition):
 ```yaml
 subdir: pass-info-from-rewrite-to-script-through-env
 files:
-  - filename: '.htaccess'
+  - filename: '2.htaccess'
     content: |
       <IfModule mod_rewrite.c>
 
@@ -433,7 +433,7 @@ Implementation (YAML definition):
 ```yaml
 subdir: pass-info-from-rewrite-to-script-through-request-header
 files:
-  - filename: '.htaccess'
+  - filename: '2.htaccess'
     content: |
       <IfModule mod_rewrite.c>
           RewriteEngine On
@@ -477,7 +477,7 @@ Implementation (YAML definition):
 ```yaml
 subdir: rewrite
 files:
-  - filename: '.htaccess'
+  - filename: '2.htaccess'
     content: |
       <IfModule mod_rewrite.c>
           RewriteEngine On
@@ -508,7 +508,7 @@ Implementation (YAML definition):
 ```yaml
 subdir: request-header
 files:
-  - filename: '.htaccess'
+  - filename: '2.htaccess'
     content: |
       <IfModule mod_headers.c>
           # Certain hosts seem to strip non-standard request headers,
@@ -546,7 +546,7 @@ subdir: server-signature
 subtests:
   - subdir: on
     files:
-    - filename: '.htaccess'
+    - filename: '2.htaccess'
       content: |
         ServerSignature On
     - filename: 'test.php'
@@ -566,7 +566,7 @@ subtests:
 
   - subdir: off
     files:
-    - filename: '.htaccess'
+    - filename: '2.htaccess'
       content: |
         ServerSignature Off
     - filename: 'test.php'

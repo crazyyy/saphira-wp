@@ -18,12 +18,12 @@ if ( ! class_exists( 'rsssl_server' ) ) {
 
 		/**
 		 * @Since 2.5.1
-		 * Checks if the server uses .htaccess
+		 * Checks if the server uses 2.htaccess
 		 * @return bool
 		 */
 
 		public function uses_htaccess() {
-			// No .htaccess on WP Engine
+			// No 2.htaccess on WP Engine
 			if ( function_exists( 'is_wpe' ) && is_wpe() ) {
 				return false;
 			}

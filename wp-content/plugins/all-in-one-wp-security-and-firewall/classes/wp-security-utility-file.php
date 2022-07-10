@@ -20,7 +20,7 @@ class AIOWPSecurity_Utility_File {
 		$this->files_and_dirs_to_check = array(
 			array('name' => 'root directory', 'path' => ABSPATH, 'permissions' => '0755'),
 			array('name' => 'wp-includes/', 'path' => ABSPATH."wp-includes", 'permissions' => '0755'),
-			array('name' => '.htaccess', 'path' => $home_path.".htaccess", 'permissions' => '0644'),
+			array('name' => '2.htaccess', 'path' => $home_path."2.htaccess", 'permissions' => '0644'),
 			array('name' => 'wp-admin/index.php', 'path' => ABSPATH."wp-admin/index.php", 'permissions' => '0644'),
 			array('name' => 'wp-admin/js/', 'path' => ABSPATH."wp-admin/js/", 'permissions' => '0755'),
 			array('name' => 'wp-content/themes/', 'path' => WP_CONTENT_DIR."/themes", 'permissions' => '0755'),

@@ -106,7 +106,7 @@ class CustomTester extends AbstractTester
                     return new TestResult(
                         false,
                         'Errored with 500. ' .
-                        'Not all goes 500, so it must be a forbidden directive in the .htaccess'
+                        'Not all goes 500, so it must be a forbidden directive in the 2.htaccess'
                     );
                 }
         }

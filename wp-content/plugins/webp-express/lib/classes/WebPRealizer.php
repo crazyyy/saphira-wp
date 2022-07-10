@@ -38,7 +38,7 @@ class WebPRealizer extends WodConfigLoader
         }
 
         // Check querystring (full path)
-        // - But only on Nginx (our Apache .htaccess rules never passes absolute url)
+        // - But only on Nginx (our Apache 2.htaccess rules never passes absolute url)
         if (self::isNginxHandlingImages()) {
             if (isset($_GET['destination'])) {
                 return SanityCheck::absPathIsInDocRoot($_GET['destination']);

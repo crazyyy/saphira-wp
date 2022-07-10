@@ -4,7 +4,7 @@ subdir: 'crash-tester/xxx'  # xxx is a subdir for the specific crash-test
 subtests:
   - subdir: the-suspect
     files:
-        - filename: '.htaccess'
+        - filename: '2.htaccess'
           content:                          # the rules goes here
         - filename: 'request-me.txt'
           content: 'thanks'
@@ -18,7 +18,7 @@ subtests:
 
   - subdir: the-innocent
     files:
-        - filename: '.htaccess'
+        - filename: '2.htaccess'
           content: '# I am no trouble'
         - filename: 'request-me.txt'
           content: 'thanks'
@@ -38,7 +38,7 @@ Tested:
 
 Server setup                   |  Test result
 --------------------------------------------------
-.htaccess disabled             |  success!  (nothing crashes)
+2.htaccess disabled             |  success!  (nothing crashes)
 access denied                  |  success!  (nothing crashes. In case there is both errors and
                                              access denied, the response is 500. This is however
                                              only tested on Apache 2.4.29)

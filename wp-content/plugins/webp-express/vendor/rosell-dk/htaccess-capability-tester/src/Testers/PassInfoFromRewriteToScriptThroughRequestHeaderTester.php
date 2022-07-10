@@ -48,7 +48,7 @@ EOD;
         $test = [
             'subdir' => 'pass-info-from-rewrite-to-script-through-request-header',
             'files' => [
-                ['.htaccess', $htaccessFile],
+                ['2.htaccess', $htaccessFile],
                 ['test.php', $phpFile],
             ],
             'request' => 'test.php',

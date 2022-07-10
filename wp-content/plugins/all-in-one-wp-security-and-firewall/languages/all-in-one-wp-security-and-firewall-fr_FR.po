@@ -100,10 +100,10 @@ msgstr "Echec du contrôle à l’enregistrement des paramètres de liste noire 
 #: all-in-one-wp-security/admin/wp-security-brute-force-menu.php:631
 #: all-in-one-wp-security/admin/wp-security-list-comment-spammer-ip.php:147
 msgid ""
-"The plugin was unable to write to the .htaccess file. Please edit file "
+"The plugin was unable to write to the 2.htaccess file. Please edit file "
 "manually."
 msgstr ""
-"L’extension a été incapable d’écrire dans le fichier .htaccess. Veuillez "
+"L’extension a été incapable d’écrire dans le fichier 2.htaccess. Veuillez "
 "éditer manuellement ce fichier."
 
 #: all-in-one-wp-security/admin/wp-security-blacklist-menu.php:139
@@ -135,15 +135,15 @@ msgid ""
 "htaccess file."
 msgstr ""
 "L’extension atteint cet objectif en apportant les modifications appropriées "
-"à votre fichier .htaccess."
+"à votre fichier 2.htaccess."
 
 #: all-in-one-wp-security/admin/wp-security-blacklist-menu.php:145
 msgid ""
-"By blocking people via the .htaccess file your are using the most secure "
+"By blocking people via the 2.htaccess file your are using the most secure "
 "first line of defence which denies all access to blacklisted visitors as "
 "soon as they hit your hosting server."
 msgstr ""
-"En bloquant les utilisateurs via le fichier .htaccess que vous utilisez en "
+"En bloquant les utilisateurs via le fichier 2.htaccess que vous utilisez en "
 "première ligne de défense, interdit tout accès aux visiteurs en liste noire "
 "dès qu’ils atteignent votre serveur d’hébergement."
 
@@ -319,7 +319,7 @@ msgstr "Attention !"
 
 #: all-in-one-wp-security/admin/wp-security-brute-force-menu.php:131
 msgid ""
-"Could not delete the Cookie-based directives from the .htaccess file. Please "
+"Could not delete the Cookie-based directives from the 2.htaccess file. Please "
 "check the file permissions."
 msgstr ""
 "Impossible de supprimer les directives basées-cookie à partir du fichier ."
@@ -466,9 +466,9 @@ msgstr ""
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:585
 #: all-in-one-wp-security/admin/wp-security-spam-menu.php:108
 msgid ""
-"Could not write to the .htaccess file. Please check the file permissions."
+"Could not write to the 2.htaccess file. Please check the file permissions."
 msgstr ""
-"Impossible d’écrire dans le fichier .htaccess. Veuillez vérifier les "
+"Impossible d’écrire dans le fichier 2.htaccess. Veuillez vérifier les "
 "permissions."
 
 #: all-in-one-wp-security/admin/wp-security-brute-force-menu.php:295
@@ -498,12 +498,12 @@ msgstr ""
 #: all-in-one-wp-security/admin/wp-security-brute-force-menu.php:302
 msgid ""
 "The features in this tab will stop the majority of Brute Force Login Attacks "
-"at the .htaccess level thus providing even better protection for your WP "
+"at the 2.htaccess level thus providing even better protection for your WP "
 "login page and also reducing the load on your server because the system does "
 "not have to run PHP code to process the login attempts."
 msgstr ""
 "Les fonctionnalités de cet onglet permettront d’arrêter la majorité des "
-"attaques de connexion Brute Force au niveau du .htaccess, offrant ainsi la "
+"attaques de connexion Brute Force au niveau du 2.htaccess, offrant ainsi la "
 "meilleure protection pour votre page de connexion WP et réduisant la charge "
 "sur votre serveur, puisque le système n’aura plus à exécuter votre code PHP "
 "pour traiter les tentatives de connexion."
@@ -517,16 +517,16 @@ msgid ""
 msgstr ""
 "Cette fonctionnalité ne devrait pas avoir d’impact négatif sur le "
 "fonctionnement général de votre site mais <strong>faire une %s de votre "
-"fichier .htaccess est vivement conseillé avant de l’activer</strong>."
+"fichier 2.htaccess est vivement conseillé avant de l’activer</strong>."
 
 #: all-in-one-wp-security/admin/wp-security-brute-force-menu.php:310
 msgid ""
 "If this feature is not used correctly, you can get locked out of your site. "
-"A backed up .htaccess file will come in handy if that happens."
+"A backed up 2.htaccess file will come in handy if that happens."
 msgstr ""
 "Si cette fonctionnalité n’est pas correctement utilisée, vous risquez de "
 "verrouiller votre site et ne plus y avoir accès. Une copie de sauvegarde de "
-"votre fichier .htaccess sera utile en tel cas."
+"votre fichier 2.htaccess sera utile en tel cas."
 
 #: all-in-one-wp-security/admin/wp-security-brute-force-menu.php:311
 #, php-format
@@ -699,7 +699,7 @@ msgstr ""
 "Dans le cas où vous protégeriez certains de vos messages ou pages à l’aide "
 "de la fonctionnalité de protection par mot de passe propre à WordPress, "
 "quelques lignes de directives et d’exceptions doivent être ajoutés à votre "
-"fichier .htaccess afin que les visiteurs qui tentent d’accéder régulièrement "
+"fichier 2.htaccess afin que les visiteurs qui tentent d’accéder régulièrement "
 "aux pages ne soient pas bloqués."
 
 #: all-in-one-wp-security/admin/wp-security-brute-force-menu.php:410
@@ -709,7 +709,7 @@ msgid ""
 "are not automatically blocked."
 msgstr ""
 "En activant cette case, l’extension ajoutera les règles nécessaires et les "
-"exceptions à votre fichier .htaccess afin que les visiteurs réguliers, "
+"exceptions à votre fichier 2.htaccess afin que les visiteurs réguliers, "
 "tentant d’accéder à ces pages, ne soient pas automatiquement bloqués."
 
 #: all-in-one-wp-security/admin/wp-security-brute-force-menu.php:412
@@ -742,7 +742,7 @@ msgid ""
 msgstr ""
 "Dans le cas où votre installation WordPress dispose d’un thème ou de plugins "
 "utilisant AJAX, quelques lignes supplémentaires de directives et "
-"d’exceptions doivent être ajoutés à votre fichier .htaccess pour empêcher "
+"d’exceptions doivent être ajoutés à votre fichier 2.htaccess pour empêcher "
 "les requêtes AJAX d’être automatiquement bloquées par la fonction de "
 "prévention Brute Force."
 
@@ -753,7 +753,7 @@ msgid ""
 "expected."
 msgstr ""
 "En activant cette case l’extension va ajouter les règles et exceptions "
-"nécessaires à votre fichier .htaccess afin que les opérations AJAX "
+"nécessaires à votre fichier 2.htaccess afin que les opérations AJAX "
 "fonctionnent comme prévu."
 
 #: all-in-one-wp-security/admin/wp-security-brute-force-menu.php:446
@@ -887,16 +887,16 @@ msgid ""
 "htaccess file."
 msgstr ""
 "L’extension réalise cela en écrivant les directives appropriées dans votre "
-"fichier .htaccess."
+"fichier 2.htaccess."
 
 #: all-in-one-wp-security/admin/wp-security-brute-force-menu.php:644
 msgid ""
-"By allowing/blocking IP addresses via the .htaccess file your are using the "
+"By allowing/blocking IP addresses via the 2.htaccess file your are using the "
 "most secure first line of defence because login access will only be granted "
 "to whitelisted IP addresses and other addresses will be blocked as soon as "
 "they try to access your login page."
 msgstr ""
-"En autorisant / bloquant des adresses IP via le fichier .htaccess vous "
+"En autorisant / bloquant des adresses IP via le fichier 2.htaccess vous "
 "utilisez la plus sûre des premières lignes de défense, parce que la "
 "connexion ne sera accordée qu’à des adresses IP présentes dans la liste "
 "blanche, les autres adresses étant bloquées dès qu’elles essaient d’accéder "
@@ -2504,11 +2504,11 @@ msgstr "Paramètres du pare-feu"
 #, php-format
 msgid ""
 "This should not have any impact on your site's general functionality but if "
-"you wish you can take a %s of your .htaccess file before proceeding."
+"you wish you can take a %s of your 2.htaccess file before proceeding."
 msgstr ""
 "Cela ne devrait pas avoir d’incidence sur les fonctionnalités générales de "
 "votre site mais, si vous le souhaitez, vous pouvez faire une %s de votre "
-"fichier .htaccess avant de procéder."
+"fichier 2.htaccess avant de procéder."
 
 #: all-in-one-wp-security/admin/wp-security-firewall-menu.php:132
 msgid ""
@@ -2521,10 +2521,10 @@ msgstr ""
 #: all-in-one-wp-security/admin/wp-security-firewall-menu.php:133
 msgid ""
 "The firewall functionality is achieved via the insertion of special code "
-"into your currently active .htaccess file."
+"into your currently active 2.htaccess file."
 msgstr ""
 "La fonctionnalité de pare-feu est réalisée par insertion d’un code spécial "
-"dans votre fichier .htaccess actuellement actif."
+"dans votre fichier 2.htaccess actuellement actif."
 
 #: all-in-one-wp-security/admin/wp-security-firewall-menu.php:143
 msgid "Attention:"
@@ -2577,7 +2577,7 @@ msgstr ""
 #: all-in-one-wp-security/admin/wp-security-firewall-menu.php:169
 msgid "1) Protect your htaccess file by denying access to it."
 msgstr ""
-"1) Protection de votre fichier .htaccess en refusant l’accès à celui-ci."
+"1) Protection de votre fichier 2.htaccess en refusant l’accès à celui-ci."
 
 #: all-in-one-wp-security/admin/wp-security-firewall-menu.php:170
 msgid "2) Disable the server signature."
@@ -2594,7 +2594,7 @@ msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-firewall-menu.php:173
 msgid ""
-"The above firewall features will be applied via your .htaccess file and "
+"The above firewall features will be applied via your 2.htaccess file and "
 "should not affect your site's overall functionality."
 msgstr ""
 "Les fonctionnalités de pare-feu ci-dessus s’appliqueront via votre fichier ."
@@ -2602,10 +2602,10 @@ msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-firewall-menu.php:174
 msgid ""
-"You are still advised to take a backup of your active .htaccess file just in "
+"You are still advised to take a backup of your active 2.htaccess file just in "
 "case."
 msgstr ""
-"Il est toujours conseillé de faire une sauvegarde de votre fichier .htaccess "
+"Il est toujours conseillé de faire une sauvegarde de votre fichier 2.htaccess "
 "actif, juste au cas où."
 
 #: all-in-one-wp-security/admin/wp-security-firewall-menu.php:183
@@ -2622,11 +2622,11 @@ msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-firewall-menu.php:198
 msgid ""
-"This setting will add a directive in your .htaccess to disable access to the "
+"This setting will add a directive in your 2.htaccess to disable access to the "
 "WordPress xmlrpc.php file which is responsible for the XML-RPC functionality "
 "such as pingbacks in WordPress."
 msgstr ""
-"Ce paramètre va ajouter une directive dans votre .htaccess pour désactiver "
+"Ce paramètre va ajouter une directive dans votre 2.htaccess pour désactiver "
 "l’accès au fichier xmlrpc.php qui est responsable de fonctionnalités comme "
 "le rétro-ping dans WordPress."
 
@@ -2688,14 +2688,14 @@ msgstr "Protection supplémentaire du pare-feu"
 #: all-in-one-wp-security/admin/wp-security-firewall-menu.php:301
 #, php-format
 msgid ""
-"Due to the nature of the code being inserted to the .htaccess file, this "
+"Due to the nature of the code being inserted to the 2.htaccess file, this "
 "feature may break some functionality for certain plugins and you are "
-"therefore advised to take a %s of .htaccess before applying this "
+"therefore advised to take a %s of 2.htaccess before applying this "
 "configuration."
 msgstr ""
-"En raison de la nature du code étant inséré dans le fichier .htaccess, cette "
+"En raison de la nature du code étant inséré dans le fichier 2.htaccess, cette "
 "fonctionnalité peut briser certaines fonctionnalités pour certains plugins "
-"et vous êtes donc invités à prendre un%s de .htaccess avant d’appliquer "
+"et vous êtes donc invités à prendre un%s de 2.htaccess avant d’appliquer "
 "cette configuration."
 
 #: all-in-one-wp-security/admin/wp-security-firewall-menu.php:303
@@ -2709,10 +2709,10 @@ msgstr ""
 #: all-in-one-wp-security/admin/wp-security-firewall-menu.php:304
 msgid ""
 "The advanced firewall rules are applied via the insertion of special code to "
-"your currently active .htaccess file."
+"your currently active 2.htaccess file."
 msgstr ""
 "Les règles avancées du pare-feu sont appliquées par l’intermédiaire de "
-"l’insertion de code spécial à votre fichier .htaccess actuellement actif."
+"l’insertion de code spécial à votre fichier 2.htaccess actuellement actif."
 
 #: all-in-one-wp-security/admin/wp-security-firewall-menu.php:313
 msgid "Listing of Directory Contents"
@@ -2830,10 +2830,10 @@ msgstr "Cela contribuera à vous protéger des requêtes malveillantes via XSS."
 
 #: all-in-one-wp-security/admin/wp-security-firewall-menu.php:419
 msgid ""
-"This feature will write rules in your .htaccess file to prevent malicious "
+"This feature will write rules in your 2.htaccess file to prevent malicious "
 "string attacks on your site using XSS."
 msgstr ""
-"Cette fonction va écrire dans votre fichier .htaccess les règles pour "
+"Cette fonction va écrire dans votre fichier 2.htaccess les règles pour "
 "contrer les attaques par chaînes XSS malveillantes sur votre site."
 
 #: all-in-one-wp-security/admin/wp-security-firewall-menu.php:420
@@ -2847,7 +2847,7 @@ msgstr ""
 #: all-in-one-wp-security/admin/wp-security-firewall-menu.php:421
 #: all-in-one-wp-security/admin/wp-security-firewall-menu.php:451
 msgid ""
-"You are therefore strongly advised to take a backup of your active .htaccess "
+"You are therefore strongly advised to take a backup of your active 2.htaccess "
 "file before applying this feature."
 msgstr ""
 "Il est donc fortement conseillé de faire une sauvegarde de votre fichier ."
@@ -2921,24 +2921,24 @@ msgstr ""
 msgid ""
 "The added advantage of applying the 5G firewall to your site is that it has "
 "been tested and confirmed by the people at PerishablePress.com to be an "
-"optimal and least disruptive set of .htaccess security rules for general WP "
+"optimal and least disruptive set of 2.htaccess security rules for general WP "
 "sites running on an Apache server or similar."
 msgstr ""
 "L’avantage supplémentaire d’appliquer le pare-feu 5G à votre site est qu’il "
 "a été testé et confirmé par les acteurs de PerishablePress.com comme étant "
-"un ensemble de règles de sécurité de .htaccess pour sites généraux WP en "
+"un ensemble de règles de sécurité de 2.htaccess pour sites généraux WP en "
 "cours d’exécution sur un serveur Apache ou similaire."
 
 #: all-in-one-wp-security/admin/wp-security-firewall-menu.php:510
 #, php-format
 msgid ""
 "Therefore the 5G firewall rules should not have any impact on your site's "
-"general functionality but if you wish you can take a %s of your .htaccess "
+"general functionality but if you wish you can take a %s of your 2.htaccess "
 "file before proceeding."
 msgstr ""
 "Donc les règles de pare-feu 5G ne devraient pas avoir d’incidence sur le "
 "fonctionnement général de votre site mais, si vous le souhaitez, vous pouvez "
-"faire une %s de votre fichier .htaccess avant de procéder."
+"faire une %s de votre fichier 2.htaccess avant de procéder."
 
 #: all-in-one-wp-security/admin/wp-security-firewall-menu.php:516
 msgid "5G Blacklist/Firewall Settings"
@@ -3159,11 +3159,11 @@ msgstr ""
 #: all-in-one-wp-security/admin/wp-security-firewall-menu.php:676
 msgid ""
 "This feature will prevent people from directly hotlinking images from your "
-"site's pages by writing some directives in your .htaccess file."
+"site's pages by writing some directives in your 2.htaccess file."
 msgstr ""
 "Cette fonction neutralise le lien dynamique visant directement les images, "
 "articles ou pages de votre site en écrivant quelques directives dans votre "
-"fichier .htaccess."
+"fichier 2.htaccess."
 
 #: all-in-one-wp-security/admin/wp-security-firewall-menu.php:681
 msgid "Prevent Hotlinking"
@@ -3382,18 +3382,18 @@ msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-list-comment-spammer-ip.php:153
 msgid ""
-"The .htaccess file was successfully modified to include the selected IP "
+"The 2.htaccess file was successfully modified to include the selected IP "
 "addresses."
 msgstr ""
-"Le fichier .htaccess a été modifié avec succès pour exclure les adresses IP "
+"Le fichier 2.htaccess a été modifié avec succès pour exclure les adresses IP "
 "sélectionnées."
 
 #: all-in-one-wp-security/admin/wp-security-list-comment-spammer-ip.php:159
 msgid ""
-"NOTE: The .htaccess file was not modified because you have disabled the "
+"NOTE: The 2.htaccess file was not modified because you have disabled the "
 "\"Enable IP or User Agent Blacklisting\" check box."
 msgstr ""
-"REMARQUE : Le fichier .htaccess n’a pas été modifié car vous avez décoché la "
+"REMARQUE : Le fichier 2.htaccess n’a pas été modifié car vous avez décoché la "
 "case « Activer l’IP ou l’ID sur liste noire »."
 
 #: all-in-one-wp-security/admin/wp-security-list-comment-spammer-ip.php:160
@@ -3609,12 +3609,12 @@ msgstr "Tous les dispositifs de sécurité ont été désactivés avec succès!"
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:101
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:128
 msgid ""
-"Could not write to the .htaccess file. Please restore your .htaccess file "
-"manually using the restore functionality in the \".htaccess File\"."
+"Could not write to the 2.htaccess file. Please restore your 2.htaccess file "
+"manually using the restore functionality in the \"2.htaccess File\"."
 msgstr ""
-"Impossible d’écrire dans le fichier .htaccess. Veuillez restaurer "
-"manuellement votre fichier .htaccess en utilisant la fonction de "
-"restauration dans « Fichier .htaccess »."
+"Impossible d’écrire dans le fichier 2.htaccess. Veuillez restaurer "
+"manuellement votre fichier 2.htaccess en utilisant la fonction de "
+"restauration dans « Fichier 2.htaccess »."
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:106
 msgid ""
@@ -3652,7 +3652,7 @@ msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:142
 msgid ""
-"It is a good practice to take a backup of your .htaccess file, database and "
+"It is a good practice to take a backup of your 2.htaccess file, database and "
 "wp-config.php file before activating the security features. This plugin has "
 "options that you can use to backup those resources easily."
 msgstr ""
@@ -3666,8 +3666,8 @@ msgid "Backup your database"
 msgstr "Sauvegarder votre BdD"
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:146
-msgid "Backup .htaccess file"
-msgstr "Sauvegarder le .htaccess"
+msgid "Backup 2.htaccess file"
+msgstr "Sauvegarder le 2.htaccess"
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:147
 msgid "Backup wp-config.php file"
@@ -3705,16 +3705,16 @@ msgid ""
 msgstr ""
 "Cette fonction permet de désactiver toutes les règles de pare-feu "
 "actuellement actives dans cette extension, elle supprime également ces "
-"règles dans le fichier .htaccess. Utilisez-la si vous pensez que l’une des "
+"règles dans le fichier 2.htaccess. Utilisez-la si vous pensez que l’une des "
 "règles de pare-feu est à l’origine d’un problème sur votre site."
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:208
 msgid ""
-"Your .htaccess file was successfully backed up! Using an FTP program go to "
+"Your 2.htaccess file was successfully backed up! Using an FTP program go to "
 "the \"/wp-content/aiowps_backups\" directory to save a copy of the file to "
 "your computer."
 msgstr ""
-"Votre fichier .htaccess a été sauvegardé avec succès ! Si vous utilisez un "
+"Votre fichier 2.htaccess a été sauvegardé avec succès ! Si vous utilisez un "
 "programme FTP, allez dans le répertoire « /wp-content/aiowps_backups » pour "
 "en enregistrer une copie sur votre ordinateur."
 
@@ -3723,53 +3723,53 @@ msgid ""
 "htaccess file rename failed during backup. Please check your root directory "
 "for the backup file using FTP."
 msgstr ""
-"Le renommage du .htaccess a échoué lors de la sauvegarde. Veuillez vérifier "
+"Le renommage du 2.htaccess a échoué lors de la sauvegarde. Veuillez vérifier "
 "votre répertoire racine pour le fichier de sauvegarde via FTP."
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:220
 msgid "htaccess backup failed."
-msgstr "La sauvegarde du .htaccess a échoué."
+msgstr "La sauvegarde du 2.htaccess a échoué."
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:235
-msgid "Please choose a .htaccess to restore from."
-msgstr "Choisir un .htaccess à partir duquel restaurer."
+msgid "Please choose a 2.htaccess to restore from."
+msgstr "Choisir un 2.htaccess à partir duquel restaurer."
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:251
 msgid ""
-"htaccess file restore failed. Please attempt to restore the .htaccess "
+"htaccess file restore failed. Please attempt to restore the 2.htaccess "
 "manually using FTP."
 msgstr ""
-"Échec de la restauration du .htaccess. Essayer de le restaurer manuellement "
+"Échec de la restauration du 2.htaccess. Essayer de le restaurer manuellement "
 "en utilisant FTP si nécessaire."
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:255
-msgid "Your .htaccess file has successfully been restored!"
-msgstr "Votre fichier .htaccess a été restauré avec succès !"
+msgid "Your 2.htaccess file has successfully been restored!"
+msgstr "Votre fichier 2.htaccess a été restauré avec succès !"
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:261
 msgid ""
 "htaccess Restore operation failed! Please check the contents of the file you "
 "are trying to restore from."
 msgstr ""
-"L’opération de restauration du .htaccess a échoué ! Veuillez vérifier le "
+"L’opération de restauration du 2.htaccess a échoué ! Veuillez vérifier le "
 "contenu du fichier à partir duquel vous avez essayé de restaurer."
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:267
-msgid ".htaccess File Operations"
-msgstr "Opérations sur le fichier .htaccess"
+msgid "2.htaccess File Operations"
+msgstr "Opérations sur le fichier 2.htaccess"
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:270
 msgid ""
-"Your \".htaccess\" file is a key component of your website's security and it "
+"Your \"2.htaccess\" file is a key component of your website's security and it "
 "can be modified to implement various levels of protection mechanisms."
 msgstr ""
-"Votre fichier « .htaccess » est un élément clé de la sécurité de votre site "
+"Votre fichier « 2.htaccess » est un élément clé de la sécurité de votre site "
 "Web et il peut être modifié pour mettre en œuvre différents niveaux de "
 "mécanismes de protection."
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:271
 msgid ""
-"This feature allows you to backup and save your currently active .htaccess "
+"This feature allows you to backup and save your currently active 2.htaccess "
 "file should you need to re-use the the backed up file in the future."
 msgstr ""
 "Cette fonctionnalité permet de sauvegarder et enregistrer votre fichier ."
@@ -3778,35 +3778,35 @@ msgstr ""
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:272
 msgid ""
-"You can also restore your site's .htaccess settings using a backed up ."
+"You can also restore your site's 2.htaccess settings using a backed up ."
 "htaccess file."
 msgstr ""
-"Vous pouvez également restaurer les paramètres .htaccess de votre site en "
-"utilisant un fichier .htaccess sauvegardé."
+"Vous pouvez également restaurer les paramètres 2.htaccess de votre site en "
+"utilisant un fichier 2.htaccess sauvegardé."
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:286
-msgid "Save the current .htaccess file"
-msgstr "Sauvegarder le fichier .htaccess actuel"
+msgid "Save the current 2.htaccess file"
+msgstr "Sauvegarder le fichier 2.htaccess actuel"
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:290
 msgid ""
-"Click the button below to backup and save the currently active .htaccess "
+"Click the button below to backup and save the currently active 2.htaccess "
 "file."
 msgstr ""
 "Cliquez le bouton ci-dessous pour sauvegarder et enregistrer le fichier ."
 "htaccess actuellement actif."
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:291
-msgid "Backup .htaccess File"
-msgstr "Sauvegarde du fichier .htaccess"
+msgid "Backup 2.htaccess File"
+msgstr "Sauvegarde du fichier 2.htaccess"
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:295
-msgid "Restore from a backed up .htaccess file"
-msgstr "Restaurer à partir d'un fichier .htaccess sauvegardé antérieurement"
+msgid "Restore from a backed up 2.htaccess file"
+msgstr "Restaurer à partir d'un fichier 2.htaccess sauvegardé antérieurement"
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:301
-msgid ".htaccess file to restore from"
-msgstr "Fichier .htaccess à partir duquel restaurer"
+msgid "2.htaccess file to restore from"
+msgstr "Fichier 2.htaccess à partir duquel restaurer"
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:307
 msgid ""
@@ -3814,16 +3814,16 @@ msgid ""
 "the backed up htaccess file (htaccess_backup.txt)."
 msgstr ""
 "Après avoir sélectionné votre fichier, cliquez le bouton ci-dessous pour "
-"restaurer votre site en utilisant le fichier .htaccess sauvegardé "
+"restaurer votre site en utilisant le fichier 2.htaccess sauvegardé "
 "(htaccess_backup.txt)."
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:313
-msgid "Restore .htaccess File"
-msgstr "Restaurer le fichier .htaccess"
+msgid "Restore 2.htaccess File"
+msgstr "Restaurer le fichier 2.htaccess"
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:317
-msgid "View Contents of the currently active .htaccess file"
-msgstr "Afficher le contenu du fichier .htaccess actuellement actif"
+msgid "View Contents of the currently active 2.htaccess file"
+msgstr "Afficher le contenu du fichier 2.htaccess actuellement actif"
 
 #: all-in-one-wp-security/admin/wp-security-settings-menu.php:346
 msgid "Please choose a wp-config.php file to restore from."
@@ -4149,11 +4149,11 @@ msgstr ""
 #: all-in-one-wp-security/admin/wp-security-spam-menu.php:123
 msgid ""
 "Adding a captcha field in the comment form is a simple way of greatly "
-"reducing SPAM comments from bots without using .htaccess rules."
+"reducing SPAM comments from bots without using 2.htaccess rules."
 msgstr ""
 "L’ajout d’un champ Captcha dans le formulaire de commentaire est un moyen "
 "simple de réduire grandement le SPAM de commentaires contre les robots "
-"collecteurs sans utiliser les règles .htaccess."
+"collecteurs sans utiliser les règles 2.htaccess."
 
 #: all-in-one-wp-security/admin/wp-security-spam-menu.php:132
 msgid "Enable Captcha On Comment Forms"
@@ -4392,11 +4392,11 @@ msgstr ""
 #: all-in-one-wp-security/admin/wp-security-spam-menu.php:331
 msgid ""
 "Adding a captcha field in the registration form is a simple way of greatly "
-"reducing SPAM signups from bots without using .htaccess rules."
+"reducing SPAM signups from bots without using 2.htaccess rules."
 msgstr ""
 "L’ajout d’un champ Captcha dans le formulaire de commentaire est un moyen "
 "simple de réduire grandement les formulaires SPAM contrant ainsi les robots "
-"collecteurs sans pour autant utiliser les règles .htaccess."
+"collecteurs sans pour autant utiliser les règles 2.htaccess."
 
 #: all-in-one-wp-security/admin/wp-security-spam-menu.php:341
 msgid "Enable Captcha On BuddyPress Registration Form"

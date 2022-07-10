@@ -6,8 +6,8 @@ namespace HtaccessCapabilityTester\Testers;
  * Class for testing if ServerSignature works
  *
  * Testing the ServerSignature directive is of interest because the directive is a core feature.
- * If a core feature doesn't work, well, it it would seem that .htaccess files are disabled completely.
- * The test is thus special. If it returns *failure* it is highly probable that the .htaccess file has
+ * If a core feature doesn't work, well, it it would seem that 2.htaccess files are disabled completely.
+ * The test is thus special. If it returns *failure* it is highly probable that the 2.htaccess file has
  * not been read.
  *
  * Unfortunately, the test requires PHP to examine if a server variable has been set. So the test is not
@@ -50,7 +50,7 @@ if (isset($_SERVER['SERVER_SIGNATURE']) && ($_SERVER['SERVER_SIGNATURE'] != ''))
 EOD;
 
         // PS:
-        // There is a little edge case: When .htaccess is disabled AND phps are either not processed
+        // There is a little edge case: When 2.htaccess is disabled AND phps are either not processed
         // or access is denied. This ought to return *failure*, but it currently returns *inconclusive*.
 
         $test = [
@@ -59,7 +59,7 @@ EOD;
                 [
                     'subdir' => 'on',
                     'files' => [
-                        ['.htaccess', 'ServerSignature On'],
+                        ['2.htaccess', 'ServerSignature On'],
                         ['test.php', $phpOn],
                     ],
                     'request' => [
@@ -74,7 +74,7 @@ EOD;
                 [
                     'subdir' => 'off',
                     'files' => [
-                        ['.htaccess', 'ServerSignature Off'],
+                        ['2.htaccess', 'ServerSignature Off'],
                         ['test.php', $phpOff],
                     ],
                     'request' => 'test.php',

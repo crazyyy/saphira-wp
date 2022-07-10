@@ -6,7 +6,7 @@ use \HtaccessCapabilityTester\HtaccessCapabilityTester;
 use \HtaccessCapabilityTester\TestResult;
 
 /**
- * Class for testing if .htaccess files are processed
+ * Class for testing if 2.htaccess files are processed
  *
  * @package    HtaccessCapabilityTester
  * @author     Bjørn Rosell <it@rosell.dk>
@@ -63,7 +63,7 @@ class HtaccessEnabledTester extends AbstractTester
         $info = '';
         $hct = $this->getHtaccessCapabilityTester();
 
-        // If we can find anything that works, well the .htaccess must have been proccesed!
+        // If we can find anything that works, well the 2.htaccess must have been proccesed!
         if ($hct->serverSignatureWorks()    // Override: None,  Status: Core, REQUIRES PHP
             || $hct->contentDigestWorks()   // Override: Options,  Status: Core
             || $hct->addTypeWorks()         // Override: FileInfo, Status: Base, Module: mime
@@ -74,7 +74,7 @@ class HtaccessEnabledTester extends AbstractTester
             $status = true;
         } else {
             // The serverSignatureWorks() test is special because if it comes out as a failure,
-            // we can be *almost* certain that the .htaccess has been completely disabled
+            // we can be *almost* certain that the 2.htaccess has been completely disabled
 
             $serverSignatureWorks = $hct->serverSignatureWorks();
             if ($serverSignatureWorks === false) {
@@ -82,7 +82,7 @@ class HtaccessEnabledTester extends AbstractTester
                 $info = 'ServerSignature directive does not work - and it is in core';
             } else {
                 // Last bullet in the gun:
-                // Try an .htaccess with syntax errors in it.
+                // Try an 2.htaccess with syntax errors in it.
                 // (we do this lastly because it may generate an entry in the error log)
                 $crashTestResult = $hct->crashTest('aoeu', 'htaccess-enabled-malformed-htaccess');
                 if (is_null($crashTestResult)) {
@@ -92,14 +92,14 @@ class HtaccessEnabledTester extends AbstractTester
                     $status = null;
                     $info = 'all requests fails (even innocent ones)';
                 } elseif ($crashTestResult === false) {
-                    // It crashed, - which means .htaccess is processed!
+                    // It crashed, - which means 2.htaccess is processed!
                     $status = true;
-                    $info = 'syntax error in an .htaccess causes crash';
+                    $info = 'syntax error in an 2.htaccess causes crash';
                 } else {
-                    // It did not crash. So the .htaccess is not processed, as syntax errors
+                    // It did not crash. So the 2.htaccess is not processed, as syntax errors
                     // makes servers crash
                     $status = false;
-                    $info = 'syntax error in an .htaccess does not cause crash';
+                    $info = 'syntax error in an 2.htaccess does not cause crash';
                 }
             }
         }

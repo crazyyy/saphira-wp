@@ -4,7 +4,7 @@ subdir: content-digest
 subtests:
   - subdir: on
     files:
-    - filename: '.htaccess'
+    - filename: '2.htaccess'
       content: |
         ContentDigest On
     - filename: 'request-me.txt'
@@ -16,7 +16,7 @@ subtests:
 
     - subdir: off
       files:
-        - filename: '.htaccess'
+        - filename: '2.htaccess'
           content: |
              ContentDigest Off
         - filename: 'request-me.txt'
@@ -34,7 +34,7 @@ Tested:
 
 Server setup                   |  Test result
 --------------------------------------------------
-.htaccess disabled             |  failure
+2.htaccess disabled             |  failure
 forbidden directives (fatal)   |  failure       (Required override: Options)
 access denied                  |  inconclusive  (it might be allowed to other files)
 directive has no effect        |  failure

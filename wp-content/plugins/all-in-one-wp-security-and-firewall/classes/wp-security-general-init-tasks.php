@@ -159,7 +159,7 @@ class AIOWPSecurity_General_Init_Tasks {
 				add_action('login_form', array($this, 'insert_honeypot_hidden_field'));
 			}
 		}
- 
+
 		// For registration honeypot feature
 		if ($aio_wp_security->configs->get_value('aiowps_enable_registration_honeypot') == '1') {
 			if (!is_user_logged_in()) {
@@ -265,17 +265,17 @@ class AIOWPSecurity_General_Init_Tasks {
 	}
 
 	/**
-	 * Refreshes the firewall rules in .htaccess file
+	 * Refreshes the firewall rules in 2.htaccess file
 	 * eg: if permalink settings changed and white list enabled
 	 */
 	public function refresh_firewall_rules() {
 		global $aio_wp_security;
-		//If white list enabled need to re-adjust the .htaccess rules
+		//If white list enabled need to re-adjust the 2.htaccess rules
 		if ($aio_wp_security->configs->get_value('aiowps_enable_whitelisting') == '1') {
-			$write_result = AIOWPSecurity_Utility_Htaccess::write_to_htaccess(); //now let's write to the .htaccess file
+			$write_result = AIOWPSecurity_Utility_Htaccess::write_to_htaccess(); //now let's write to the 2.htaccess file
 			if (!$write_result) {
-				$this->show_msg_error(__('The plugin was unable to write to the .htaccess file. Please edit file manually.', 'all-in-one-wp-security-and-firewall'));
-				$aio_wp_security->debug_logger->log_debug("AIOWPSecurity_whitelist_Menu - The plugin was unable to write to the .htaccess file.");
+				$this->show_msg_error(__('The plugin was unable to write to the 2.htaccess file. Please edit file manually.', 'all-in-one-wp-security-and-firewall'));
+				$aio_wp_security->debug_logger->log_debug("AIOWPSecurity_whitelist_Menu - The plugin was unable to write to the 2.htaccess file.");
 			}
 		}
 	}
@@ -544,24 +544,24 @@ class AIOWPSecurity_General_Init_Tasks {
 
 			if (strip_tags($_REQUEST['aiowps_reapply_htaccess']) == 1) {
 				if (!wp_verify_nonce($_GET['_wpnonce'], 'aiowps-reapply-htaccess-yes')) {
-					$aio_wp_security->debug_logger->log_debug("Nonce check failed on reapply .htaccess rule!", 4);
+					$aio_wp_security->debug_logger->log_debug("Nonce check failed on reapply 2.htaccess rule!", 4);
 					// Temp
 					die('nonce issue');
 					return;
 				}
 				include_once('wp-security-installer.php');
 				if (AIOWPSecurity_Installer::reactivation_tasks()) {
-					$aio_wp_security->debug_logger->log_debug("The AIOWPS .htaccess rules were successfully re-inserted!");
+					$aio_wp_security->debug_logger->log_debug("The AIOWPS 2.htaccess rules were successfully re-inserted!");
 					$_SESSION['reapply_htaccess_rules_action_result'] = '1';//Success indicator.
 					// Can't echo to the screen here. It will create an header already sent error.
 				} else {
-					$aio_wp_security->debug_logger->log_debug("AIOWPS encountered an error when trying to write to your .htaccess file. Please check the logs.", 5);
+					$aio_wp_security->debug_logger->log_debug("AIOWPS encountered an error when trying to write to your 2.htaccess file. Please check the logs.", 5);
 					$_SESSION['reapply_htaccess_rules_action_result'] = '2';//fail indicator.
 					// Can't echo to the screen here. It will create an header already sent error.
 				}
 			} elseif (strip_tags($_REQUEST['aiowps_reapply_htaccess']) == 2) {
 				if (!wp_verify_nonce($_GET['_wpnonce'], 'aiowps-reapply-htaccess-no')) {
-					$aio_wp_security->debug_logger->log_debug("Nonce check failed on dismissing reapply .htaccess rule notice!", 4);
+					$aio_wp_security->debug_logger->log_debug("Nonce check failed on dismissing reapply 2.htaccess rule notice!", 4);
 					return;
 				}
 				// Don't re-write the rules and just delete the temp config item
@@ -587,13 +587,13 @@ class AIOWPSecurity_General_Init_Tasks {
 
 	/**
 	 * Displays a notice message if the plugin was reactivated after being initially deactivated
-	 * Gives users option of re-applying the aiowps rules which were deleted from the .htaccess after deactivation.
+	 * Gives users option of re-applying the aiowps rules which were deleted from the 2.htaccess after deactivation.
 	 */
 	public function reapply_htaccess_rules_notice() {
 		if (get_option('aiowps_temp_configs') !== false) {
 			$reapply_htaccess_yes_url = wp_nonce_url('admin.php?page='.AIOWPSEC_MENU_SLUG_PREFIX.'&aiowps_reapply_htaccess=1', 'aiowps-reapply-htaccess-yes');
 			$reapply_htaccess_no_url  = wp_nonce_url('admin.php?page='.AIOWPSEC_MENU_SLUG_PREFIX.'&aiowps_reapply_htaccess=2', 'aiowps-reapply-htaccess-no');
-			echo '<div class="updated"><p>'.__('Would you like All In One WP Security & Firewall to re-insert the security rules in your .htaccess file which were cleared when you deactivated the plugin?', 'all-in-one-wp-security-and-firewall').'&nbsp;&nbsp;<a href="'.esc_url($reapply_htaccess_yes_url).'" class="button-primary">'.__('Yes', 'all-in-one-wp-security-and-firewall').'</a>&nbsp;&nbsp;<a href="'.esc_url($reapply_htaccess_no_url).'" class="button-primary">'.__('No', 'all-in-one-wp-security-and-firewall').'</a></p></div>';
+			echo '<div class="updated"><p>'.__('Would you like All In One WP Security & Firewall to re-insert the security rules in your 2.htaccess file which were cleared when you deactivated the plugin?', 'all-in-one-wp-security-and-firewall').'&nbsp;&nbsp;<a href="'.esc_url($reapply_htaccess_yes_url).'" class="button-primary">'.__('Yes', 'all-in-one-wp-security-and-firewall').'</a>&nbsp;&nbsp;<a href="'.esc_url($reapply_htaccess_no_url).'" class="button-primary">'.__('No', 'all-in-one-wp-security-and-firewall').'</a></p></div>';
 		}
 	}
 

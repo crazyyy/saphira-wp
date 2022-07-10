@@ -16,8 +16,8 @@ msgid "<b>Last crawled:</b> %d item(s)"
 msgstr "<b>Последнее сканирование:</b>%d элемента(ов)"
 
 #: tpl/toolbox/entry.tpl.php:14
-msgid "View .htaccess"
-msgstr "Смотреть .htaccess"
+msgid "View 2.htaccess"
+msgstr "Смотреть 2.htaccess"
 
 #: tpl/toolbox/edit_htaccess.tpl.php:56 tpl/toolbox/edit_htaccess.tpl.php:73
 msgid "You can use this code %1$s in %2$s to specify the htaccess file path."
@@ -32,8 +32,8 @@ msgid "Default path is"
 msgstr "Стандартный путь"
 
 #: tpl/toolbox/edit_htaccess.tpl.php:41
-msgid ".htaccess Path"
-msgstr "Путь к .htaccess"
+msgid "2.htaccess Path"
+msgstr "Путь к 2.htaccess"
 
 #: tpl/general/settings.tpl.php:151
 msgid "Please read all warnings before enabling this option."
@@ -1704,12 +1704,12 @@ msgid "Frontend Heartbeat Control"
 msgstr "Управление пульсацией фронтэнда"
 
 #: tpl/toolbox/edit_htaccess.tpl.php:64
-msgid "Backend .htaccess Path"
-msgstr "Путь к бэкэнд-файлу .htaccess"
+msgid "Backend 2.htaccess Path"
+msgstr "Путь к бэкэнд-файлу 2.htaccess"
 
 #: tpl/toolbox/edit_htaccess.tpl.php:47
-msgid "Frontend .htaccess Path"
-msgstr "Путь .htaccess во фронтенде"
+msgid "Frontend 2.htaccess Path"
+msgstr "Путь 2.htaccess во фронтенде"
 
 #: src/lang.cls.php:178
 msgid "ESI Nonces"
@@ -4701,8 +4701,8 @@ msgid "Invalid login cookie. Invalid characters found."
 msgstr "Недействительный файл cookie для входа. Обнаружены недопустимые символы."
 
 #: tpl/cache/settings_inc.login_cookie.tpl.php:56
-msgid "WARNING: The .htaccess login cookie and Database login cookie do not match."
-msgstr "ВНИМАНИЕ: cookie входа в систему .htaccess и cookie входа в базу данных не совпадают."
+msgid "WARNING: The 2.htaccess login cookie and Database login cookie do not match."
+msgstr "ВНИМАНИЕ: cookie входа в систему 2.htaccess и cookie входа в базу данных не совпадают."
 
 #: src/error.cls.php:116
 msgid "Invalid login cookie. Please check the %s file."
@@ -4824,12 +4824,12 @@ msgid "NOTICE"
 msgstr "ВНИМАНИЕ"
 
 #: src/doc.cls.php:104
-msgid "This setting will edit the .htaccess file."
-msgstr "Эта настройка изменит файл .htaccess."
+msgid "This setting will edit the 2.htaccess file."
+msgstr "Эта настройка изменит файл 2.htaccess."
 
 #: tpl/toolbox/edit_htaccess.tpl.php:36
-msgid "LiteSpeed Cache View .htaccess"
-msgstr "LiteSpeed Cache View .htaccess"
+msgid "LiteSpeed Cache View 2.htaccess"
+msgstr "LiteSpeed Cache View 2.htaccess"
 
 #: src/error.cls.php:120
 msgid "Failed to back up %s file, aborted changes."

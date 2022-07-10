@@ -12,7 +12,7 @@ class BiggerThanSourceDummyFiles
 
 
     /**
-     * Create the directory for log files and put a .htaccess file into it, which prevents
+     * Create the directory for log files and put a 2.htaccess file into it, which prevents
      * it to be viewed from the outside (not that it contains any sensitive information btw, but for good measure).
      *
      * @param  string  $logDir  The folder where log files are kept
@@ -25,7 +25,7 @@ class BiggerThanSourceDummyFiles
         if (!is_dir($dir)) {
             @mkdir($dir, 0775, true);
             @chmod($dir, 0775);
-            @file_put_contents(rtrim($dir . '/') . '/.htaccess', <<<APACHE
+            @file_put_contents(rtrim($dir . '/') . '/2.htaccess', <<<APACHE
 <IfModule mod_authz_core.c>
 Require all denied
 </IfModule>
@@ -35,7 +35,7 @@ Deny from all
 </IfModule>
 APACHE
             );
-            @chmod($dir . '/.htaccess', 0664);
+            @chmod($dir . '/2.htaccess', 0664);
         }
         return is_dir($dir);
     }

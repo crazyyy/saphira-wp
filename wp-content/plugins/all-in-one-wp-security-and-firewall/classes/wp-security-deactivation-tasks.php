@@ -18,13 +18,13 @@ class AIOWPSecurity_Deactivation {
 	public static function run_deactivation_tasks($networkwide) {
 		global $wpdb;
 		global $aio_wp_security;
-		
+
 		if (AIOWPSecurity_Utility::is_multisite_install()) {
 			delete_site_transient('users_online');
 		} else {
 			delete_transient('users_online');
 		}
-		
+
 		if (AIOWPSecurity_Utility::is_multisite_install() && $networkwide) {
 			// check if it is a network activation
 			$blogids = $wpdb->get_col("SELECT blog_id FROM $wpdb->blogs");
@@ -32,20 +32,20 @@ class AIOWPSecurity_Deactivation {
 				switch_to_blog($blog_id);
 				//Let's first save the current aio_wp_security_configs options in a temp option
 				update_option('aiowps_temp_configs', $aio_wp_security->configs->configs);
-				
+
 				AIOWPSecurity_Deactivation::clear_cron_events();
 				restore_current_blog();
 			}
 		} else {
 			//Let's first save the current aio_wp_security_configs options in a temp option
 			update_option('aiowps_temp_configs', $aio_wp_security->configs->configs);
-			
+
 			AIOWPSecurity_Deactivation::clear_cron_events();
 		}
-		//Deactivate all firewall and other .htaccess rules
+		//Deactivate all firewall and other 2.htaccess rules
 		AIOWPSecurity_Configure_Settings::turn_off_all_firewall_rules();
 	}
-	
+
 	/**
 	 * Helper function which clears aiowps cron events
 	 */

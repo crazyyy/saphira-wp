@@ -59,7 +59,7 @@ class AIOWPSecurity_List_404 extends AIOWPSecurity_List_Table {
         $is_locked = AIOWPSecurity_Utility::check_locked_ip($ip);
         $blacklisted_string = $aio_wp_security->configs->get_value('aiowps_banned_ip_addresses');
         $banned = strpos($blacklisted_string, $ip);
-        
+
         if ($banned !== false) {
             return 'blacklisted';
         } else if ($is_locked) {
@@ -184,7 +184,7 @@ class AIOWPSecurity_List_404 extends AIOWPSecurity_List_Table {
         global $wpdb, $aio_wp_security;
         $bl_ip_addresses = $aio_wp_security->configs->get_value('aiowps_banned_ip_addresses'); //get the currently saved blacklisted IPs
         $ip_list_array = AIOWPSecurity_Utility_IP::create_ip_list_array_from_string_with_newline($bl_ip_addresses);
-        
+
         if (is_array($entries)) {
             //Get the selected IP addresses
             $entries = array_filter($entries, 'is_numeric'); //discard non-numeric ID values
@@ -214,12 +214,12 @@ class AIOWPSecurity_List_404 extends AIOWPSecurity_List_Table {
             $aio_wp_security->configs->set_value('aiowps_banned_ip_addresses',$banned_ip_data);
             $aio_wp_security->configs->save_config(); //Save the configuration
 
-            $write_result = AIOWPSecurity_Utility_Htaccess::write_to_htaccess(); //now let's write to the .htaccess file
+            $write_result = AIOWPSecurity_Utility_Htaccess::write_to_htaccess(); //now let's write to the 2.htaccess file
             if ( $write_result ) {
                 AIOWPSecurity_Admin_Menu::show_msg_updated_st(__('The selected IP addresses have been added to the blacklist and will be permanently blocked!', 'WPS'));
             } else {
-                AIOWPSecurity_Admin_Menu::show_msg_error_st(__('The plugin was unable to write to the .htaccess file. Please edit file manually.','all-in-one-wp-security-and-firewall'));
-                $aio_wp_security->debug_logger->log_debug("AIOWPSecurity_Blacklist_Menu - The plugin was unable to write to the .htaccess file.");
+                AIOWPSecurity_Admin_Menu::show_msg_error_st(__('The plugin was unable to write to the 2.htaccess file. Please edit file manually.','all-in-one-wp-security-and-firewall'));
+                $aio_wp_security->debug_logger->log_debug("AIOWPSecurity_Blacklist_Menu - The plugin was unable to write to the 2.htaccess file.");
             }
         }
         else{
@@ -292,7 +292,7 @@ class AIOWPSecurity_List_404 extends AIOWPSecurity_List_Table {
 
         $orderby = !empty($orderby) ? esc_sql($orderby) : 'id';
         $order = !empty($order) ? esc_sql($order) : 'DESC';
-        
+
         $orderby = AIOWPSecurity_Utility::sanitize_value_by_array($orderby, $sortable);
         $order = AIOWPSecurity_Utility::sanitize_value_by_array($order, array('DESC' => '1', 'ASC' => '1'));
 

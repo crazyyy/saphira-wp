@@ -3,7 +3,7 @@
     </th>
     <td>
         Only redirect to converter for webp-enabled browsers?<?php echo helpIcon(
-            'If checked, a condition is added to the .htaccess, that the <i>Accept</i> header contains "image/webp"'
+            'If checked, a condition is added to the 2.htaccess, that the <i>Accept</i> header contains "image/webp"'
         ); ?>
         <input
             name="only-redirect-to-converter-for-webp-enabled-browsers"

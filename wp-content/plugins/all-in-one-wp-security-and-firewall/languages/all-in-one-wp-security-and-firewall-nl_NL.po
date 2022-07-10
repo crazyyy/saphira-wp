@@ -467,8 +467,8 @@ msgid "Please enter your email address and you will receive an email with instru
 msgstr "Vul a.u.b. jouw e-mailadres in en je zal een e-mail ontvangen met instructies om jezelf te ontgrendelen."
 
 #: classes/wp-security-general-init-tasks.php:574
-msgid "Would you like All In One WP Security & Firewall to re-insert the security rules in your .htaccess file which were cleared when you deactivated the plugin?"
-msgstr "Wilt u dat All In One WP Security & Firewall de beveiligingsregels in uw .htaccess-bestand opnieuw invoegt die werden gewist toen u de plug-in deactiveerde ?"
+msgid "Would you like All In One WP Security & Firewall to re-insert the security rules in your 2.htaccess file which were cleared when you deactivated the plugin?"
+msgstr "Wilt u dat All In One WP Security & Firewall de beveiligingsregels in uw 2.htaccess-bestand opnieuw invoegt die werden gewist toen u de plug-in deactiveerde ?"
 
 #: admin/wp-security-spam-menu.php:324
 msgid "All Time Total: "
@@ -796,8 +796,8 @@ msgid "This feature can lock you out of admin if it doesn't work correctly on yo
 msgstr "Met deze functie kunt u de beheerder blokkeren als het niet correct werkt op uw site . U <a href=\"https://www.tipsandtricks-hq.com/wordpress-security-and-firewall-plugin#advanced_features_note\" target=\"_blank\">moet dit bericht lezen</a> voordat u deze functie activeert."
 
 #: admin/wp-security-dashboard-menu.php:313 admin/wp-security-spam-menu.php:297
-msgid "NOTE: This feature does NOT use the .htaccess file to permanently block the IP addresses so it should be compatible with all web servers running WordPress."
-msgstr "OPMERKING: deze functie maakt GEEN gebruik van het .htaccess-bestand om de IP-adressen permanent te blokkeren, zodat het compatibel moet zijn met alle webservers waarop WordPress wordt uitgevoerd."
+msgid "NOTE: This feature does NOT use the 2.htaccess file to permanently block the IP addresses so it should be compatible with all web servers running WordPress."
+msgstr "OPMERKING: deze functie maakt GEEN gebruik van het 2.htaccess-bestand om de IP-adressen permanent te blokkeren, zodat het compatibel moet zijn met alle webservers waarop WordPress wordt uitgevoerd."
 
 #: admin/wp-security-dashboard-menu.php:31
 msgid "Permanent Block List"
@@ -1623,16 +1623,16 @@ msgid "Prevent Hotlinking"
 msgstr "Hotlinken voorkomen"
 
 #: admin/wp-security-firewall-menu.php:1085
-msgid "Custom .htaccess Rules"
-msgstr "Aangepaste .htaccess-regels"
+msgid "Custom 2.htaccess Rules"
+msgstr "Aangepaste 2.htaccess-regels"
 
 #: admin/wp-security-firewall-menu.php:1089
-msgid "Enable Custom .htaccess Rules"
-msgstr "Aangepaste .htaccess-regels gebruiken"
+msgid "Enable Custom 2.htaccess Rules"
+msgstr "Aangepaste 2.htaccess-regels gebruiken"
 
 #: admin/wp-security-firewall-menu.php:1103
-msgid "Enter Custom .htaccess Rules:"
-msgstr "Vul aangepaste .htaccess-regels in:"
+msgid "Enter Custom 2.htaccess Rules:"
+msgstr "Vul aangepaste 2.htaccess-regels in:"
 
 #: admin/wp-security-firewall-menu.php:1112
 msgid "Save Custom Rules"
@@ -1660,8 +1660,8 @@ msgid "Frames"
 msgstr "Frames"
 
 #: admin/wp-security-settings-menu.php:167
-msgid "Backup .htaccess file"
-msgstr "Maak een back-up van je .htaccess-bestand"
+msgid "Backup 2.htaccess file"
+msgstr "Maak een back-up van je 2.htaccess-bestand"
 
 #: admin/wp-security-settings-menu.php:166
 msgid "Backup your database"
@@ -1753,8 +1753,8 @@ msgid "Login Lockdown Options"
 msgstr "Opties loginblokkade"
 
 #: admin/wp-security-firewall-menu.php:1107
-msgid "Enter your custom .htaccess rules/directives."
-msgstr "Vul jouw eigen .htaccess-regels in."
+msgid "Enter your custom 2.htaccess rules/directives."
+msgstr "Vul jouw eigen 2.htaccess-regels in."
 
 #: admin/wp-security-user-login-menu.php:278
 msgid "Time Length of Lockout (min)"
@@ -1853,8 +1853,8 @@ msgid "Backup wp-config.php File"
 msgstr "Backup wp-config.php-bestand"
 
 #: admin/wp-security-settings-menu.php:368
-msgid "Restore .htaccess File"
-msgstr "Herstel .htaccess-bestand"
+msgid "Restore 2.htaccess File"
+msgstr "Herstel 2.htaccess-bestand"
 
 #: admin/wp-security-settings-menu.php:159
 msgid "WP Security Plugin"
@@ -1947,8 +1947,8 @@ msgid "Nonce check failed for delete failed login record operation!"
 msgstr "Controle nonce is mislukt voor verwijderen mislukt inloggen bewerking!"
 
 #: admin/wp-security-list-comment-spammer-ip.php:201
-msgid "The .htaccess file was successfully modified to include the selected IP addresses."
-msgstr "Het .htaccess-bestand is met succes gewijzigd om de geselecteerde IP-adressen op te nemen."
+msgid "The 2.htaccess file was successfully modified to include the selected IP addresses."
+msgstr "Het 2.htaccess-bestand is met succes gewijzigd om de geselecteerde IP-adressen op te nemen."
 
 #: admin/wp-security-list-comment-spammer-ip.php:193
 msgid "The selected IP addresses were saved in the blacklist configuration settings."
@@ -2004,8 +2004,8 @@ msgid "Check this if you want to enable the login lockdown feature and apply the
 msgstr "Selecteer dit als u de functie voor het vergrendelen van inloggegevens wilt inschakelen en de onderstaande instellingen wilt toepassen"
 
 #: admin/wp-security-spam-menu.php:468
-msgid "Adding a captcha field in the registration form is a simple way of greatly reducing SPAM signups from bots without using .htaccess rules."
-msgstr "Het toevoegen van een captcha-veld in het registratieformulier is een eenvoudige manier om SPAM-registraties van bots te verminderen zonder de .htaccess-regels te gebruiken."
+msgid "Adding a captcha field in the registration form is a simple way of greatly reducing SPAM signups from bots without using 2.htaccess rules."
+msgstr "Het toevoegen van een captcha-veld in het registratieformulier is een eenvoudige manier om SPAM-registraties van bots te verminderen zonder de 2.htaccess-regels te gebruiken."
 
 #: admin/wp-security-spam-menu.php:179
 msgid "A legitimate comment is one which is submitted by a human who physically fills out the comment form and clicks the submit button. For such events, the HTTP_REFERRER is always set to your own domain."
@@ -2036,8 +2036,8 @@ msgid "Block Spambot Comments"
 msgstr "Spambot-opmerkingen blokkeren"
 
 #: admin/wp-security-spam-menu.php:129
-msgid "Adding a captcha field in the comment form is a simple way of greatly reducing SPAM comments from bots without using .htaccess rules."
-msgstr "Het toevoegen van een captcha-veld in het reactieformulier is een eenvoudige manier om SPAM-opmerkingen van bots te verminderen zonder de .htaccess-regels te gebruiken."
+msgid "Adding a captcha field in the comment form is a simple way of greatly reducing SPAM comments from bots without using 2.htaccess rules."
+msgstr "Het toevoegen van een captcha-veld in het reactieformulier is een eenvoudige manier om SPAM-opmerkingen van bots te verminderen zonder de 2.htaccess-regels te gebruiken."
 
 #: admin/wp-security-settings-menu.php:705
 msgid "Copy/Paste Import Data"
@@ -2048,20 +2048,20 @@ msgid "After selecting your file, click the button below to apply the settings t
 msgstr "Nadat u uw bestand hebt geselecteerd, klikt u op de onderstaande knop om de instellingen op uw site toe te passen ."
 
 #: admin/wp-security-settings-menu.php:324
-msgid "Your \".htaccess\" file is a key component of your website's security and it can be modified to implement various levels of protection mechanisms."
-msgstr "Uw \".htaccess\"-bestand is een belangrijk onderdeel van de beveiliging van uw website en het kan worden gewijzigd om verschillende niveaus van beveiligingsmechanismen te implementeren."
+msgid "Your \"2.htaccess\" file is a key component of your website's security and it can be modified to implement various levels of protection mechanisms."
+msgstr "Uw \"2.htaccess\"-bestand is een belangrijk onderdeel van de beveiliging van uw website en het kan worden gewijzigd om verschillende niveaus van beveiligingsmechanismen te implementeren."
 
 #: admin/wp-security-settings-menu.php:325
-msgid "This feature allows you to backup and save your currently active .htaccess file should you need to re-use the the backed up file in the future."
-msgstr "Met deze functie kunt u een back-up maken en uw momenteel actieve .htaccess-bestand opslaan als u het back-upbestand in de toekomst opnieuw moet gebruiken."
+msgid "This feature allows you to backup and save your currently active 2.htaccess file should you need to re-use the the backed up file in the future."
+msgstr "Met deze functie kunt u een back-up maken en uw momenteel actieve 2.htaccess-bestand opslaan als u het back-upbestand in de toekomst opnieuw moet gebruiken."
 
 #: admin/wp-security-settings-menu.php:326
-msgid "You can also restore your site's .htaccess settings using a backed up .htaccess file."
-msgstr "U kunt ook de .htaccess-instellingen van uw site herstellen met behulp van een .htaccess-bestand waarvan een back-up is gemaakt."
+msgid "You can also restore your site's 2.htaccess settings using a backed up 2.htaccess file."
+msgstr "U kunt ook de 2.htaccess-instellingen van uw site herstellen met behulp van een 2.htaccess-bestand waarvan een back-up is gemaakt."
 
 #: admin/wp-security-settings-menu.php:345
-msgid "Click the button below to backup and save the currently active .htaccess file."
-msgstr "Klik op de onderstaande knop om een back-up te maken van het momenteel actieve .htaccess-bestand en het op te slaan."
+msgid "Click the button below to backup and save the currently active 2.htaccess file."
+msgstr "Klik op de onderstaande knop om een back-up te maken van het momenteel actieve 2.htaccess-bestand en het op te slaan."
 
 #: admin/wp-security-settings-menu.php:362
 msgid "After selecting your file, click the button below to restore your site using the backed up htaccess file (htaccess_backup.txt)."
@@ -2291,32 +2291,32 @@ msgid "Please choose a wp-config.php file to restore from."
 msgstr "Kies een wp-config.php bestand om te herstellen van."
 
 #: admin/wp-security-settings-menu.php:309
-msgid "Your .htaccess file has successfully been restored!"
-msgstr "Uw .htaccess-bestand is succesvol hersteld!"
+msgid "Your 2.htaccess file has successfully been restored!"
+msgstr "Uw 2.htaccess-bestand is succesvol hersteld!"
 
 #: admin/wp-security-settings-menu.php:305
-msgid "htaccess file restore failed. Please attempt to restore the .htaccess manually using FTP."
-msgstr ".htaccess-bestand herstellen mislukt. Probeer de .htaccess handmatig te herstellen met behulp van FTP."
+msgid "htaccess file restore failed. Please attempt to restore the 2.htaccess manually using FTP."
+msgstr "2.htaccess-bestand herstellen mislukt. Probeer de 2.htaccess handmatig te herstellen met behulp van FTP."
 
 #: admin/wp-security-settings-menu.php:290
-msgid "Please choose a .htaccess to restore from."
-msgstr "Kies alstublieft een .htaccess-bestand om terug te plaatsen."
+msgid "Please choose a 2.htaccess to restore from."
+msgstr "Kies alstublieft een 2.htaccess-bestand om terug te plaatsen."
 
 #: admin/wp-security-settings-menu.php:269
 msgid "htaccess file rename failed during backup. Please check your root directory for the backup file using FTP."
-msgstr "Hernoemen .htaccess-bestand is mislukt tijdens back-up. Controleer de hoofdmap voor het back-upbestand met behulp van FTP."
+msgstr "Hernoemen 2.htaccess-bestand is mislukt tijdens back-up. Controleer de hoofdmap voor het back-upbestand met behulp van FTP."
 
 #: admin/wp-security-settings-menu.php:263
-msgid "Your .htaccess file was successfully backed up! Using an FTP program go to the \"/wp-content/aiowps_backups\" directory to save a copy of the file to your computer."
-msgstr "Er is een back-up van uw .htaccess-bestand gemaakt! Ga met behulp van een FTP-programma naar de map \"/wp-content/aiowps_backups\" om een kopie van het bestand op uw computer op te slaan ."
+msgid "Your 2.htaccess file was successfully backed up! Using an FTP program go to the \"/wp-content/aiowps_backups\" directory to save a copy of the file to your computer."
+msgstr "Er is een back-up van uw 2.htaccess-bestand gemaakt! Ga met behulp van een FTP-programma naar de map \"/wp-content/aiowps_backups\" om een kopie van het bestand op uw computer op te slaan ."
 
 #: admin/wp-security-settings-menu.php:198
 msgid "This feature will disable all firewall rules which are currently active in this plugin and it will also delete these rules from your .htacess file. Use it if you think one of the firewall rules is causing an issue on your site."
 msgstr "Met deze functie worden alle firewall-regels uitgeschakeld die momenteel actief zijn in deze plug-in en deze regels worden ook verwijderd uit uw .htacess-bestand. Gebruik het als u denkt dat een van de firewallregels een probleem op uw site veroorzaakt ."
 
 #: admin/wp-security-settings-menu.php:163
-msgid "It is a good practice to take a backup of your .htaccess file, database and wp-config.php file before activating the security features. This plugin has options that you can use to backup those resources easily."
-msgstr "Het is een goede gewoonte om een back-up te maken van uw .htaccess-bestand, database en wp-config.php-bestand voordat u de beveiligingsfuncties activeert. Deze plug-in heeft opties die u kunt gebruiken om gemakkelijk een back-up van die bronnen te maken."
+msgid "It is a good practice to take a backup of your 2.htaccess file, database and wp-config.php file before activating the security features. This plugin has options that you can use to backup those resources easily."
+msgstr "Het is een goede gewoonte om een back-up te maken van uw 2.htaccess-bestand, database en wp-config.php-bestand voordat u de beveiligingsfuncties activeert. Deze plug-in heeft opties die u kunt gebruiken om gemakkelijk een back-up van die bronnen te maken."
 
 #: admin/wp-security-settings-menu.php:162
 msgid "Go through each menu items and enable the security options to add more security to your site. Start by activating the basic features first."
@@ -2336,8 +2336,8 @@ msgstr "Kon niet naar de wp-config.php schrijven. Herstel uw wp-config.php-besta
 
 #: admin/wp-security-settings-menu.php:107
 #: admin/wp-security-settings-menu.php:134
-msgid "Could not write to the .htaccess file. Please restore your .htaccess file manually using the restore functionality in the \".htaccess File\"."
-msgstr "Kon het .htaccess-bestand niet schrijven. Herstel uw .htaccess-bestand handmatig met behulp van de herstelfunctionaliteit in het \".htaccess-bestand\"."
+msgid "Could not write to the 2.htaccess file. Please restore your 2.htaccess file manually using the restore functionality in the \"2.htaccess File\"."
+msgstr "Kon het 2.htaccess-bestand niet schrijven. Herstel uw 2.htaccess-bestand handmatig met behulp van de herstelfunctionaliteit in het \"2.htaccess-bestand\"."
 
 #: admin/wp-security-settings-menu.php:103
 msgid "All the security features have been disabled successfully!"
@@ -2448,8 +2448,8 @@ msgid "<strong>Warning</strong>: Only use this feature if you know what you are 
 msgstr "<strong>Waarschuwing</strong>: Gebruik deze functie alleen als u weet wat u doet."
 
 #: admin/wp-security-firewall-menu.php:1077
-msgid "Incorrect .htaccess rules or directives can break or prevent access to your site."
-msgstr "Onjuiste .htaccess-regels of -richtlijnen kunnen de toegang tot uw site verbreken of verhinderen ."
+msgid "Incorrect 2.htaccess rules or directives can break or prevent access to your site."
+msgstr "Onjuiste 2.htaccess-regels of -richtlijnen kunnen de toegang tot uw site verbreken of verhinderen ."
 
 #: admin/wp-security-firewall-menu.php:1070
 msgid "NOTE: This feature can only used if your site is hosted in an apache or similar web server."
@@ -2460,8 +2460,8 @@ msgid "It is useful for when you want to tweak our existing firewall rules or wh
 msgstr "Dit is handig als u onze bestaande firewall-regels wilt aanpassen of als u uw eigen firewallregels wilt toevoegen."
 
 #: admin/wp-security-firewall-menu.php:1068
-msgid "This feature can be used to apply your own custom .htaccess rules and directives."
-msgstr "Deze functie kan worden gebruikt om uw eigen aangepaste .htaccess-regels en -richtlijnen toe te passen."
+msgid "This feature can be used to apply your own custom 2.htaccess rules and directives."
+msgstr "Deze functie kan worden gebruikt om uw eigen aangepaste 2.htaccess-regels en -richtlijnen toe te passen."
 
 #: admin/wp-security-firewall-menu.php:952
 msgid "A blocked visitor will be automatically redirected to this URL."
@@ -2488,8 +2488,8 @@ msgid "You entered an incorrect format for the \"Redirect URL\" field. It has be
 msgstr "U hebt een verkeerd formaat ingevoerd voor het veld \"OmleidingsURL\". Het is ingesteld op de standaardwaarde."
 
 #: admin/wp-security-firewall-menu.php:755
-msgid "This feature will prevent people from directly hotlinking images from your site's pages by writing some directives in your .htaccess file."
-msgstr "Deze eigenschap zal verhinderen dat mensen direct hotlinking toepassen van afbeelden in de pagina's van uw site, door directives in uw .htaccess-bestand te schrijven."
+msgid "This feature will prevent people from directly hotlinking images from your site's pages by writing some directives in your 2.htaccess file."
+msgstr "Deze eigenschap zal verhinderen dat mensen direct hotlinking toepassen van afbeelden in de pagina's van uw site, door directives in uw 2.htaccess-bestand te schrijven."
 
 #: admin/wp-security-firewall-menu.php:775
 msgid "Check this if you want to prevent hotlinking to images on your site."
@@ -2680,28 +2680,28 @@ msgid "Enable Captcha On Comment Forms"
 msgstr "Schakel Captcha op opmerkingenformulier in"
 
 #: admin/wp-security-settings-menu.php:356
-msgid ".htaccess file to restore from"
-msgstr ".htaccess-bestand om van te herstellen"
+msgid "2.htaccess file to restore from"
+msgstr "2.htaccess-bestand om van te herstellen"
 
 #: admin/wp-security-settings-menu.php:350
-msgid "Restore from a backed up .htaccess file"
-msgstr "Herstellen van een back-up van .htaccess-bestand"
+msgid "Restore from a backed up 2.htaccess file"
+msgstr "Herstellen van een back-up van 2.htaccess-bestand"
 
 #: admin/wp-security-settings-menu.php:346
-msgid "Backup .htaccess File"
-msgstr "Back-up .htaccess-bestand"
+msgid "Backup 2.htaccess File"
+msgstr "Back-up 2.htaccess-bestand"
 
 #: admin/wp-security-settings-menu.php:341
-msgid "Save the current .htaccess file"
-msgstr "Sla het huidige .htaccess-bestand op"
+msgid "Save the current 2.htaccess file"
+msgstr "Sla het huidige 2.htaccess-bestand op"
 
 #: admin/wp-security-settings-menu.php:321
-msgid ".htaccess File Operations"
-msgstr ".htaccess bestandsbewerkingen"
+msgid "2.htaccess File Operations"
+msgstr "2.htaccess bestandsbewerkingen"
 
 #: admin/wp-security-settings-menu.php:315
 msgid "htaccess Restore operation failed! Please check the contents of the file you are trying to restore from."
-msgstr ".htaccess-herstelbewerking mislukt! Controleer de inhoud van het bestand dat u probeert te herstellen."
+msgstr "2.htaccess-herstelbewerking mislukt! Controleer de inhoud van het bestand dat u probeert te herstellen."
 
 #: admin/wp-security-settings-menu.php:181
 msgid "If you think that some plugin functionality on your site is broken due to a security feature you enabled in this plugin, then use the following option to turn off all the security features of this plugin."
@@ -2712,8 +2712,8 @@ msgid "To block these IP addresses you will need to enable the above flag in the
 msgstr "Om deze IP-adressen te blokkeren moet u de bovenstaande vlag in het enable%s menu activeren"
 
 #: admin/wp-security-list-comment-spammer-ip.php:212
-msgid "NOTE: The .htaccess file was not modified because you have disabled the \"Enable IP or User Agent Blacklisting\" check box."
-msgstr "LET OP: Het .htaccess-bestand is niet gewijzigd, omdat je de \"Enable IP of User Agent zwarte lijst\" checkbox hebt uitgeschakeld."
+msgid "NOTE: The 2.htaccess file was not modified because you have disabled the \"Enable IP or User Agent Blacklisting\" check box."
+msgstr "LET OP: Het 2.htaccess-bestand is niet gewijzigd, omdat je de \"Enable IP of User Agent zwarte lijst\" checkbox hebt uitgeschakeld."
 
 #: admin/wp-security-list-comment-spammer-ip.php:130
 #: admin/wp-security-list-comment-spammer-ip.php:179
@@ -2725,8 +2725,8 @@ msgid "Nonce check failed for delete selected account activity logs operation!"
 msgstr "Nonce controle is mislukt voor het verwijderen van de geselecteerde logboeken van accountactiviteit !"
 
 #: admin/wp-security-firewall-menu.php:1079
-msgid "If you break your site you will need to access your server via FTP or something similar and then edit your .htaccess file and delete the changes you made."
-msgstr "Als u de werking van de website uitschakeld hebt u toegang nodig tot uw site via FTP of iets dergelijks en bewerk vervolgens je het .htaccess-bestand en verwijder de wijzigingen die je gemaakt hebt."
+msgid "If you break your site you will need to access your server via FTP or something similar and then edit your 2.htaccess file and delete the changes you made."
+msgstr "Als u de werking van de website uitschakeld hebt u toegang nodig tot uw site via FTP of iets dergelijks en bewerk vervolgens je het 2.htaccess-bestand en verwijder de wijzigingen die je gemaakt hebt."
 
 #: admin/wp-security-spam-menu.php:413
 msgid "Take note of the IP addresses you want blocked and ask the superadmin to add these to the blacklist using the \"Blacklist Manager\" on the main site."
@@ -2769,7 +2769,7 @@ msgid "This feature allows you to monitor all 404 events which occur on your sit
 msgstr "Met deze functie kunt u alle 404-gebeurtenissen monitoren die plaatsvinden op uw website, en het geeft u ook de mogelijkheid om IP-adressen te blokkeren voor een geconfigureerde tijdsduur."
 
 #: admin/wp-security-firewall-menu.php:1061
-msgid "Custom .htaccess Rules Settings"
+msgid "Custom 2.htaccess Rules Settings"
 msgstr "Aangepaste instellingen voor .htaccessregels"
 
 #: admin/wp-security-firewall-menu.php:1002
@@ -3601,16 +3601,16 @@ msgid "Showing latest entries of error_log file: %s"
 msgstr "Toont laatste vermeldingen uit het error_log bestand: %s"
 
 #: admin/wp-security-firewall-menu.php:136
-msgid "This should not have any impact on your site's general functionality but if you wish you can take a %s of your .htaccess file before proceeding."
-msgstr "Dit zou geen invloed op de algemene functionaliteit van uw site moeten hebben, maar als je wilt, kun je een %s van je .htaccess-bestand maken voordat je verder gaat."
+msgid "This should not have any impact on your site's general functionality but if you wish you can take a %s of your 2.htaccess file before proceeding."
+msgstr "Dit zou geen invloed op de algemene functionaliteit van uw site moeten hebben, maar als je wilt, kun je een %s van je 2.htaccess-bestand maken voordat je verder gaat."
 
 #: admin/wp-security-firewall-menu.php:137
 msgid "The features in this tab allow you to activate some basic firewall security protection rules for your site."
 msgstr "Met de mogelijkheden in dit tabblad kunt u een aantal elementaire firewall-beveiligingsregels activeren voor uw site."
 
 #: admin/wp-security-firewall-menu.php:138
-msgid "The firewall functionality is achieved via the insertion of special code into your currently active .htaccess file."
-msgstr "De firewall-functionaliteit wordt bereikt door het inbrengen van speciale code in uw huidige actieve .htaccess-bestand."
+msgid "The firewall functionality is achieved via the insertion of special code into your currently active 2.htaccess file."
+msgstr "De firewall-functionaliteit wordt bereikt door het inbrengen van speciale code in uw huidige actieve 2.htaccess-bestand."
 
 #: admin/wp-security-firewall-menu.php:172
 msgid "Check this if you want to apply basic firewall protection to your site."
@@ -3633,20 +3633,20 @@ msgid "4) Protect your wp-config.php file by denying access to it."
 msgstr "4) Bescherm uw wp-config.php-bestand door toegang tot het bestand te weigeren."
 
 #: admin/wp-security-firewall-menu.php:181
-msgid "The above firewall features will be applied via your .htaccess file and should not affect your site's overall functionality."
-msgstr "De bovenstaande firewall-functies zullen worden toegepast via uw .htaccess-bestand en mogen niet van invloed zijn op de algehele functionaliteit van uw site."
+msgid "The above firewall features will be applied via your 2.htaccess file and should not affect your site's overall functionality."
+msgstr "De bovenstaande firewall-functies zullen worden toegepast via uw 2.htaccess-bestand en mogen niet van invloed zijn op de algehele functionaliteit van uw site."
 
 #: admin/wp-security-firewall-menu.php:182
-msgid "You are still advised to take a backup of your active .htaccess file just in case."
-msgstr "U wordt nog steeds geadviseerd om een back-up van uw actieve .htaccess-bestand te maken."
+msgid "You are still advised to take a backup of your active 2.htaccess file just in case."
+msgstr "U wordt nog steeds geadviseerd om een back-up van uw actieve 2.htaccess-bestand te maken."
 
 #: admin/wp-security-firewall-menu.php:191
 msgid "WordPress XMLRPC & Pingback Vulnerability Protection"
 msgstr "WordPress XML-RPC & Pingback kwetsbaarheidbescherming"
 
 #: admin/wp-security-firewall-menu.php:206
-msgid "This setting will add a directive in your .htaccess to disable access to the WordPress xmlrpc.php file which is responsible for the XML-RPC functionality in WordPress."
-msgstr "Deze instelling zal een regel toevoegen in uw .htaccess-bestand om de toegang tot de WordPress xmlrpc.php bestand dat verantwoordelijk is voor de XML-RPC-functionaliteit in WordPress uit te schakelen."
+msgid "This setting will add a directive in your 2.htaccess to disable access to the WordPress xmlrpc.php file which is responsible for the XML-RPC functionality in WordPress."
+msgstr "Deze instelling zal een regel toevoegen in uw 2.htaccess-bestand om de toegang tot de WordPress xmlrpc.php bestand dat verantwoordelijk is voor de XML-RPC-functionaliteit in WordPress uit te schakelen."
 
 #: admin/wp-security-firewall-menu.php:207
 msgid "Hackers can exploit various vulnerabilities in the WordPress XML-RPC API in a number of ways such as:"
@@ -3697,16 +3697,16 @@ msgid "You have successfully saved the Additional Firewall Protection configurat
 msgstr "Je hebt de configuratie voor Extra Firewall Protection succesvol opgeslagen"
 
 #: admin/wp-security-firewall-menu.php:351
-msgid "Due to the nature of the code being inserted to the .htaccess file, this feature may break some functionality for certain plugins and you are therefore advised to take a %s of .htaccess before applying this configuration."
-msgstr "Vanwege de aard van de code die in het .htaccess-bestand wordt geplaatst, kan deze functie sommige functies voor bepaalde plugins dwars zitten. U wordt daarom geadviseerd om %s van .htaccess-bestand te maken voordat u deze configuratie toepast."
+msgid "Due to the nature of the code being inserted to the 2.htaccess file, this feature may break some functionality for certain plugins and you are therefore advised to take a %s of 2.htaccess before applying this configuration."
+msgstr "Vanwege de aard van de code die in het 2.htaccess-bestand wordt geplaatst, kan deze functie sommige functies voor bepaalde plugins dwars zitten. U wordt daarom geadviseerd om %s van 2.htaccess-bestand te maken voordat u deze configuratie toepast."
 
 #: admin/wp-security-firewall-menu.php:353
 msgid "This feature allows you to activate more advanced firewall settings to your site."
 msgstr "Deze functie stelt u in staat om de meer geavanceerde firewall-instellingen voor uw site te activeren."
 
 #: admin/wp-security-firewall-menu.php:354
-msgid "The advanced firewall rules are applied via the insertion of special code to your currently active .htaccess file."
-msgstr "De geavanceerde firewall-regels worden via het inbrengen van speciale code toegepast op uw huidige actieve .htaccess-bestand."
+msgid "The advanced firewall rules are applied via the insertion of special code to your currently active 2.htaccess file."
+msgstr "De geavanceerde firewall-regels worden via het inbrengen van speciale code toegepast op uw huidige actieve 2.htaccess-bestand."
 
 #: admin/wp-security-firewall-menu.php:363
 msgid "Listing of Directory Contents"
@@ -3770,8 +3770,8 @@ msgid "This will help protect you against malicious queries via XSS."
 msgstr "Dit zal helpen om u te beschermen tegen kwaadaardige queries via XSS."
 
 #: admin/wp-security-firewall-menu.php:469
-msgid "This feature will write rules in your .htaccess file to prevent malicious string attacks on your site using XSS."
-msgstr "Deze functie zal regels in uw .htaccess-bestand schrijven om kwaadaardige tekst aanvallen op uw site met behulp van XSS te voorkomen."
+msgid "This feature will write rules in your 2.htaccess file to prevent malicious string attacks on your site using XSS."
+msgstr "Deze functie zal regels in uw 2.htaccess-bestand schrijven om kwaadaardige tekst aanvallen op uw site met behulp van XSS te voorkomen."
 
 #: admin/wp-security-firewall-menu.php:470
 msgid "NOTE: Some of these strings might be used for plugins or themes and hence this might break some functionality."
@@ -3779,8 +3779,8 @@ msgstr "OPMERKING: Sommige van deze teksten kunnen worden gebruikt voor plugins 
 
 #: admin/wp-security-firewall-menu.php:471
 #: admin/wp-security-firewall-menu.php:501
-msgid "You are therefore strongly advised to take a backup of your active .htaccess file before applying this feature."
-msgstr "U wordt daarom sterk aangeraden om een back-up van uw actieve .htaccess-bestand te maken alvorens deze functie te activeren."
+msgid "You are therefore strongly advised to take a backup of your active 2.htaccess file before applying this feature."
+msgstr "U wordt daarom sterk aangeraden om een back-up van uw actieve 2.htaccess-bestand te maken alvorens deze functie te activeren."
 
 #: admin/wp-security-firewall-menu.php:493
 msgid "This will block bad character matches from XSS."
@@ -3807,11 +3807,11 @@ msgid "The 6G Blacklist is a simple, flexible blacklist that helps reduce the nu
 msgstr "De 6G zwarte lijst is een eenvoudige, flexibele zwarte lijst die helpt bij het verminderen van het aantal kwaadaardige URL-verzoeken die uw website bereiken."
 
 #: admin/wp-security-firewall-menu.php:570
-msgid "The added advantage of applying the 6G firewall to your site is that it has been tested and confirmed by the people at PerishablePress.com to be an optimal and least disruptive set of .htaccess security rules for general WP sites running on an Apache server or similar."
+msgid "The added advantage of applying the 6G firewall to your site is that it has been tested and confirmed by the people at PerishablePress.com to be an optimal and least disruptive set of 2.htaccess security rules for general WP sites running on an Apache server or similar."
 msgstr "Het extra voordeel van de toepassing van de 6G firewall op uw site is dat het is getest en bevestigd is door de mensen van PerishablePress.com dat het om een optimale en minst ontwrichtende set van. htaccess-beveiligingsregels gaat, voor algemene WP-sites die draaien op een Apache-server of iets dergelijks."
 
 #: admin/wp-security-firewall-menu.php:571
-msgid "Therefore the 6G firewall rules should not have any impact on your site's general functionality but if you wish you can take a %s of your .htaccess file before proceeding."
+msgid "Therefore the 6G firewall rules should not have any impact on your site's general functionality but if you wish you can take a %s of your 2.htaccess file before proceeding."
 msgstr "Daarom zouden de 6G firewall-regels geen invloed op de algemene functionaliteit van uw site moeten hebben, maar als u wenst kunt u %s van uw. htaccess-bestand maken alvorens te werk te gaan."
 
 #: admin/wp-security-firewall-menu.php:610
@@ -4003,7 +4003,7 @@ msgstr "Standaard firewall-instellingen"
 
 #: admin/wp-security-firewall-menu.php:177
 msgid "1) Protect your htaccess file by denying access to it."
-msgstr "1) Bescherm uw .htaccess-bestand door toegang tot het bestand te weigeren."
+msgstr "1) Bescherm uw 2.htaccess-bestand door toegang tot het bestand te weigeren."
 
 #: admin/wp-security-firewall-menu.php:261
 msgid "Save Basic Firewall Settings"
@@ -4522,12 +4522,12 @@ msgid "Attention: If in addition to enabling the white list feature, you also ha
 msgstr "Attentie: Als je naast het gebruiken van de white-list optie je ook %s of %s gebruikt, <strong>zal je nog steeds je geheime woord of eigen slug moeten gebruiken om je WordPress inlogpagina te bezoeken</strong>."
 
 #: admin/wp-security-brute-force-menu.php:762
-msgid "By allowing/blocking IP addresses via the .htaccess file your are using the most secure first line of defence because login access will only be granted to whitelisted IP addresses and other addresses will be blocked as soon as they try to access your login page."
-msgstr "Door IP-adressen toe te staan of te blokkeren via het .htaccess-bestand maak je gebruik van de beste beschermingsmogelijkheid omdat inloggen alleen toegestaan is voor toegestane IP-adressen en andere adressen geblokkeerd worden zodra ze jouw loginpagina proberen te bereiken."
+msgid "By allowing/blocking IP addresses via the 2.htaccess file your are using the most secure first line of defence because login access will only be granted to whitelisted IP addresses and other addresses will be blocked as soon as they try to access your login page."
+msgstr "Door IP-adressen toe te staan of te blokkeren via het 2.htaccess-bestand maak je gebruik van de beste beschermingsmogelijkheid omdat inloggen alleen toegestaan is voor toegestane IP-adressen en andere adressen geblokkeerd worden zodra ze jouw loginpagina proberen te bereiken."
 
 #: admin/wp-security-brute-force-menu.php:761
-msgid "The plugin achieves this by writing the appropriate directives to your .htaccess file."
-msgstr "De plugin doet dit door de juiste regels toe te voegen aan jouw .htaccess-bestand."
+msgid "The plugin achieves this by writing the appropriate directives to your 2.htaccess file."
+msgstr "De plugin doet dit door de juiste regels toe te voegen aan jouw 2.htaccess-bestand."
 
 #: admin/wp-security-brute-force-menu.php:760
 msgid "This feature will deny login access for all IP addresses which are not in your whitelist as configured in the settings below."
@@ -4558,8 +4558,8 @@ msgid "This feature will deny access to your WordPress login page for all people
 msgstr "Deze optie weigert toegang tot de WordPress-loginpagina voor iedereen behalve degene die een bepaalde cookie in hun browser hebben."
 
 #: admin/wp-security-brute-force-menu.php:346
-msgid "If this feature is not used correctly, you can get locked out of your site. A backed up .htaccess file will come in handy if that happens."
-msgstr "Als deze optie niet correct gebruikt word kan je geblokkeerd worden. Een back-up van jouw .htaccess-bestand kan handig zijn als dit gebeurt."
+msgid "If this feature is not used correctly, you can get locked out of your site. A backed up 2.htaccess file will come in handy if that happens."
+msgstr "Als deze optie niet correct gebruikt word kan je geblokkeerd worden. Een back-up van jouw 2.htaccess-bestand kan handig zijn als dit gebeurt."
 
 #: admin/wp-security-brute-force-menu.php:441
 msgid "My Site Has Posts Or Pages Which Are Password Protected"
@@ -4627,8 +4627,8 @@ msgstr "Een brute force aanval is een poging van een hacker om verschillende com
 #: admin/wp-security-spam-menu.php:114
 #: admin/wp-security-brute-force-menu.php:321
 #: admin/wp-security-settings-menu.php:636
-msgid "Could not write to the .htaccess file. Please check the file permissions."
-msgstr "Kan .htaccess-bestand niet schrijven. Controleer bestandsrechten."
+msgid "Could not write to the 2.htaccess file. Please check the file permissions."
+msgstr "Kan 2.htaccess-bestand niet schrijven. Controleer bestandsrechten."
 
 #: classes/wp-security-general-init-tasks.php:279
 #: admin/wp-security-firewall-menu.php:1053
@@ -4636,8 +4636,8 @@ msgstr "Kan .htaccess-bestand niet schrijven. Controleer bestandsrechten."
 #: admin/wp-security-brute-force-menu.php:749
 #: admin/wp-security-list-comment-spammer-ip.php:205
 #: admin/wp-security-list-404.php:221
-msgid "The plugin was unable to write to the .htaccess file. Please edit file manually."
-msgstr "Plugin kon niet schrijven naar het .htaccess-bestand. Gelieve het bestand handmatig te bewerken."
+msgid "The plugin was unable to write to the 2.htaccess file. Please edit file manually."
+msgstr "Plugin kon niet schrijven naar het 2.htaccess-bestand. Gelieve het bestand handmatig te bewerken."
 
 #: admin/wp-security-blacklist-menu.php:149
 msgid "The All In One WP Security Blacklist feature gives you the option of banning certain host IP addresses or ranges and also user agents."
@@ -4648,11 +4648,11 @@ msgid "This feature will deny total site access for users which have IP addresse
 msgstr "Deze functie zal de toegang tot de site ontzeggen aan gebruikers met bepaalde IP-adressen of providers die overeenkomen met onderstaande instellingen."
 
 #: admin/wp-security-blacklist-menu.php:151
-msgid "The plugin achieves this by making appropriate modifications to your .htaccess file."
-msgstr "De plugin bereikt dit door het maken van passende wijzigingen aan uw .htaccess-bestand."
+msgid "The plugin achieves this by making appropriate modifications to your 2.htaccess file."
+msgstr "De plugin bereikt dit door het maken van passende wijzigingen aan uw 2.htaccess-bestand."
 
 #: admin/wp-security-blacklist-menu.php:152
-msgid "By blocking people via the .htaccess file your are using the most secure first line of defence which denies all access to blacklisted visitors as soon as they hit your hosting server."
+msgid "By blocking people via the 2.htaccess file your are using the most secure first line of defence which denies all access to blacklisted visitors as soon as they hit your hosting server."
 msgstr "Door mensen via het. htaccess-bestand te blokkeren gebruikt u de veiligste eerste lijn van defensie, die alle toegang voor bezoekers die op de zwarte lijst staan blokkeert zodra zij uw server benaderen."
 
 #: admin/wp-security-blacklist-menu.php:190
@@ -4665,7 +4665,7 @@ msgid "To specify an IP range use a wildcard \"*\" character. Acceptable ways to
 msgstr "Als u een IP-bereik wilt opgeven, gebruikt u een jokerteken *. Acceptabele manieren om jokertekens te gebruiken zijn te zien in de onderstaande voorbeelden:"
 
 #: admin/wp-security-brute-force-menu.php:147
-msgid "Could not delete the Cookie-based directives from the .htaccess file. Please check the file permissions."
+msgid "Could not delete the Cookie-based directives from the 2.htaccess file. Please check the file permissions."
 msgstr "Kan de op cookies gebaseerde richtlijnen niet verwijderen uit het. htaccess-bestand. Controleer de bestandspermissies."
 
 #: admin/wp-security-brute-force-menu.php:170
@@ -4717,12 +4717,12 @@ msgid "Due to the fact that at any one time there may be many concurrent login a
 msgstr "Vanwege het feit dat er op een gegeven moment veel gelijktijdige aanmeldingspogingen kunnen zijn, die zich op uw site via kwaadaardige geautomatiseerde robots aanmelden, heeft dit ook een negatieve invloed op het geheugen van uw server en de prestaties."
 
 #: admin/wp-security-brute-force-menu.php:338
-msgid "The features in this tab will stop the majority of Brute Force Login Attacks at the .htaccess level thus providing even better protection for your WP login page and also reducing the load on your server because the system does not have to run PHP code to process the login attempts."
-msgstr "De functies in dit tabblad stopt de meerderheid van de brute force loginaanvallen op .htaccess niveau waardoor nog betere bescherming voor uw WP-loginpagina ontstaat en ook een vermindering van de belasting op uw server, omdat het systeem geen PHP-code hoeft te draaien om de loginpogingen te verwerken."
+msgid "The features in this tab will stop the majority of Brute Force Login Attacks at the 2.htaccess level thus providing even better protection for your WP login page and also reducing the load on your server because the system does not have to run PHP code to process the login attempts."
+msgstr "De functies in dit tabblad stopt de meerderheid van de brute force loginaanvallen op 2.htaccess niveau waardoor nog betere bescherming voor uw WP-loginpagina ontstaat en ook een vermindering van de belasting op uw server, omdat het systeem geen PHP-code hoeft te draaien om de loginpogingen te verwerken."
 
 #: admin/wp-security-brute-force-menu.php:345
-msgid "Even though this feature should not have any impact on your site's general functionality <strong>you are strongly encouraged to take a %s of your .htaccess file before proceeding</strong>."
-msgstr "Alhoewel deze eigenschap geen invloed heeft op de algemene functionaliteit van uw site <strong> wordt u wordt sterk aangemoedigd om een %s van uw .htaccess-bestand te maken alvorens </strong> te werk te gaan."
+msgid "Even though this feature should not have any impact on your site's general functionality <strong>you are strongly encouraged to take a %s of your 2.htaccess file before proceeding</strong>."
+msgstr "Alhoewel deze eigenschap geen invloed heeft op de algemene functionaliteit van uw site <strong> wordt u wordt sterk aangemoedigd om een %s van uw 2.htaccess-bestand te maken alvorens </strong> te werk te gaan."
 
 #: admin/wp-security-brute-force-menu.php:360
 msgid "NOTE: If you already had the Rename Login Page feature active, the plugin has automatically deactivated it because only one of these features can be active at any one time."
@@ -4762,11 +4762,11 @@ msgstr "Activeer dit als u gebruik maakt van de WordPress wachtwoordbeveiligings
 
 #: admin/wp-security-brute-force-menu.php:449
 msgid "In the cases where you are protecting some of your posts or pages using the in-built WordPress password protection feature, a few extra lines of directives and exceptions need to be added to your .htacces file so that people trying to access pages are not automatically blocked."
-msgstr "In de gevallen waarin u een aantal van uw berichten of pagina's beschermt met behulp van de ingebouwde WordPress wachtwoordbeveiligingsfunctie, zullen een paar extra regels en uitzonderingen moeten worden toegevoegd aan uw .htaccess-bestand, zodat mensen die proberen om pagina's te openen niet automatisch geblokkeerd worden."
+msgstr "In de gevallen waarin u een aantal van uw berichten of pagina's beschermt met behulp van de ingebouwde WordPress wachtwoordbeveiligingsfunctie, zullen een paar extra regels en uitzonderingen moeten worden toegevoegd aan uw 2.htaccess-bestand, zodat mensen die proberen om pagina's te openen niet automatisch geblokkeerd worden."
 
 #: admin/wp-security-brute-force-menu.php:451
 msgid "By enabling this checkbox the plugin will add the necessary rules and exceptions to your .htacces file so that people trying to access these pages are not automatically blocked."
-msgstr "Door het inschakelen van dit selectievakje zal de plugin de nodige regels en uitzonderingen toe voegen aan uw .htaccess-bestand, zodat mensen die proberen om deze pagina's te benaderen niet automatisch worden geblokkeerd."
+msgstr "Door het inschakelen van dit selectievakje zal de plugin de nodige regels en uitzonderingen toe voegen aan uw 2.htaccess-bestand, zodat mensen die proberen om deze pagina's te benaderen niet automatisch worden geblokkeerd."
 
 #: admin/wp-security-brute-force-menu.php:455
 msgid "If you do not use the WordPress password protection feature for your posts or pages then it is highly recommended that you leave this checkbox disabled."
@@ -4774,11 +4774,11 @@ msgstr "Als u geen gebruik maakt van de WordPress wachtwoordbeschermingsfunctie 
 
 #: admin/wp-security-brute-force-menu.php:470
 msgid "In the cases where your WordPress installation has a theme or plugins which use AJAX, a few extra lines of directives and exceptions need to be added to your .htacces file to prevent AJAX requests from being automatically blocked by the brute force prevention feature."
-msgstr "In het geval dat WordPress-installatie een thema of plugin heeft die AJAX gebruikt, zullen een paar extra regels en uitzonderingen moeten worden toegevoegd aan je .htaccess-bestand om te voorkomen dat AJAX verzoeken automatisch worden geblokkeerd door de brute force preventiefunctie."
+msgstr "In het geval dat WordPress-installatie een thema of plugin heeft die AJAX gebruikt, zullen een paar extra regels en uitzonderingen moeten worden toegevoegd aan je 2.htaccess-bestand om te voorkomen dat AJAX verzoeken automatisch worden geblokkeerd door de brute force preventiefunctie."
 
 #: admin/wp-security-brute-force-menu.php:472
 msgid "By enabling this checkbox the plugin will add the necessary rules and exceptions to your .htacces file so that AJAX operations will work as expected."
-msgstr "Door het inschakelen van deze optie zal de plugin de benodige regels en uitzonderingen toevoegen aan je .htaccess-bestand, zodat AJAX-operaties zullen werken zoals verwacht."
+msgstr "Door het inschakelen van deze optie zal de plugin de benodige regels en uitzonderingen toevoegen aan je 2.htaccess-bestand, zodat AJAX-operaties zullen werken zoals verwacht."
 
 #: admin/wp-security-brute-force-menu.php:502
 msgid "Before using this feature you are required to perform a cookie test first. This is to make sure that your browser cookie is working correctly and that you won't lock yourself out."

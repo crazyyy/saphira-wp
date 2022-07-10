@@ -2,11 +2,11 @@
 /*
 subdir: pass-info-from-rewrite-to-script-through-env
 files:
-  - filename: '.htaccess'
+  - filename: '2.htaccess'
     content: |
       <IfModule mod_rewrite.c>
 
-          # Testing if we can pass environment variable from .htaccess to script in a RewriteRule
+          # Testing if we can pass environment variable from 2.htaccess to script in a RewriteRule
           # We pass document root, because that can easily be checked by the script
 
           RewriteEngine On
@@ -53,7 +53,7 @@ Tested:
 
 Server setup                   |  Test result
 --------------------------------------------------
-.htaccess disabled             |  failure
+2.htaccess disabled             |  failure
 forbidden directives (fatal)   |  failure
 access denied                  |  inconclusive  (it might be allowed to other files)
 directive has no effect        |  failure

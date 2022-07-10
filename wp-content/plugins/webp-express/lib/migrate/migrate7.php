@@ -39,7 +39,7 @@ function webpexpress_migrate7() {
 
         if (($config['enable-redirection-to-webp-realizer']) && ($config['destination-folder'] != 'mingled')) {
             //HTAccess::saveRules($config); // Commented out because rules are going to be saved in migrate12
-            $msg .= 'Also fixed <a target="_blank" href="https://github.com/rosell-dk/webp-express/issues/195">buggy</a> <i>.htaccess</i> rules. ';
+            $msg .= 'Also fixed <a target="_blank" href="https://github.com/rosell-dk/webp-express/issues/195">buggy</a> <i>2.htaccess</i> rules. ';
         }
 
         if (!$config['alter-html']['enabled']) {

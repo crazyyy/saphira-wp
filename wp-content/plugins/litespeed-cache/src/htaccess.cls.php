@@ -61,11 +61,11 @@ class Htaccess extends Root {
 		$this->_default_backend_htaccess = $this->backend_htaccess;
 
 		$frontend_htaccess = defined( 'LITESPEED_CFG_HTACCESS' ) ? LITESPEED_CFG_HTACCESS : false;
-		if ( $frontend_htaccess && substr( $frontend_htaccess, -10 ) === '/.htaccess' ) {
+		if ( $frontend_htaccess && substr( $frontend_htaccess, -10 ) === '/2.htaccess' ) {
 			$this->frontend_htaccess = $frontend_htaccess;
 		}
 		$backend_htaccess = defined( 'LITESPEED_CFG_HTACCESS_BACKEND' ) ? LITESPEED_CFG_HTACCESS_BACKEND : false;
-		if ( $backend_htaccess && substr( $backend_htaccess, -10 ) === '/.htaccess' ) {
+		if ( $backend_htaccess && substr( $backend_htaccess, -10 ) === '/2.htaccess' ) {
 			$this->backend_htaccess = $backend_htaccess;
 		}
 
@@ -75,7 +75,7 @@ class Htaccess extends Root {
 
 		clearstatcache();
 
-		// frontend .htaccess privilege
+		// frontend 2.htaccess privilege
 		$test_permissions = file_exists( $this->frontend_htaccess ) ? $this->frontend_htaccess : dirname( $this->frontend_htaccess );
 		if ( is_readable( $test_permissions ) ) {
 			$this->frontend_htaccess_readable = true;
@@ -92,7 +92,7 @@ class Htaccess extends Root {
 			'RewriteRule ' . preg_quote( self::CONF_FILE ) . ' - [F,L]',
 		);
 
-		// backend .htaccess privilege
+		// backend 2.htaccess privilege
 		if ( $this->frontend_htaccess === $this->backend_htaccess ) {
 			$this->backend_htaccess_readable = $this->frontend_htaccess_readable;
 			$this->backend_htaccess_writable = $this->frontend_htaccess_writable;
@@ -165,7 +165,7 @@ class Htaccess extends Root {
 	}
 
 	/**
-	 * Check to see if .htaccess exists starting at $start_path and going up directories until it hits DOCUMENT_ROOT.
+	 * Check to see if 2.htaccess exists starting at $start_path and going up directories until it hits DOCUMENT_ROOT.
 	 *
 	 * As dirname() strips the ending '/', paths passed in must exclude the final '/'
 	 *
@@ -173,7 +173,7 @@ class Htaccess extends Root {
 	 * @access private
 	 */
 	private function _htaccess_search( $start_path ) {
-		while ( ! file_exists( $start_path . '/.htaccess' ) ) {
+		while ( ! file_exists( $start_path . '/2.htaccess' ) ) {
 			if ( $start_path === '/' || ! $start_path ) {
 				return false;
 			}
@@ -200,8 +200,8 @@ class Htaccess extends Root {
 	 */
 	private function _path_set() {
 		$frontend = Router::frontend_path();
-		$frontend_htaccess_search = $this->_htaccess_search( $frontend );// The existing .htaccess path to be used for frontend .htaccess
-		$this->frontend_htaccess = ( $frontend_htaccess_search ?: $frontend ) . '/.htaccess';
+		$frontend_htaccess_search = $this->_htaccess_search( $frontend );// The existing 2.htaccess path to be used for frontend 2.htaccess
+		$this->frontend_htaccess = ( $frontend_htaccess_search ?: $frontend ) . '/2.htaccess';
 
 		$backend = realpath( ABSPATH ); // /home/user/public_html/backend/
 		if ( $frontend == $backend ) {
@@ -211,9 +211,9 @@ class Htaccess extends Root {
 
 		// Backend is a different path
 		$backend_htaccess_search = $this->_htaccess_search( $backend );
-		// Found affected .htaccess
+		// Found affected 2.htaccess
 		if ( $backend_htaccess_search ) {
-			$this->backend_htaccess = $backend_htaccess_search . '/.htaccess';
+			$this->backend_htaccess = $backend_htaccess_search . '/2.htaccess';
 			return;
 		}
 
@@ -224,7 +224,7 @@ class Htaccess extends Root {
 			return;
 		}
 
-		$this->backend_htaccess = $backend . '/.htaccess';
+		$this->backend_htaccess = $backend . '/2.htaccess';
 	}
 
 	/**
@@ -279,7 +279,7 @@ class Htaccess extends Root {
 	}
 
 	/**
-	 * Try to backup the .htaccess file if we didn't save one before.
+	 * Try to backup the 2.htaccess file if we didn't save one before.
 	 *
 	 * NOTE: will throw error if failed
 	 *
@@ -330,7 +330,7 @@ class Htaccess extends Root {
 	}
 
 	/**
-	 * Parse rewrites rule from the .htaccess file.
+	 * Parse rewrites rule from the 2.htaccess file.
 	 *
 	 * NOTE: will throw error if failed
 	 *
@@ -760,7 +760,7 @@ class Htaccess extends Root {
 	 *
 	 * @since  1.3
 	 * @access private
-	 * @param  string $kind Frontend or backend .htaccess file
+	 * @param  string $kind Frontend or backend 2.htaccess file
 	 */
 	private function _extract_rules( $kind = 'frontend' ) {
 		clearstatcache();

@@ -29,7 +29,7 @@ EOD;
 $test = [
     'subdir' => 'header-set',
     'files' => [
-        ['.htaccess', $htaccessFile],
+        ['2.htaccess', $htaccessFile],
         ['request-me.txt', "hi"],
     ],
     'request' => 'request-me.txt',
@@ -45,7 +45,7 @@ $test = [
 ];
 
 if ($hct->customTest($test)) {
-    // setting a header in the .htaccess works!
+    // setting a header in the 2.htaccess works!
 }
 ```
 
@@ -55,7 +55,7 @@ if ($hct->customTest($test)) {
 ```yaml
 subdir: header-set
 files:
-    - filename: '.htaccess'
+    - filename: '2.htaccess'
       content: |
           <IfModule mod_headers.c>
               Header set X-Response-Header-Test: test

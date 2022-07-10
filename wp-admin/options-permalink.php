@@ -151,11 +151,11 @@ if ( $iis7_permalinks ) {
 } elseif ( $is_nginx ) {
 	$writable = false;
 } else {
-	if ( ( ! file_exists( $home_path . '.htaccess' ) && is_writable( $home_path ) ) || is_writable( $home_path . '.htaccess' ) ) {
+	if ( ( ! file_exists( $home_path . '2.htaccess' ) && is_writable( $home_path ) ) || is_writable( $home_path . '2.htaccess' ) ) {
 		$writable = true;
 	} else {
 		$writable       = false;
-		$existing_rules = array_filter( extract_from_markers( $home_path . '.htaccess', 'WordPress' ) );
+		$existing_rules = array_filter( extract_from_markers( $home_path . '2.htaccess', 'WordPress' ) );
 		$new_rules      = array_filter( explode( "\n", $wp_rewrite->mod_rewrite_rules() ) );
 
 		$htaccess_update_required = ( $new_rules !== $existing_rules );
@@ -184,9 +184,9 @@ if ( $structure_updated ) {
 			}
 		} elseif ( ! $is_nginx && $htaccess_update_required && ! $writable ) {
 			$message = sprintf(
-				/* translators: %s: .htaccess */
+				/* translators: %s: 2.htaccess */
 				__( 'You should update your %s file now.' ),
-				'<code>.htaccess</code>'
+				'<code>2.htaccess</code>'
 			);
 		}
 	}
@@ -425,9 +425,9 @@ else :
 <p id="htaccess-description">
 		<?php
 		printf(
-			/* translators: 1: .htaccess, 2: Documentation URL, 3: Ctrl + A, 4: ⌘ + A */
+			/* translators: 1: 2.htaccess, 2: Documentation URL, 3: Ctrl + A, 4: ⌘ + A */
 			__( '<strong>Error:</strong> Your %1$s file is not <a href="%2$s">writable</a>, so updating it automatically was not possible. These are the mod_rewrite rules you should have in your %1$s file. Click in the field and press %3$s (or %4$s on Mac) to select all.' ),
-			'<code>.htaccess</code>',
+			'<code>2.htaccess</code>',
 			__( 'https://wordpress.org/support/article/changing-file-permissions/' ),
 			'<kbd>Ctrl + A</kbd>',
 			'<kbd>⌘ + A</kbd>'

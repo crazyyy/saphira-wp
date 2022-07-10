@@ -80,7 +80,7 @@ class AIOWPSecurity_Utility_Htaccess {
 	public static $custom_rules_marker_end = '#AIOWPS_CUSTOM_RULES_END';
 
 	/**
-	 * TODO - enter more markers as new .htaccess features are added
+	 * TODO - enter more markers as new 2.htaccess features are added
 	 */
 	public function __construct() {
 		//NOP
@@ -88,7 +88,7 @@ class AIOWPSecurity_Utility_Htaccess {
 
 
 	/**
-	 * Write all active rules to .htaccess file.
+	 * Write all active rules to 2.htaccess file.
 	 *
 	 * @return boolean True on success, false on failure.
 	 */
@@ -96,24 +96,24 @@ class AIOWPSecurity_Utility_Htaccess {
 		global $aio_wp_security;
 		//figure out what server is being used
 		if (AIOWPSecurity_Utility::get_server_type() == -1) {
-			$aio_wp_security->debug_logger->log_debug("Unable to write to .htaccess - server type not supported!", 4);
+			$aio_wp_security->debug_logger->log_debug("Unable to write to 2.htaccess - server type not supported!", 4);
 			return false; //unable to write to the file
 		}
 
 		//clean up old rules first
 		if (AIOWPSecurity_Utility_Htaccess::delete_from_htaccess() == -1) {
-			$aio_wp_security->debug_logger->log_debug("Delete operation of .htaccess file failed!", 4);
+			$aio_wp_security->debug_logger->log_debug("Delete operation of 2.htaccess file failed!", 4);
 			return false; //unable to write to the file
 		}
 
 		if (!function_exists('get_home_path')) require_once(ABSPATH. '/wp-admin/includes/file.php');
 		$home_path = get_home_path();
-		$htaccess = $home_path . '.htaccess';
+		$htaccess = $home_path . '2.htaccess';
 
 		if (!$f = @fopen($htaccess, 'a+')) {// phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged,Squiz.PHP.DisallowMultipleAssignments.FoundInControlStructure
 			@chmod($htaccess, 0644);// phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged
 			if (!$f = @fopen($htaccess, 'a+')) {// phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged,Squiz.PHP.DisallowMultipleAssignments.FoundInControlStructure
-				$aio_wp_security->debug_logger->log_debug("chmod operation on .htaccess failed!", 4);
+				$aio_wp_security->debug_logger->log_debug("chmod operation on 2.htaccess failed!", 4);
 				return false;
 			}
 		}
@@ -127,7 +127,7 @@ class AIOWPSecurity_Utility_Htaccess {
 		$contents = array_merge($rulesarray, $ht);
 
 		if (!$f = @fopen($htaccess, 'w+')) {// phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged,Squiz.PHP.DisallowMultipleAssignments.FoundInControlStructure
-			$aio_wp_security->debug_logger->log_debug("Write operation on .htaccess failed!", 4);
+			$aio_wp_security->debug_logger->log_debug("Write operation on 2.htaccess failed!", 4);
 			return false; //we can't write to the file
 		}
 
@@ -150,7 +150,7 @@ class AIOWPSecurity_Utility_Htaccess {
 	}
 
 	/**
-	 * This function will delete the code which has been added to the .htaccess file by this plugin
+	 * This function will delete the code which has been added to the 2.htaccess file by this plugin
 	 * It will try to find the comment markers "# BEGIN All In One WP Security" and "# END All In One WP Security" and delete contents in between
 	 *
 	 * @param string $section
@@ -159,15 +159,15 @@ class AIOWPSecurity_Utility_Htaccess {
 	public static function delete_from_htaccess($section = 'All In One WP Security') {
 		if (!function_exists('get_home_path')) require_once(ABSPATH. '/wp-admin/includes/file.php');
 		$home_path = get_home_path();
-		$htaccess = $home_path . '.htaccess';
+		$htaccess = $home_path . '2.htaccess';
 
 		if (!file_exists($htaccess)) {
 			$ht = @fopen($htaccess, 'a+');// phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged
 			@fclose($ht);// phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged
 		}
 
-		// Bug Fix: On some environments such as windows (xampp) this function was clobbering the non-aiowps-related .htaccess contents for certain cases.
-		// In some cases when WordPress saves the .htaccess file (eg, when saving permalink settings),
+		// Bug Fix: On some environments such as windows (xampp) this function was clobbering the non-aiowps-related 2.htaccess contents for certain cases.
+		// In some cases when WordPress saves the 2.htaccess file (eg, when saving permalink settings),
 		// the line endings differ from the expected PHP_EOL endings. (WordPress saves with "\n" (UNIX style) but PHP_EOL may be set as "\r\n" (WIN/DOS))
 		// In this case exploding via PHP_EOL may not yield the result we expect.
 		// Therefore we need to do the following extra checks.
@@ -183,7 +183,7 @@ class AIOWPSecurity_Utility_Htaccess {
 		} elseif (strstr($ht_contents_imploded, "\r\n")) {
 			$ht_contents = explode("\r\n", $ht_contents_imploded); //parse each line of file into array
 		}
-		
+
 		if ($ht_contents) { //as long as there are lines in the file
 			$state = true;
 			if (!$f = @fopen($htaccess, 'w+')) {// phpcs:ignore Generic.PHP.NoSilencedErrors.Discouraged,Squiz.PHP.DisallowMultipleAssignments.FoundInControlStructure
@@ -235,7 +235,7 @@ class AIOWPSecurity_Utility_Htaccess {
 		} else {
 			$rules .= $custom_rules;
 		}
-		
+
 		//TODO: The following utility functions are ready to use when we write the menu pages for these features
 
 		//Add more functions for features as needed
@@ -365,7 +365,7 @@ class AIOWPSecurity_Utility_Htaccess {
 		if ($aio_wp_security->configs->get_value('aiowps_enable_basic_firewall') == '1') {
 			$rules .= AIOWPSecurity_Utility_Htaccess::$basic_htaccess_rules_marker_start . PHP_EOL; //Add feature marker start
 			//protect the htaccess file - this is done by default with apache config file but we are including it here for good measure
-			$rules .= self::create_apache2_access_denied_rule('.htaccess');
+			$rules .= self::create_apache2_access_denied_rule('2.htaccess');
 
 			//disable the server signature
 			$rules .= 'ServerSignature Off' . PHP_EOL;
@@ -375,7 +375,7 @@ class AIOWPSecurity_Utility_Htaccess {
 			//Shouldn't be empty but just in case
 			$upload_limit = empty($upload_limit) ? 10 : $upload_limit;
 			$upload_limit = $upload_limit * 1024 * 1024; // Convert from MB to Bytes - approx but close enough
-			
+
 			$rules .= 'LimitRequestBody '.$upload_limit . PHP_EOL;
 
 			// protect wpconfig.php.
@@ -579,7 +579,7 @@ class AIOWPSecurity_Utility_Htaccess {
 	public static function getrules_enable_login_whitelist_v2() {
 		global $aio_wp_security;
 		$rules = '';
-		
+
 		if ($aio_wp_security->configs->get_value('aiowps_enable_whitelisting') == '1') {
 			$site_url = AIOWPSEC_WP_URL;
 			$parse_url = parse_url($site_url);
@@ -612,7 +612,7 @@ class AIOWPSecurity_Utility_Htaccess {
 				$rules_apache_pre_24 .= 'Order Allow,Deny' . PHP_EOL;
 				$rules_apache_pre_24 .= 'Allow from ' . $hostname . PHP_EOL;
 				$rules_apache_pre_24 .= 'Allow from ' . $host_ip . PHP_EOL;
-				
+
 				//start writing rules for versions of apache >=2.4
 				$rules_apache_24 .= '<IfModule mod_authz_core.c>' . PHP_EOL;
 				$rules_apache_24 .= 'Require all denied' . PHP_EOL;
@@ -652,7 +652,7 @@ class AIOWPSecurity_Utility_Htaccess {
 						$rules_apache_24 .= 'Require ip '. $xhost . PHP_EOL;
 					}
 				}
-				
+
 			}
 			if (!empty($rules_apache_pre_24)) {
 				$rules_apache_pre_24 .= '</IfModule>' . PHP_EOL;
@@ -675,7 +675,7 @@ class AIOWPSecurity_Utility_Htaccess {
 
 	/**
 	 * This function will disable directory listings for all directories, add this line to the
-	 * site’s root .htaccess file.
+	 * site’s root 2.htaccess file.
 	 * NOTE: AllowOverride must be enabled in the httpd.conf file for this to work!
 	 */
 	public static function getrules_disable_index_views() {
@@ -994,7 +994,7 @@ class AIOWPSecurity_Utility_Htaccess {
 					$ip_blacklist_24 .= '#AIOWPS_IP_BLACKLIST_2_4_END' . PHP_EOL;
 				}
 			}
-			
+
 			$rules .= AIOWPSecurity_Utility_Htaccess::$six_g_blacklist_marker_start . PHP_EOL; //Add feature marker start
 
 			$rules .= '# 6G FIREWALL/BLACKLIST
@@ -1131,7 +1131,7 @@ class AIOWPSecurity_Utility_Htaccess {
 	}
 
 	/**
-	 * This function will write any custom htaccess rules into the server's .htaccess file
+	 * This function will write any custom htaccess rules into the server's 2.htaccess file
 	 *
 	 * @return string
 	 */
@@ -1149,10 +1149,10 @@ class AIOWPSecurity_Utility_Htaccess {
 	}
 
 	/**
-	 * This function will do a quick check to see if a file's contents are actually .htaccess specific.
+	 * This function will do a quick check to see if a file's contents are actually 2.htaccess specific.
 	 * At the moment it will look for the following tag somewhere in the file - "# BEGIN WordPress"
-	 * If it finds the tag it will deem the file as being .htaccess specific.
-	 * This was written to supplement the .htaccess restore functionality
+	 * If it finds the tag it will deem the file as being 2.htaccess specific.
+	 * This was written to supplement the 2.htaccess restore functionality
 	 *
 	 * @param string $file
 	 * @return boolean
@@ -1279,7 +1279,7 @@ END;
 				}
 				$output[] = $ip;
 			}
-			
+
 
 			$parts = explode('.', $ip);
 

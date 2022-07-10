@@ -156,7 +156,7 @@ class AIOWPSecurity_Dashboard_Menu extends AIOWPSecurity_Admin_Menu
         <div class="aio_blue_box">
             <?php
             echo '<p>' . __('This tab displays the list of all permanently blocked IP addresses.', 'all-in-one-wp-security-and-firewall') . '</p>' .
-                '<p>' . __('NOTE: This feature does NOT use the .htaccess file to permanently block the IP addresses so it should be compatible with all web servers running WordPress.', 'all-in-one-wp-security-and-firewall') . '</p>';
+                '<p>' . __('NOTE: This feature does NOT use the 2.htaccess file to permanently block the IP addresses so it should be compatible with all web servers running WordPress.', 'all-in-one-wp-security-and-firewall') . '</p>';
             ?>
         </div>
 
@@ -196,7 +196,7 @@ class AIOWPSecurity_Dashboard_Menu extends AIOWPSecurity_Admin_Menu
     public function render_tab4()
     {
         //Needed for rendering the debug log table
-        include_once 'wp-security-list-debug.php'; 
+        include_once 'wp-security-list-debug.php';
         $debug_log_list = new AIOWPSecurity_List_Debug_Log();
 
         global $wpdb; global $aio_wp_security;

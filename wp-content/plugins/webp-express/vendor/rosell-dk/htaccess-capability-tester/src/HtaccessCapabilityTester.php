@@ -116,10 +116,10 @@ class HtaccessCapabilityTester
     }
 
     /**
-     * Test if .htaccess files are enabled
+     * Test if 2.htaccess files are enabled
      *
-     * Apache can be configured to completely ignore .htaccess files. This test examines
-     * if .htaccess files are proccesed.
+     * Apache can be configured to completely ignore 2.htaccess files. This test examines
+     * if 2.htaccess files are proccesed.
      *
      * @return bool|null   true=success, false=failure, null=inconclusive
      */
@@ -144,7 +144,7 @@ class HtaccessCapabilityTester
     /**
      * Test if rewriting works.
      *
-     * The .htaccess in this test uses the following directives:
+     * The 2.htaccess in this test uses the following directives:
      * - IfModule
      * - RewriteEngine
      * - Rewrite
@@ -159,7 +159,7 @@ class HtaccessCapabilityTester
     /**
      * Test if AddType works.
      *
-     * The .htaccess in this test uses the following directives:
+     * The 2.htaccess in this test uses the following directives:
      * - IfModule (core)
      * - AddType  (mod_mime, FileInfo)
      *
@@ -279,18 +279,18 @@ class HtaccessCapabilityTester
     }*/
 
     /**
-     * Crash-test some .htaccess rules.
+     * Crash-test some 2.htaccess rules.
      *
      * Tests if the server can withstand the given rules without going fatal.
      *
      * - success: if the rules does not result in status 500.
      * - failure: if the rules results in status 500 while a request to a file in a directory
-     *        without any .htaccess succeeds (<> 500)
+     *        without any 2.htaccess succeeds (<> 500)
      * - inconclusive: if the rules results in status 500 while a request to a file in a directory
-     *        without any .htaccess also fails (500)
+     *        without any 2.htaccess also fails (500)
      *
      * @param string       $rules   Rules to crash-test
-     * @param string       $subDir  (optional) Subdir for the .htaccess to reside.
+     * @param string       $subDir  (optional) Subdir for the 2.htaccess to reside.
      *                              if left out, a unique string will be generated
      *
      * @return bool|null   true=success, false=failure, null=inconclusive
@@ -306,7 +306,7 @@ class HtaccessCapabilityTester
      * If this fails, everything else will also fail.
      *
      * Possible reasons for failure:
-     * - A .htaccess in a parent folder has forbidden tags / syntax errors
+     * - A 2.htaccess in a parent folder has forbidden tags / syntax errors
      *
      * Possible reasons for inconclusive (= test could not be run)
      * - 403 Forbidden

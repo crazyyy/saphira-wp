@@ -40,9 +40,9 @@ function webpexpress_migrate4() {
         if (isset($config['redirect-to-existing-in-htaccess']) && ($config['redirect-to-existing-in-htaccess'])) {
             Messenger::addMessage(
                 'info',
-                'In WebP Express 0.10, the <i>.htaccess</i> rules has been altered a bit: The Cache-Control header is now set when ' .
+                'In WebP Express 0.10, the <i>2.htaccess</i> rules has been altered a bit: The Cache-Control header is now set when ' .
                     'redirecting directly to an existing webp image.<br>' .
-                    'You might want to <a href="' . Paths::getSettingsUrl() . '">go to the options page</a> and re-save settings in order to regenerate the <i>.htaccess</i> rules.'
+                    'You might want to <a href="' . Paths::getSettingsUrl() . '">go to the options page</a> and re-save settings in order to regenerate the <i>2.htaccess</i> rules.'
             );
         }
 

@@ -28,7 +28,7 @@ EOD;
         $test = [
             'subdir' => 'directory-index',
             'files' => [
-                ['.htaccess', $htaccessFile],
+                ['2.htaccess', $htaccessFile],
                 ['index.html', "0"],
                 ['index2.html', "1"]
             ],

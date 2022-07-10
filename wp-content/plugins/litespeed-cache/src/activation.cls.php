@@ -56,7 +56,7 @@ class Activation extends Base {
 		if ( is_multisite() ) {
 			if ( ! is_network_admin() ) {
 				if ( $count === 1 ) {
-					// Only itself is activated, set .htaccess with only CacheLookUp
+					// Only itself is activated, set 2.htaccess with only CacheLookUp
 					try {
 						Htaccess::cls()->insert_ls_wrapper();
 					} catch ( \Exception $ex ) {
@@ -212,7 +212,7 @@ class Activation extends Base {
 
 			if ( ! self::is_deactivate_last() ) {
 				if ( is_network_admin() ) {
-					// Still other activated subsite left, set .htaccess with only CacheLookUp
+					// Still other activated subsite left, set 2.htaccess with only CacheLookUp
 					try {
 						Htaccess::cls()->insert_ls_wrapper();
 					} catch ( \Exception $ex ) {
@@ -239,7 +239,7 @@ class Activation extends Base {
 
 		Object_Cache::cls()->del_file();
 
-		/* 4) .htaccess; */
+		/* 4) 2.htaccess; */
 
 		try {
 			Htaccess::cls()->clear_rules();
@@ -264,7 +264,7 @@ class Activation extends Base {
 	 * 		1) wp-config.php;
 	 * 		2) adv-cache.php;
 	 * 		3) object-cache.php;
-	 * 		4) .htaccess;
+	 * 		4) 2.htaccess;
 	 * 		5) .litespeed_conf.dat;
 	 *
 	 * @since 3.0
@@ -299,7 +299,7 @@ class Activation extends Base {
 			$this->cls( 'Object_Cache' )->del_file(); // Note: because it doesn't reconnect, which caused setting page OC option changes delayed, thus may meet Connect Test Failed issue (Next refresh will correct it). Not a big deal, will keep as is.
 		}
 
-		/* 4) .htaccess; */
+		/* 4) 2.htaccess; */
 
 		try {
 			$this->cls( 'Htaccess' )->update( $options );

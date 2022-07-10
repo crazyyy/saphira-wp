@@ -13,8 +13,8 @@ defined( 'WPINC' ) || exit;
 
 class Error {
 	private static $CODE_SET = array(
-		'HTA_LOGIN_COOKIE_INVALID' => 4300, // .htaccess did not find.
-		'HTA_DNF'		 => 4500, // .htaccess did not find.
+		'HTA_LOGIN_COOKIE_INVALID' => 4300, // 2.htaccess did not find.
+		'HTA_DNF'		 => 4500, // 2.htaccess did not find.
 		'HTA_BK'		 => 9010, // backup
 		'HTA_R'			 => 9041, // read htaccess
 		'HTA_W'			 => 9042, // write
@@ -108,28 +108,28 @@ class Error {
 				if ( ! is_array( $args ) ) {
 					$args = array( '<code>' . $args . '</code>' );
 				}
-				$args[] = '.htaccess';
+				$args[] = '2.htaccess';
 				$msg = __( 'Could not find %1$s in %2$s.', 'litespeed-cache' );
 				break;
 
 			case 'HTA_LOGIN_COOKIE_INVALID':
-				$msg = sprintf( __( 'Invalid login cookie. Please check the %s file.', 'litespeed-cache' ), '.htaccess' );
+				$msg = sprintf( __( 'Invalid login cookie. Please check the %s file.', 'litespeed-cache' ), '2.htaccess' );
 				break;
 
 			case 'HTA_BK':
-				$msg = sprintf( __( 'Failed to back up %s file, aborted changes.', 'litespeed-cache' ), '.htaccess' );
+				$msg = sprintf( __( 'Failed to back up %s file, aborted changes.', 'litespeed-cache' ), '2.htaccess' );
 				break;
 
 			case 'HTA_R':
-				$msg = sprintf( __( '%s file not readable.', 'litespeed-cache' ), '.htaccess' );
+				$msg = sprintf( __( '%s file not readable.', 'litespeed-cache' ), '2.htaccess' );
 				break;
 
 			case 'HTA_W':
-				$msg = sprintf( __( '%s file not writable.', 'litespeed-cache' ), '.htaccess' );
+				$msg = sprintf( __( '%s file not writable.', 'litespeed-cache' ), '2.htaccess' );
 				break;
 
 			case 'HTA_GET':
-				$msg = sprintf( __( 'Failed to get %s file contents.', 'litespeed-cache' ), '.htaccess' );
+				$msg = sprintf( __( 'Failed to get %s file contents.', 'litespeed-cache' ), '2.htaccess' );
 				break;
 
 			case 'failed_tb_creation':

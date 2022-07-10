@@ -3,7 +3,7 @@
     width: 100%;
 }*/
 
-/* break long lines in pre (when we are showing .htaccess inside notice) */
+/* break long lines in pre (when we are showing 2.htaccess inside notice) */
 .notice pre {
     white-space: pre-wrap;
     word-wrap: break-word;

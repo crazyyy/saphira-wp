@@ -194,9 +194,9 @@ class Revisr_Git_Callback {
 			revisr()->git->run( 'remote', array( 'add', $remote_name, revisr()->git->options['remote_url'] ) );
 		}
 
-		// Adds an .htaccess file to the "/.git" directory to prevent public access.
+		// Adds an 2.htaccess file to the "/.git" directory to prevent public access.
 		if ( is_writable( revisr()->git->git_dir ) ) {
-			file_put_contents( revisr()->git->git_dir . DIRECTORY_SEPARATOR . '.htaccess', 'Deny from all' . PHP_EOL );
+			file_put_contents( revisr()->git->git_dir . DIRECTORY_SEPARATOR . '2.htaccess', 'Deny from all' . PHP_EOL );
 		}
 
 		// Fires after the repo has been created.

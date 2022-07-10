@@ -729,18 +729,18 @@ class Health_Check_Debug_Data {
 			);
 		}
 
-		// Check if a .htaccess file exists.
-		if ( $is_apache && is_file( ABSPATH . '.htaccess' ) ) {
+		// Check if a 2.htaccess file exists.
+		if ( $is_apache && is_file( ABSPATH . '2.htaccess' ) ) {
 			// If the file exists, grab the content of it.
-			$htaccess_content = file_get_contents( ABSPATH . '.htaccess' );
+			$htaccess_content = file_get_contents( ABSPATH . '2.htaccess' );
 
 			// Filter away the core WordPress rules.
 			$filtered_htaccess_content = trim( preg_replace( '/\# BEGIN WordPress[\s\S]+?# END WordPress/si', '', $htaccess_content ) );
 			$filtered_htaccess_content = ! empty( $filtered_htaccess_content );
 
 			$info['wp-server']['fields']['htaccess_extra_rules'] = array(
-				'label' => __( '.htaccess rules', 'health-check' ),
-				'value' => ( $filtered_htaccess_content ? __( 'Custom rules have been added to your .htaccess file.', 'health-check' ) : __( 'Your .htaccess file contains only core WordPress features.', 'health-check' ) ),
+				'label' => __( '2.htaccess rules', 'health-check' ),
+				'value' => ( $filtered_htaccess_content ? __( 'Custom rules have been added to your 2.htaccess file.', 'health-check' ) : __( 'Your 2.htaccess file contains only core WordPress features.', 'health-check' ) ),
 				'debug' => $filtered_htaccess_content,
 			);
 		}

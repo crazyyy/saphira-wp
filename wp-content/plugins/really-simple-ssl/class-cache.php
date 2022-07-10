@@ -19,7 +19,7 @@ if ( ! class_exists( 'rsssl_cache' ) ) {
 
   /**
    * Flushes the cache for popular caching plugins to prevent mixed content errors
-   * When .htaccess is changed, all traffic should flow over https, so clear cache when possible.
+   * When 2.htaccess is changed, all traffic should flow over https, so clear cache when possible.
    * supported: W3TC, WP fastest Cache, Zen Cache, wp_rocket
    *
    * @since  2.0

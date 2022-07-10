@@ -53,7 +53,7 @@ defined( 'WPINC' ) || exit ;
 				$cookie_arr = explode( ',', $cookie_rule ) ;
 				if ( ! in_array( $this->conf( $id ), $cookie_arr ) ) {
 					echo '<div class="litespeed-callout notice notice-warning inline"><p>'
-							. __( 'WARNING: The .htaccess login cookie and Database login cookie do not match.', 'litespeed-cache' )
+							. __( 'WARNING: The 2.htaccess login cookie and Database login cookie do not match.', 'litespeed-cache' )
 						. '</p></div>'
 					;
 				}

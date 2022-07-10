@@ -94,14 +94,14 @@ class Doc {
 	}
 
 	/**
-	 * Notice to edit .htaccess
+	 * Notice to edit 2.htaccess
 	 *
 	 * @since  3.0
 	 * @access public
 	 */
 	public static function notice_htaccess() {
 		echo '<font class="litespeed-primary">';
-		echo '⚠️ ' . __( 'This setting will edit the .htaccess file.', 'litespeed-cache' );
+		echo '⚠️ ' . __( 'This setting will edit the 2.htaccess file.', 'litespeed-cache' );
 		echo ' <a href="https://docs.litespeedtech.com/lscache/lscwp/toolbox/#edit-htaccess-tab" target="_blank" class="litespeed-learn-more">' . __( 'Learn More', 'litespeed-cache' ) . '</a>';
 		echo '</font>';
 	}

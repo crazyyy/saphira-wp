@@ -260,7 +260,7 @@ class Paths
      *  - trailing dash is removed - we don't use that around here.
      *
      *  We do not resolve symlinks anymore. Information was lost that way.
-     *  And in some cases we needed the unresolved path - for example in the .htaccess.
+     *  And in some cases we needed the unresolved path - for example in the 2.htaccess.
      */
     public static function getAbsDir($dir)
     {
@@ -307,14 +307,14 @@ class Paths
 
     }
 
-    // ------------ .htaccess dir -------------
-    // (directory containing the relevant .htaccess)
+    // ------------ 2.htaccess dir -------------
+    // (directory containing the relevant 2.htaccess)
     // (see https://github.com/rosell-dk/webp-express/issues/36)
 
 
 
     public static function canWriteHTAccessRulesHere($dirName) {
-        return FileHelper::canEditOrCreateFileHere($dirName . '/.htaccess');
+        return FileHelper::canEditOrCreateFileHere($dirName . '/2.htaccess');
     }
 
     public static function canWriteHTAccessRulesInDir($dirId) {
@@ -438,7 +438,7 @@ class Paths
         if (!is_dir($configDir)) {
             @mkdir($configDir, 0775);
             @chmod($configDir, 0775);
-            @file_put_contents(rtrim($configDir . '/') . '/.htaccess', <<<APACHE
+            @file_put_contents(rtrim($configDir . '/') . '/2.htaccess', <<<APACHE
 <IfModule mod_authz_core.c>
 Require all denied
 </IfModule>
@@ -448,7 +448,7 @@ Deny from all
 </IfModule>
 APACHE
             );
-            @chmod($configDir . '/.htaccess', 0664);
+            @chmod($configDir . '/2.htaccess', 0664);
         }
         return is_dir($configDir);
     }

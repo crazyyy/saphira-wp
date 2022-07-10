@@ -473,12 +473,12 @@ class SelfTestHelper
     public static function htaccessInfo($config, $printRules = true)
     {
         $log = [];
-        //$log[] = '*.htaccess info:*';
+        //$log[] = '*2.htaccess info:*';
         //$log[] = '- Image roots with WebP Express rules: ' . implode(', ', HTAccess::getRootsWithWebPExpressRulesIn());
-        $log[] = '#### .htaccess files that WebP Express have placed rules in the following files:';
+        $log[] = '#### 2.htaccess files that WebP Express have placed rules in the following files:';
         $rootIds = HTAccess::getRootsWithWebPExpressRulesIn();
         foreach ($rootIds as $imageRootId) {
-            $log[] = '- ' . Paths::getAbsDirById($imageRootId) . '/.htaccess';
+            $log[] = '- ' . Paths::getAbsDirById($imageRootId) . '/2.htaccess';
         }
 
         foreach ($rootIds as $imageRootId) {
@@ -491,7 +491,7 @@ class SelfTestHelper
     public static function rulesInImageRoot($config, $imageRootId)
     {
         $log = [];
-        $file = Paths::getAbsDirById($imageRootId) . '/.htaccess';
+        $file = Paths::getAbsDirById($imageRootId) . '/2.htaccess';
         $log[] = '#### WebP rules in *' .
             ($imageRootId == 'cache' ? 'webp image cache' : $imageRootId) . '*:';
         $log[] = 'File: ' . $file;
@@ -537,26 +537,26 @@ class SelfTestHelper
     {
         $capTests = $config['base-htaccess-on-these-capability-tests'];
         $log = [];
-        $log[] = '#### Live tests of .htaccess capabilities / system configuration:';
+        $log[] = '#### Live tests of 2.htaccess capabilities / system configuration:';
         $log[] = 'Unless noted otherwise, the tests are run in *wp-content/webp-express/htaccess-capability-tester*. ';
         $log[] = 'WebPExpress currently treats the results as they neccessarily applies to all scopes (upload, themes, etc), ';
         $log[] = 'but note that a server might be configured to have mod_rewrite disallowed in some folders and allowed in others.';
-        /*$log[] = 'Exactly what you can do in a *.htaccess* depends on the server setup. WebP Express ' .
+        /*$log[] = 'Exactly what you can do in a *2.htaccess* depends on the server setup. WebP Express ' .
             'makes some live tests to verify if a certain feature in fact works. This is done by creating ' .
-            'test files (*.htaccess* files and php files) in a dir inside the content dir and running these. ' .
+            'test files (*2.htaccess* files and php files) in a dir inside the content dir and running these. ' .
             'These test results are used when creating the rewrite rules. Here are the results:';*/
 
 //        $log[] = '';
-        $log[] = '- .htaccess files enabled?: ' . self::trueFalseNullString(HTAccessCapabilityTestRunner::htaccessEnabled());
+        $log[] = '- 2.htaccess files enabled?: ' . self::trueFalseNullString(HTAccessCapabilityTestRunner::htaccessEnabled());
         $log[] = '- mod_rewrite working?: ' . self::trueFalseNullString(HTAccessCapabilityTestRunner::modRewriteWorking());
         $log[] = '- mod_headers loaded?: ' . self::trueFalseNullString(HTAccessCapabilityTestRunner::modHeadersLoaded());
         $log[] = '- mod_headers working (header set): ' . self::trueFalseNullString(HTAccessCapabilityTestRunner::modHeaderWorking());
-        //$log[] = '- passing variables from *.htaccess* to PHP script through environment variable working?: ' . self::trueFalseNullString($capTests['passThroughEnvWorking']);
-        $log[] = '- passing variables from *.htaccess* to PHP script through environment variable working?: ' . self::trueFalseNullString(HTAccessCapabilityTestRunner::passThroughEnvWorking());
+        //$log[] = '- passing variables from *2.htaccess* to PHP script through environment variable working?: ' . self::trueFalseNullString($capTests['passThroughEnvWorking']);
+        $log[] = '- passing variables from *2.htaccess* to PHP script through environment variable working?: ' . self::trueFalseNullString(HTAccessCapabilityTestRunner::passThroughEnvWorking());
         $log[] = '- Can run php test file in plugins/webp-express/wod/ ?: ' . self::trueFalseNullString(HTAccessCapabilityTestRunner::canRunTestScriptInWOD());
         $log[] = '- Can run php test file in plugins/webp-express/wod2/ ?: ' . self::trueFalseNullString(HTAccessCapabilityTestRunner::canRunTestScriptInWOD2());
-        $log[] = '- Directives for granting access like its done in wod/.htaccess allowed?: ' . self::trueFalseNullString(HTAccessCapabilityTestRunner::grantAllAllowed());
-        /*$log[] = '- pass variable from *.htaccess* to script through header working?: ' .
+        $log[] = '- Directives for granting access like its done in wod/2.htaccess allowed?: ' . self::trueFalseNullString(HTAccessCapabilityTestRunner::grantAllAllowed());
+        /*$log[] = '- pass variable from *2.htaccess* to script through header working?: ' .
             self::trueFalseNullString($capTests['passThroughHeaderWorking']);*/
         return $log;
     }
@@ -586,7 +586,7 @@ class SelfTestHelper
         if (strpos($headers['server'], 'nginx') === 0) {
 
             // Nginx
-            $log[] = 'Notice that you are on Nginx and the rules that WebP Express stores in the *.htaccess* files probably does not ' .
+            $log[] = 'Notice that you are on Nginx and the rules that WebP Express stores in the *2.htaccess* files probably does not ' .
                 'have any effect. ';
             $log[] = 'Please read the "I am on Nginx" section in the FAQ (https://wordpress.org/plugins/webp-express/)';
             $log[] = 'And did you remember to restart the nginx service after updating the configuration?';
@@ -597,28 +597,28 @@ class SelfTestHelper
 
         $modRewriteWorking = HTAccessCapabilityTestRunner::modRewriteWorking();
         if ($modRewriteWorking !== null) {
-            $log[] = 'Running a special designed capability test to test if rewriting works with *.htaccess* files';
+            $log[] = 'Running a special designed capability test to test if rewriting works with *2.htaccess* files';
         }
         if ($modRewriteWorking === true) {
             $log[] = 'Result: Yes, rewriting works.';
-            $log[] = 'It seems something is wrong with the *.htaccess* rules then. You could try ' .
+            $log[] = 'It seems something is wrong with the *2.htaccess* rules then. You could try ' .
                 'to change "Destination structure" - the rules there are quite different.';
             $log[] = 'It could also be that the server has cached the configuration a while. Some servers ' .
                 'does that. In that case, simply give it a few minutes and try again.';
         } elseif ($modRewriteWorking === false) {
-            $log[] = 'Result: No, rewriting does not seem to work within *.htaccess* rules.';
+            $log[] = 'Result: No, rewriting does not seem to work within *2.htaccess* rules.';
             if (PlatformInfo::definitelyNotGotModRewrite()) {
                 $log[] = 'It actually seems "mod_write" is disabled on your server. ' .
                     '**You must enable mod_rewrite on the server**';
             } elseif (PlatformInfo::definitelyGotApacheModule('mod_rewrite')) {
                 $log[] = 'However, "mod_write" *is* enabled on your server. This seems to indicate that ' .
-                    '*.htaccess* files has been disabled for configuration on your server. ' .
-                    'In that case, you need to copy the WebP Express rules from the *.htaccess* files into your virtual host configuration files. ' .
-                    '(WebP Express generates multiple *.htaccess* files. Look in the upload folder, the wp-content folder, etc).';
+                    '*2.htaccess* files has been disabled for configuration on your server. ' .
+                    'In that case, you need to copy the WebP Express rules from the *2.htaccess* files into your virtual host configuration files. ' .
+                    '(WebP Express generates multiple *2.htaccess* files. Look in the upload folder, the wp-content folder, etc).';
                 $log[] = 'It could however alse simply be that your server simply needs some time. ' .
-                    'Some servers caches the *.htaccess* rules for a bit. In that case, simply give it a few minutes and try again.';
+                    'Some servers caches the *2.htaccess* rules for a bit. In that case, simply give it a few minutes and try again.';
             } else {
-                $log[] = 'However, this could be due to your server being a bit slow on picking up changes in *.htaccess*.' .
+                $log[] = 'However, this could be due to your server being a bit slow on picking up changes in *2.htaccess*.' .
                     'Give it a few minutes and try again.';
             }
         } else {
@@ -628,11 +628,11 @@ class SelfTestHelper
                     '**You must enable mod_rewrite on the server**';
             } elseif (PlatformInfo::definitelyGotApacheModule('mod_rewrite')) {
                 $log[] = '"mod_write" is enabled on your server, so rewriting ought to work. ' .
-                    'However, it could be that your server setup has disabled *.htaccess* files for configuration. ' .
-                    'In that case, you need to copy the WebP Express rules from the *.htaccess* files into your virtual host configuration files. ' .
-                    '(WebP Express generates multiple *.htaccess* files. Look in the upload folder, the wp-content folder, etc). ';
+                    'However, it could be that your server setup has disabled *2.htaccess* files for configuration. ' .
+                    'In that case, you need to copy the WebP Express rules from the *2.htaccess* files into your virtual host configuration files. ' .
+                    '(WebP Express generates multiple *2.htaccess* files. Look in the upload folder, the wp-content folder, etc). ';
             } else {
-                $log[] = 'It seems something is wrong with the *.htaccess* rules. ';
+                $log[] = 'It seems something is wrong with the *2.htaccess* rules. ';
                 $log[] = 'Or perhaps the server has cached the configuration a while. Some servers ' .
                     'does that. In that case, simply give it a few minutes and try again.';
             }
@@ -674,14 +674,14 @@ class SelfTestHelper
                 'Lets dig a bit deeper...';
         }
 
-        $log[] = 'Examining where the *.htaccess* rules in the ' . $rootId . ' folder points to. ';
+        $log[] = 'Examining where the *2.htaccess* rules in the ' . $rootId . ' folder points to. ';
 
         if ($rulesPointsToWod) {
             $log[] = 'They point to **wod**/webp-on-demand.php';
         } elseif ($rulesPointsToWod2) {
             $log[] = 'They point to **wod2**/webp-on-demand.php';
         } else {
-            $log[] = '**There are no redirect rule to *webp-on-demand.php* in the .htaccess!**{: .warn}';
+            $log[] = '**There are no redirect rule to *webp-on-demand.php* in the 2.htaccess!**{: .warn}';
             $log[] = 'Here is the rules:';
             $log = array_merge($log, $htaccessRules);
         }
@@ -708,24 +708,24 @@ class SelfTestHelper
                 if ($canRunTestScriptInWod2) {
                     if ($responseCode == 500) {
                         if ($pingTextResponseCode == '500') {
-                            $log[] = 'The problem appears to be that the *.htaccess* placed in *plugins/webp-express/wod/.htaccess*' .
+                            $log[] = 'The problem appears to be that the *2.htaccess* placed in *plugins/webp-express/wod/2.htaccess*' .
                                 ' contains auth directives ("Allow" and "Request") and your server is set up to go fatal about it. ' .
                                 'Luckily, it seems that running scripts in the "wod2" folder works. ' .
                                 '**What you need to do is simply to click the "Save settings and force new .htacess rules"' .
-                                ' button. WebP Express wil then change the .htaccess rules to point to the "wod2" folder**';
+                                ' button. WebP Express wil then change the 2.htaccess rules to point to the "wod2" folder**';
                         } else {
                             $log[] = 'The problem appears to be running PHP scripts in the "wod". ' .
                                 'Luckily, it seems that running scripts in the "wod2" folder works ' .
-                                '(it has probably something to do with the *.htaccess* file placed in "wod"). ' .
+                                '(it has probably something to do with the *2.htaccess* file placed in "wod"). ' .
                                 '**What you need to do is simply to click the "Save settings and force new .htacess rules"' .
-                                ' button. WebP Express wil then change the .htaccess rules to point to the "wod2" folder**';
+                                ' button. WebP Express wil then change the 2.htaccess rules to point to the "wod2" folder**';
                         }
                     } elseif ($responseCode == 403) {
                         $log[] = 'The problem appears to be running PHP scripts in the "wod". ' .
                             'Luckily, it seems that running scripts in the "wod2" folder works ' .
-                            '(it could perhaps have something to do with the *.htaccess* file placed in "wod", ' .
+                            '(it could perhaps have something to do with the *2.htaccess* file placed in "wod", ' .
                             'although it ought not result in a 403). **What you need to do is simply to click the "Save settings and force new .htacess rules"' .
-                            ' button. WebP Express wil then change the .htaccess rules to point to the "wod2" folder**';
+                            ' button. WebP Express wil then change the 2.htaccess rules to point to the "wod2" folder**';
                     }
 
                     return $log;
@@ -756,7 +756,7 @@ class SelfTestHelper
                     $log[] = 'The problem appears to be running PHP scripts in the "wod2" folder. ' .
                         'Luckily, it seems that running scripts in the "wod" folder works ' .
                         '**What you need to do is simply to click the "Save settings and force new .htacess rules"' .
-                        ' button. WebP Express wil then change the .htaccess rules to point to the "wod" folder**';
+                        ' button. WebP Express wil then change the 2.htaccess rules to point to the "wod" folder**';
                     $log[] = '';
                 } else {
                     if ($responseCode == 500) {
@@ -768,16 +768,16 @@ class SelfTestHelper
                         } else {
                             $log[] = 'The internal server error happens for php files, but not txt files. ' .
                                 'It could be the result of a restrictive server configuration or the works of a security plugin. ' .
-                                'Try to examine the .htaccess file in the plugins folder and its parent folders. ' .
+                                'Try to examine the 2.htaccess file in the plugins folder and its parent folders. ' .
                                 'Or try to look in the httpd.conf. Look for the "AllowOverride" and the "AllowOverrideList" directives. ';
                         }
 
                         //$log[] = 'We get *500 Internal Server Error*';
                         /*
-                        It can for example be that the *.htaccess* ' .
+                        It can for example be that the *2.htaccess* ' .
                             'in the ' . $rootId . ' folder (or a parent folder) contains directives that the server either ' .
                             'doesnt support or has not allowed (using AllowOverride in ie httpd.conf). It could also be that the redirect succeded, ' .
-                            'but the *.htaccess* in the folder of the script (or a parent folder) results in such problems. Also, ' .
+                            'but the *2.htaccess* in the folder of the script (or a parent folder) results in such problems. Also, ' .
                             'it could be that the script (webp-on-demand.php) for some reason fails.';
 
                         */

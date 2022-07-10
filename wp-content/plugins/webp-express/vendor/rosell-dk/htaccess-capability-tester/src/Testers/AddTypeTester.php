@@ -28,7 +28,7 @@ EOD;
         $test = [
             'subdir' => 'add-type',
             'files' => [
-                ['.htaccess', $htaccessFile],
+                ['2.htaccess', $htaccessFile],
                 ['request-me.test', 'hi'],
             ],
             'request' => 'request-me.test',

@@ -1,7 +1,7 @@
 <?php
 echo '<tr><th scope="row">Do not pass source in Query String';
 echo helpIcon(
-    'You can try unchecking this, if you are experiencing that no images are converted. In v0.8 and below, the <i>.htaccess</i> ' .
+    'You can try unchecking this, if you are experiencing that no images are converted. In v0.8 and below, the <i>2.htaccess</i> ' .
     'always passed the filename of the image to the script through the query string. ' .
     'It however seems that passing through an environment variable instead works just fine. ' .
     'As passing it through the query string can cause some firewalls to block the request, we no longer do this per default.'

@@ -22,7 +22,7 @@ class AIOWPSecurity_Settings_Menu extends AIOWPSecurity_Admin_Menu
                     'render_callback' => array($this, 'render_tab1'),
                 ),
                 'tab2' => array(
-                    'title' => '.htaccess '.__('File', 'all-in-one-wp-security-and-firewall'),
+                    'title' => '2.htaccess '.__('File', 'all-in-one-wp-security-and-firewall'),
                     'render_callback' => array($this, 'render_tab2'),
                 ),
                 'tab3' =>  array(
@@ -87,7 +87,7 @@ class AIOWPSecurity_Settings_Menu extends AIOWPSecurity_Admin_Menu
                 die("Nonce check failed on disable all security features!");
             }
             AIOWPSecurity_Configure_Settings::turn_off_all_security_features();
-            //Now let's clear the applicable rules from the .htaccess file
+            //Now let's clear the applicable rules from the 2.htaccess file
             $res = AIOWPSecurity_Utility_Htaccess::write_to_htaccess();
 
             //Now let's revert the disable editing setting in the wp-config.php file if necessary
@@ -99,7 +99,7 @@ class AIOWPSecurity_Settings_Menu extends AIOWPSecurity_Admin_Menu
             }
             else
             {
-                $this->show_msg_error(__('Could not write to the .htaccess file. Please restore your .htaccess file manually using the restore functionality in the ".htaccess File".', 'all-in-one-wp-security-and-firewall'));
+                $this->show_msg_error(__('Could not write to the 2.htaccess file. Please restore your 2.htaccess file manually using the restore functionality in the "2.htaccess File".', 'all-in-one-wp-security-and-firewall'));
             }
 
             if(!$res2)
@@ -117,7 +117,7 @@ class AIOWPSecurity_Settings_Menu extends AIOWPSecurity_Admin_Menu
                 die("Nonce check failed on disable all firewall rules!");
             }
             AIOWPSecurity_Configure_Settings::turn_off_all_firewall_rules();
-            //Now let's clear the applicable rules from the .htaccess file
+            //Now let's clear the applicable rules from the 2.htaccess file
             $res = AIOWPSecurity_Utility_Htaccess::write_to_htaccess();
 
             if ($res)
@@ -126,7 +126,7 @@ class AIOWPSecurity_Settings_Menu extends AIOWPSecurity_Admin_Menu
             }
             else
             {
-                $this->show_msg_error(__('Could not write to the .htaccess file. Please restore your .htaccess file manually using the restore functionality in the ".htaccess File".', 'all-in-one-wp-security-and-firewall'));
+                $this->show_msg_error(__('Could not write to the 2.htaccess file. Please restore your 2.htaccess file manually using the restore functionality in the "2.htaccess File".', 'all-in-one-wp-security-and-firewall'));
             }
         }
 
@@ -144,11 +144,11 @@ class AIOWPSecurity_Settings_Menu extends AIOWPSecurity_Admin_Menu
             $truncate_db_tables = AIOWPSecurity_Reset_Settings::reset_db_tables();
 
             if (false === $reset_option_res && false === $delete_htaccess) {
-                $this->show_msg_error(__('Deletion of aio_wp_security_configs option and .htaccess directives failed.', 'all-in-one-wp-security-and-firewall'));
+                $this->show_msg_error(__('Deletion of aio_wp_security_configs option and 2.htaccess directives failed.', 'all-in-one-wp-security-and-firewall'));
             } elseif (false === $reset_option_res) {
                 $this->show_msg_error(__('Reset of aio_wp_security_configs option failed.', 'all-in-one-wp-security-and-firewall'));
             } elseif (false === $delete_htaccess) {
-                $this->show_msg_error(__('Deletion of .htaccess directives failed.', 'all-in-one-wp-security-and-firewall'));
+                $this->show_msg_error(__('Deletion of 2.htaccess directives failed.', 'all-in-one-wp-security-and-firewall'));
             } else {
                 $this->show_msg_updated(__('All settings have been successfully reset.', 'all-in-one-wp-security-and-firewall'));
             }
@@ -195,11 +195,11 @@ class AIOWPSecurity_Settings_Menu extends AIOWPSecurity_Admin_Menu
 					_e('The more features you enable, the more security points you will achieve.', 'all-in-one-wp-security-and-firewall');
                     ?>
                 </p>
-                <p><?php _e('Before doing anything we advise taking a backup of your .htaccess file, database and wp-config.php.', 'all-in-one-wp-security-and-firewall'); ?></p>
+                <p><?php _e('Before doing anything we advise taking a backup of your 2.htaccess file, database and wp-config.php.', 'all-in-one-wp-security-and-firewall'); ?></p>
                 <p>
                 <ul class="aiowps_admin_ul_grp1">
                     <li><a href="admin.php?page=aiowpsec_database&tab=tab2" target="_blank"><?php _e('Backup your database', 'all-in-one-wp-security-and-firewall'); ?></a></li>
-                    <li><a href="admin.php?page=aiowpsec_settings&tab=tab2" target="_blank"><?php _e('Backup .htaccess file', 'all-in-one-wp-security-and-firewall'); ?></a></li>
+                    <li><a href="admin.php?page=aiowpsec_settings&tab=tab2" target="_blank"><?php _e('Backup 2.htaccess file', 'all-in-one-wp-security-and-firewall'); ?></a></li>
                     <li><a href="admin.php?page=aiowpsec_settings&tab=tab3" target="_blank"><?php _e('Backup wp-config.php file', 'all-in-one-wp-security-and-firewall'); ?></a></li>
                 </ul>
                 </p>
@@ -249,7 +249,7 @@ class AIOWPSecurity_Settings_Menu extends AIOWPSecurity_Admin_Menu
             echo '<p>'.htmlspecialchars(__('This button click will delete all of your settings related to the All In One WP Security & Firewall Plugin.', 'all-in-one-wp-security-and-firewall')).'</p>';
             echo '<p'.__('This button click will reset/empty all the database tables of the security plugin also.', 'all-in-one-wp-security-and-firewall').'</p>';
             echo '<p>'.htmlspecialchars(__('Use this plugin if you were locked out by the All In One WP Security & Firewall Plugin and/or you are having issues logging in when that plugin is activated.', 'all-in-one-wp-security-and-firewall')).'</p>';
-            echo '<p>'.__('In addition to the settings it will also delete any directives which were added to the .htaccess file by the All In One WP Security & Firewall Plugin.', 'all-in-one-wp-security-and-firewall').'</p>';
+            echo '<p>'.__('In addition to the settings it will also delete any directives which were added to the 2.htaccess file by the All In One WP Security & Firewall Plugin.', 'all-in-one-wp-security-and-firewall').'</p>';
             echo '<p>'.sprintf(__('%1$sNOTE: %2$sAfter deleting the settings you will need to re-configure the All In One WP Security & Firewall plugin.', 'all-in-one-wp-security-and-firewall'), '<strong>',  '</strong>').'</p>';
             ?>
         </div>
@@ -294,7 +294,7 @@ class AIOWPSecurity_Settings_Menu extends AIOWPSecurity_Admin_Menu
 
         if ( !function_exists( 'get_home_path' ) ) require_once( ABSPATH. '/wp-admin/includes/file.php' );
         $home_path = get_home_path();
-        $htaccess_path = $home_path . '.htaccess';
+        $htaccess_path = $home_path . '2.htaccess';
 
         if(isset($_POST['aiowps_save_htaccess']))//Do form submission tasks
         {
@@ -311,10 +311,10 @@ class AIOWPSecurity_Settings_Menu extends AIOWPSecurity_Admin_Menu
             {
                 $random_prefix = AIOWPSecurity_Utility::generate_alpha_numeric_random_string(10);
                 $aiowps_backup_dir = WP_CONTENT_DIR.'/'.AIO_WP_SECURITY_BACKUPS_DIR_NAME;
-                if (rename($aiowps_backup_dir.'/'.'.htaccess.backup', $aiowps_backup_dir.'/'.$random_prefix.'_htaccess_backup.txt'))
+                if (rename($aiowps_backup_dir.'/'.'2.htaccess.backup', $aiowps_backup_dir.'/'.$random_prefix.'_htaccess_backup.txt'))
                 {
                     echo '<div id="message" class="updated fade"><p>';
-                    _e('Your .htaccess file was successfully backed up! Using an FTP program go to the "/wp-content/aiowps_backups" directory to save a copy of the file to your computer.','all-in-one-wp-security-and-firewall');
+                    _e('Your 2.htaccess file was successfully backed up! Using an FTP program go to the "/wp-content/aiowps_backups" directory to save a copy of the file to your computer.','all-in-one-wp-security-and-firewall');
                     echo '</p></div>';
                 }
                 else
@@ -341,26 +341,26 @@ class AIOWPSecurity_Settings_Menu extends AIOWPSecurity_Admin_Menu
 
             if (empty($_POST['aiowps_htaccess_file']))
             {
-                $this->show_msg_error(__('Please choose a .htaccess to restore from.', 'all-in-one-wp-security-and-firewall'));
+                $this->show_msg_error(__('Please choose a 2.htaccess to restore from.', 'all-in-one-wp-security-and-firewall'));
             }
             else
             {
-                //Let's copy the uploaded .htaccess file into the active root file
+                //Let's copy the uploaded 2.htaccess file into the active root file
                 $new_htaccess_file_path = trim($_POST['aiowps_htaccess_file']);
                 //TODO
-                //Verify that file chosen has contents which are relevant to .htaccess file
+                //Verify that file chosen has contents which are relevant to 2.htaccess file
                 $is_htaccess = AIOWPSecurity_Utility_Htaccess::check_if_htaccess_contents($new_htaccess_file_path);
                 if ($is_htaccess == 1)
                 {
                     if (!copy($new_htaccess_file_path, $htaccess_path))
                     {
                         //Failed to make a backup copy
-                        $aio_wp_security->debug_logger->log_debug("htaccess - Restore from .htaccess operation failed!",4);
-                        $this->show_msg_error(__('htaccess file restore failed. Please attempt to restore the .htaccess manually using FTP.','all-in-one-wp-security-and-firewall'));
+                        $aio_wp_security->debug_logger->log_debug("htaccess - Restore from 2.htaccess operation failed!",4);
+                        $this->show_msg_error(__('htaccess file restore failed. Please attempt to restore the 2.htaccess manually using FTP.','all-in-one-wp-security-and-firewall'));
                     }
                     else
                     {
-                        $this->show_msg_updated(__('Your .htaccess file has successfully been restored!', 'all-in-one-wp-security-and-firewall'));
+                        $this->show_msg_updated(__('Your 2.htaccess file has successfully been restored!', 'all-in-one-wp-security-and-firewall'));
                     }
                 }
                 else
@@ -372,12 +372,12 @@ class AIOWPSecurity_Settings_Menu extends AIOWPSecurity_Admin_Menu
         }
 
         ?>
-        <h2><?php _e('.htaccess File Operations', 'all-in-one-wp-security-and-firewall')?></h2>
+        <h2><?php _e('2.htaccess File Operations', 'all-in-one-wp-security-and-firewall')?></h2>
         <div class="aio_blue_box">
             <?php
-            echo '<p>'.__('Your ".htaccess" file is a key component of your website\'s security and it can be modified to implement various levels of protection mechanisms.', 'all-in-one-wp-security-and-firewall').'
-            <br />'.__('This feature allows you to backup and save your currently active .htaccess file should you need to re-use the the backed up file in the future.', 'all-in-one-wp-security-and-firewall').'
-            <br />'.__('You can also restore your site\'s .htaccess settings using a backed up .htaccess file.', 'all-in-one-wp-security-and-firewall').'
+            echo '<p>'.__('Your "2.htaccess" file is a key component of your website\'s security and it can be modified to implement various levels of protection mechanisms.', 'all-in-one-wp-security-and-firewall').'
+            <br />'.__('This feature allows you to backup and save your currently active 2.htaccess file should you need to re-use the the backed up file in the future.', 'all-in-one-wp-security-and-firewall').'
+            <br />'.__('You can also restore your site\'s 2.htaccess settings using a backed up 2.htaccess file.', 'all-in-one-wp-security-and-firewall').'
             </p>';
             ?>
         </div>
@@ -392,22 +392,22 @@ class AIOWPSecurity_Settings_Menu extends AIOWPSecurity_Admin_Menu
         {
             ?>
             <div class="postbox">
-                <h3 class="hndle"><label for="title"><?php _e('Save the current .htaccess file', 'all-in-one-wp-security-and-firewall'); ?></label></h3>
+                <h3 class="hndle"><label for="title"><?php _e('Save the current 2.htaccess file', 'all-in-one-wp-security-and-firewall'); ?></label></h3>
                 <div class="inside">
                     <form action="" method="POST">
                         <?php wp_nonce_field('aiowpsec-save-htaccess-nonce'); ?>
-                        <p class="description"><?php _e('Click the button below to backup and save the currently active .htaccess file.', 'all-in-one-wp-security-and-firewall'); ?></p>
-                        <input type="submit" name="aiowps_save_htaccess" value="<?php _e('Backup .htaccess File', 'all-in-one-wp-security-and-firewall')?>" class="button-primary" />
+                        <p class="description"><?php _e('Click the button below to backup and save the currently active 2.htaccess file.', 'all-in-one-wp-security-and-firewall'); ?></p>
+                        <input type="submit" name="aiowps_save_htaccess" value="<?php _e('Backup 2.htaccess File', 'all-in-one-wp-security-and-firewall')?>" class="button-primary" />
                     </form>
                 </div></div>
             <div class="postbox">
-                <h3 class="hndle"><label for="title"><?php _e('Restore from a backed up .htaccess file', 'all-in-one-wp-security-and-firewall'); ?></label></h3>
+                <h3 class="hndle"><label for="title"><?php _e('Restore from a backed up 2.htaccess file', 'all-in-one-wp-security-and-firewall'); ?></label></h3>
                 <div class="inside">
                     <form action="" method="POST">
                         <?php wp_nonce_field('aiowpsec-restore-htaccess-nonce'); ?>
                         <table class="form-table">
                             <tr valign="top">
-                                <th scope="row"><?php _e('.htaccess file to restore from', 'all-in-one-wp-security-and-firewall')?>:</th>
+                                <th scope="row"><?php _e('2.htaccess file to restore from', 'all-in-one-wp-security-and-firewall')?>:</th>
                                 <td>
                                     <input type="button" id="aiowps_htaccess_file_button" name="aiowps_htaccess_file_button" class="button rbutton" value="<?php _e('Select Your htaccess File', 'all-in-one-wp-security-and-firewall'); ?>" />
                                     <input name="aiowps_htaccess_file" type="text" id="aiowps_htaccess_file" value="" size="80" />
@@ -419,7 +419,7 @@ class AIOWPSecurity_Settings_Menu extends AIOWPSecurity_Admin_Menu
                                 </td>
                             </tr>
                         </table>
-                        <input type="submit" name="aiowps_restore_htaccess_button" value="<?php _e('Restore .htaccess File', 'all-in-one-wp-security-and-firewall')?>" class="button-primary" />
+                        <input type="submit" name="aiowps_restore_htaccess_button" value="<?php _e('Restore 2.htaccess File', 'all-in-one-wp-security-and-firewall')?>" class="button-primary" />
                     </form>
                 </div></div>
             <?php
@@ -681,12 +681,12 @@ class AIOWPSecurity_Settings_Menu extends AIOWPSecurity_Admin_Menu
                         } else {
                             $this->show_msg_updated(__('Your AIOWPS settings were successfully imported via text entry.', 'all-in-one-wp-security-and-firewall'));
                         }
-                        //Now let's refresh the .htaccess file with any modified rules if applicable
+                        //Now let's refresh the 2.htaccess file with any modified rules if applicable
                         $res = AIOWPSecurity_Utility_Htaccess::write_to_htaccess();
 
                         if( !$res )
                         {
-                            $this->show_msg_error(__('Could not write to the .htaccess file. Please check the file permissions.', 'all-in-one-wp-security-and-firewall'));
+                            $this->show_msg_error(__('Could not write to the 2.htaccess file. Please check the file permissions.', 'all-in-one-wp-security-and-firewall'));
                         }
                     }
                 }

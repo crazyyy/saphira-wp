@@ -1512,8 +1512,8 @@ msgid "To deactivate the plugin correctly, please select if you want to:"
 msgstr "Щоб коректно вимкнути плагін, будь ласка оберіть що саме ви бажаєте:"
 
 #: class-admin.php:4341
-msgid "If the setting 'stop editing the .htaccess file' is enabled, you can't change this setting."
-msgstr "Якщо налаштування 'зупинити редагування файлу .htaccess' увімкнено, вам не вдасться змінити це налаштування."
+msgid "If the setting 'stop editing the 2.htaccess file' is enabled, you can't change this setting."
+msgstr "Якщо налаштування 'зупинити редагування файлу 2.htaccess' увімкнено, вам не вдасться змінити це налаштування."
 
 #: class-admin.php:4191 class-multisite.php:342
 msgid "Enable this option to permanently dismiss all +1 notices in the 'Your progress' tab"
@@ -1528,8 +1528,8 @@ msgid "Enable WordPress 301 redirect"
 msgstr "Увімкнути переадресування WordPress 301"
 
 #: class-admin.php:4169
-msgid "Redirects all requests over HTTP to HTTPS using a PHP 301 redirect. Enable if the .htaccess redirect cannot be used, for example on NGINX servers."
-msgstr "Переадресує всі запити від HTTP до HTTPS використовуючи переадресування PHP 301. Увімкніть якщо переадресування .htaccess не може бути використане, наприклад на серверах NGINX."
+msgid "Redirects all requests over HTTP to HTTPS using a PHP 301 redirect. Enable if the 2.htaccess redirect cannot be used, for example on NGINX servers."
+msgstr "Переадресує всі запити від HTTP до HTTPS використовуючи переадресування PHP 301. Увімкніть якщо переадресування 2.htaccess не може бути використане, наприклад на серверах NGINX."
 
 #: class-admin.php:4141
 msgid "Copied!"
@@ -1585,16 +1585,16 @@ msgid "Your site uses Elementor. This can require some additional steps before g
 msgstr "Ваш сайт використовує Elementor. Можуть знадобитись додаткові кроки перед отриманням замка безпеки."
 
 #: class-admin.php:3277
-msgid "The .htaccess redirect rules selected by this plugin failed in the test. Set manually or dismiss to leave on WordPress redirect."
-msgstr "Правила переадресування .htaccess, обрані цим плагіном не пройшли тестування. Встановіть вручну чи проігноруйте, щоб залишит переадресування WordPress."
+msgid "The 2.htaccess redirect rules selected by this plugin failed in the test. Set manually or dismiss to leave on WordPress redirect."
+msgstr "Правила переадресування 2.htaccess, обрані цим плагіном не пройшли тестування. Встановіть вручну чи проігноруйте, щоб залишит переадресування WordPress."
 
 #: class-admin.php:3271
 msgid "The %s file is not writable. You can either use the WordPress redirect, add the rules manually, or set the file to %swritable%s."
 msgstr "Файл %s недоступний для запису. Ви можете або використовувати переадресування WordPress, або додати правила вручну, або зробити файл %sдоступним для запису%s."
 
 #: class-admin.php:3259
-msgid "WordPress 301 redirect enabled. We recommend to enable a 301 .htaccess redirect."
-msgstr "Переадресування WordPress 301 ввімкнено. Ми рекомендуємо увімкнути переадресування 301 .htaccess."
+msgid "WordPress 301 redirect enabled. We recommend to enable a 301 2.htaccess redirect."
+msgstr "Переадресування WordPress 301 ввімкнено. Ми рекомендуємо увімкнути переадресування 301 2.htaccess."
 
 #: class-admin.php:3219
 msgid "Mixed content fixer not enabled. Enable the option to fix mixed content on your site."
@@ -1855,12 +1855,12 @@ msgid "Error occurred when retrieving the webpage."
 msgstr "Виникла помилка при отриманні веб-сторінки."
 
 #: class-site-health.php:153
-msgid "The 301 .htaccess redirect is the fastest and most reliable redirect option."
-msgstr "Переадресування 301 .htaccess найшвидша і найнадійніша опція переадресування."
+msgid "The 301 2.htaccess redirect is the fastest and most reliable redirect option."
+msgstr "Переадресування 301 2.htaccess найшвидша і найнадійніша опція переадресування."
 
 #: class-site-health.php:150
-msgid "301 .htaccess redirect is not enabled."
-msgstr "301 .htaccess переадресація не увімкнена."
+msgid "301 2.htaccess redirect is not enabled."
+msgstr "301 2.htaccess переадресація не увімкнена."
 
 #: class-site-health.php:107
 msgid "You have set a 301 redirect to SSL. This is important for SEO purposes"
@@ -1875,8 +1875,8 @@ msgid "Dismiss all Really Simple SSL notices"
 msgstr "Відхилити всі сповіщення Really Simple SSL"
 
 #: class-admin.php:3254
-msgid "301 redirect to https set: .htaccess redirect."
-msgstr "301 перенаправлення на https встановлено: .htaccess перенаправлення."
+msgid "301 redirect to https set: 2.htaccess redirect."
+msgstr "301 перенаправлення на https встановлено: 2.htaccess перенаправлення."
 
 #: class-multisite.php:1036
 msgid "If the conversion does not proceed after a few minutes, click %shere%s to force the conversion process."
@@ -1923,8 +1923,8 @@ msgid "Cancel"
 msgstr "Скасувати"
 
 #: class-admin.php:4595
-msgid "The .htaccess redirect will remain active"
-msgstr "Переадресування .htaccess залишиться активним"
+msgid "The 2.htaccess redirect will remain active"
+msgstr "Переадресування 2.htaccess залишиться активним"
 
 #: class-admin.php:4594
 msgid "Your site address will remain https://"
@@ -2002,31 +2002,31 @@ msgstr "Можливо вам знадобиться перезайти у си�
 
 #: class-admin.php:4334
 msgid "Before you enable the htaccess redirect, make sure you know how to %sregain access%s to your site in case of a redirect loop."
-msgstr "Перед тим, як увімкнути переадресування .htaccess, переконайтесь що знаєте як %sповернути доступ%s до свого сайту у випадку появи петлі переадресування."
+msgstr "Перед тим, як увімкнути переадресування 2.htaccess, переконайтесь що знаєте як %sповернути доступ%s до свого сайту у випадку появи петлі переадресування."
 
 #: class-admin.php:4174
-msgid "A .htaccess redirect is faster and works better with caching. Really Simple SSL detects the redirect code that is most likely to work (99% of websites), but this is not 100%. Make sure you know how to regain access to your site if anything goes wrong!"
-msgstr "Переадресування .htaccess швидше та краще працює з кешуванням. Really Simple SSL знаходить код переадресування, що працюватиме з найбільшою ймовірністю (99% веб-сайтів), але це не 100%. Переконайтесь, що знаєте як повернути доступ до вашого сайту якщо щось піде не так!"
+msgid "A 2.htaccess redirect is faster and works better with caching. Really Simple SSL detects the redirect code that is most likely to work (99% of websites), but this is not 100%. Make sure you know how to regain access to your site if anything goes wrong!"
+msgstr "Переадресування 2.htaccess швидше та краще працює з кешуванням. Really Simple SSL знаходить код переадресування, що працюватиме з найбільшою ймовірністю (99% веб-сайтів), але це не 100%. Переконайтесь, що знаєте як повернути доступ до вашого сайту якщо щось піде не так!"
 
 #: class-admin.php:4175 class-site-health.php:158
-msgid "Enable 301 .htaccess redirect"
-msgstr "Увімкнути переадресування 301 .htaccess "
+msgid "Enable 301 2.htaccess redirect"
+msgstr "Увімкнути переадресування 301 2.htaccess "
 
 #: class-admin.php:3242
 msgid "No 301 redirect is set. Enable the WordPress 301 redirect in the settings to get a 301 permanent redirect."
 msgstr "Переадресування 301 не встановлено. Увімкніть переадресування WordPress 301 в налаштуваннях для отримання постійної 301 переадресації. "
 
 #: class-admin.php:3265
-msgid "Enable a .htaccess redirect or WordPress redirect in the settings to create a 301 redirect."
-msgstr "Увімкніть переадресування .htaccess або переадресування WordPress у налаштуваннях, щоб створити 301 переадресування. "
+msgid "Enable a 2.htaccess redirect or WordPress redirect in the settings to create a 301 redirect."
+msgstr "Увімкніть переадресування 2.htaccess або переадресування WordPress у налаштуваннях, щоб створити 301 переадресування. "
 
 #: class-admin.php:4164
 msgid "In most cases you need to leave this enabled, to prevent mixed content issues on your site."
 msgstr "В більшості випадків краще лишити це ввімкненим, щоб попередити проблеми зі змішаним вмістом на вашому сайті. "
 
 #: class-admin.php:4181
-msgid "If you want to customize the Really Simple SSL .htaccess, you need to prevent Really Simple SSL from rewriting it. Enabling this option will do that."
-msgstr "Якщо ви бажаєте налаштувати Really Simple SSL .htaccess, вам потрібно запобігти його перезапису Really Simple SSL. Увімкніть цю опцію, щоб зробити це. "
+msgid "If you want to customize the Really Simple SSL 2.htaccess, you need to prevent Really Simple SSL from rewriting it. Enabling this option will do that."
+msgstr "Якщо ви бажаєте налаштувати Really Simple SSL 2.htaccess, вам потрібно запобігти його перезапису Really Simple SSL. Увімкніть цю опцію, щоб зробити це. "
 
 #: class-admin.php:3238
 msgid "301 redirect to https set."
@@ -2131,8 +2131,8 @@ msgid "%s is a singleton class and you cannot create a second instance."
 msgstr "%s це одиночний класс і ви не можете створити другий запис. "
 
 #: class-admin.php:4373
-msgid ".htaccess is currently not %swritable%s."
-msgstr ".htaccess зараз не %sдоступний для запису%s."
+msgid "2.htaccess is currently not %swritable%s."
+msgstr "2.htaccess зараз не %sдоступний для запису%s."
 
 #: class-admin.php:3196
 msgid "Mixed content fixer was successfully detected on the front-end."
@@ -2156,8 +2156,8 @@ msgid "Really Simple SSL"
 msgstr "Really Simple SSL"
 
 #: class-admin.php:4182
-msgid "Stop editing the .htaccess file"
-msgstr "Припинити редагування файлу .htaccess "
+msgid "Stop editing the 2.htaccess file"
+msgstr "Припинити редагування файлу 2.htaccess "
 
 #: grid/templates/settings-footer.php:3
 #: lets-encrypt/wizard/class-field.php:1305

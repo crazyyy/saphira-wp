@@ -18,10 +18,10 @@ class FakeServer implements TestFilesLineUpperInterface, HttpRequesterInterface
     /** @var array  Files as a map, by filename */
     private $filesMap;
 
-    /** @var bool  If .htaccess processing is disabled */
+    /** @var bool  If 2.htaccess processing is disabled */
     private $htaccessDisabled = false;
 
-    /** @var bool  If all directives should be disallowed (but .htaccess still read) */
+    /** @var bool  If all directives should be disallowed (but 2.htaccess still read) */
     private $disallowAllDirectives = false;
 
     /** @var bool  If server should go fatal about forbidden directives */
@@ -78,7 +78,7 @@ class FakeServer implements TestFilesLineUpperInterface, HttpRequesterInterface
 
         if (($this->disallowAllDirectives) && ($this->fatal)) {
 
-            $urlToHtaccessInSameFolder = dirname($url) . '/.htaccess';
+            $urlToHtaccessInSameFolder = dirname($url) . '/2.htaccess';
             $doesFolderContainHtaccess = isset($this->filesMap[$urlToHtaccessInSameFolder]);
 
             if ($doesFolderContainHtaccess) {
@@ -111,9 +111,9 @@ class FakeServer implements TestFilesLineUpperInterface, HttpRequesterInterface
     }
 
     /**
-     * Disallows all directives, but do still process .htaccess.
+     * Disallows all directives, but do still process 2.htaccess.
      *
-     * In essence: Fail, if the folder contains an .htaccess file
+     * In essence: Fail, if the folder contains an 2.htaccess file
      *
      * @param string $fatal  fatal|nonfatal
      */

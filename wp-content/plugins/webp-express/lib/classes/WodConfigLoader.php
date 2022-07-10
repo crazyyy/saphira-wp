@@ -132,7 +132,7 @@ class WodConfigLoader
             }
         }
 
-        // Old .htaccess rules from before 0.22.0 passed relative path to general plugin dir.
+        // Old 2.htaccess rules from before 0.22.0 passed relative path to general plugin dir.
         // these rules must still be supported, which is what we do here:
         if (!$wpContentDirRelToWEPluginDir) {
             self::$checking = 'relative path between plugin dir and wp-content dir';
@@ -197,7 +197,7 @@ class WodConfigLoader
             $docRootAvailable = PathHelper::isDocRootAvailableAndResolvable();
             if (!$docRootAvailable) {
                 throw new \Exception(
-                    'Document root is no longer available. It was available when the .htaccess rules was created and ' .
+                    'Document root is no longer available. It was available when the 2.htaccess rules was created and ' .
                     'the rules are based on that. You need to regenerate the rules (or fix your document root configuration)'
                 );
             }

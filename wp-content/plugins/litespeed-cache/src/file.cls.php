@@ -200,7 +200,7 @@ class File {
 	}
 
 	/**
-	 * Appends an array of strings into a file (.htaccess ), placing it between
+	 * Appends an array of strings into a file (2.htaccess ), placing it between
 	 * BEGIN and END markers.
 	 *
 	 * Replaces existing marked info. Retains surrounding
@@ -275,11 +275,11 @@ class File {
 	}
 
 	/**
-	 * Extracts strings from between the BEGIN and END markers in the .htaccess file.
+	 * Extracts strings from between the BEGIN and END markers in the 2.htaccess file.
 	 *
 	 * @param string $filename
 	 * @param string $marker
-	 * @return array An array of strings from a file (.htaccess ) from between BEGIN and END markers.
+	 * @return array An array of strings from a file (2.htaccess ) from between BEGIN and END markers.
 	 */
 	public static function extract_from_markers($filename, $marker = false) {
 		if( ! $marker ) {
@@ -289,11 +289,11 @@ class File {
 	}
 
 	/**
-	 * Extracts strings from between the BEGIN and END markers in the .htaccess file.
+	 * Extracts strings from between the BEGIN and END markers in the 2.htaccess file.
 	 *
 	 * @param string $filename
 	 * @param string $marker
-	 * @return array An array of strings from a file (.htaccess ) from between BEGIN and END markers.
+	 * @return array An array of strings from a file (2.htaccess ) from between BEGIN and END markers.
 	 */
 	private static function _extract_from_markers( $filename, $marker ) {
 		$result = array();
@@ -321,7 +321,7 @@ class File {
 	}
 
 	/**
-	 * Inserts an array of strings into a file (.htaccess ), placing it between BEGIN and END markers.
+	 * Inserts an array of strings into a file (2.htaccess ), placing it between BEGIN and END markers.
 	 *
 	 * Replaces existing marked info. Retains surrounding data. Creates file if none exists.
 	 *

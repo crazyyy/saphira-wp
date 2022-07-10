@@ -514,7 +514,7 @@ msgid "Both full URLs and partial strings can be used."
 msgstr ""
 
 #: src/doc.cls.php:104
-msgid "This setting will edit the .htaccess file."
+msgid "This setting will edit the 2.htaccess file."
 msgstr ""
 
 #: src/doc.cls.php:117
@@ -2714,7 +2714,7 @@ msgstr ""
 
 #: tpl/cache/settings_inc.login_cookie.tpl.php:56
 msgid ""
-"WARNING: The .htaccess login cookie and Database login cookie do not match."
+"WARNING: The 2.htaccess login cookie and Database login cookie do not match."
 msgstr ""
 
 #: tpl/cache/settings_inc.object.tpl.php:6
@@ -5040,15 +5040,15 @@ msgid ""
 msgstr ""
 
 #: tpl/toolbox/edit_htaccess.tpl.php:36
-msgid "LiteSpeed Cache View .htaccess"
+msgid "LiteSpeed Cache View 2.htaccess"
 msgstr ""
 
 #: tpl/toolbox/edit_htaccess.tpl.php:41
-msgid ".htaccess Path"
+msgid "2.htaccess Path"
 msgstr ""
 
 #: tpl/toolbox/edit_htaccess.tpl.php:47
-msgid "Frontend .htaccess Path"
+msgid "Frontend 2.htaccess Path"
 msgstr ""
 
 #: tpl/toolbox/edit_htaccess.tpl.php:52 tpl/toolbox/edit_htaccess.tpl.php:69
@@ -5064,7 +5064,7 @@ msgid "You can use this code %1$s in %2$s to specify the htaccess file path."
 msgstr ""
 
 #: tpl/toolbox/edit_htaccess.tpl.php:64
-msgid "Backend .htaccess Path"
+msgid "Backend 2.htaccess Path"
 msgstr ""
 
 #: tpl/toolbox/edit_htaccess.tpl.php:82
@@ -5076,7 +5076,7 @@ msgid "Import / Export"
 msgstr ""
 
 #: tpl/toolbox/entry.tpl.php:14
-msgid "View .htaccess"
+msgid "View 2.htaccess"
 msgstr ""
 
 #: tpl/toolbox/entry.tpl.php:18

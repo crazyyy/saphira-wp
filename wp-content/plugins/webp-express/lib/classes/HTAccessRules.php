@@ -76,7 +76,7 @@ class HTAccessRules
 
     /**
      *
-     *  Note that server variables are only allowed some places in the .htaccess.
+     *  Note that server variables are only allowed some places in the 2.htaccess.
      *  It is for example not allowed in CondPattern so something like this will not work:
      *  RewriteCond %{REQUEST_FILENAME} (?i)(%{DOCUMENT_ROOT}/wordpress/wp-content/themes/)(.*)(\.jpe?g|\.png)$
      */
@@ -94,12 +94,12 @@ class HTAccessRules
     }
 
     /**
-     * Decides if .htaccess rules needs to be updated.
+     * Decides if 2.htaccess rules needs to be updated.
      *
      * The result is positive under these circumstances:
      * - If there is no existing config.json (it must mean that there are no rules, and so they need "updating")
      * - If existing config.json is corrupt or not readable
-     * - The new config.json is compared to the old. If any of the properties that will affect the .htaccess has
+     * - The new config.json is compared to the old. If any of the properties that will affect the 2.htaccess has
      *       changed, well, it needs updating. Also, if there is a new property, it needs update, unless the
      *       value of that new property would not have any effect
      * - If the url path to the "wod" folder has changed (actually, to wod/webp-on-demand, but if one of these changes, so does the other)
@@ -124,7 +124,7 @@ class HTAccessRules
         }
 
         // $propsToCompare is set like this:
-        // Keys: properties that should trigger .htaccess update if changed
+        // Keys: properties that should trigger 2.htaccess update if changed
         // Values: The behaviour before that property was intruduced
         $propsToCompare = [
             'forward-query-string' => true,
@@ -153,12 +153,12 @@ class HTAccessRules
                 continue;
             }
             if (!isset($oldConfig[$prop])) {
-                // Do not trigger .htaccess update if the new value results
+                // Do not trigger 2.htaccess update if the new value results
                 // in same old behaviour (before this option was introduced)
                 if ($newConfig[$prop] == $behaviourBeforeIntroduced) {
                     continue;
                 } else {
-                    // Otherwise DO trigger .htaccess update
+                    // Otherwise DO trigger 2.htaccess update
                     return true;
                 }
             }
@@ -208,17 +208,17 @@ class HTAccessRules
             "#\n# Wordpress/Server configuration:\n" .
             '# - Document root availablity: ' . Paths::docRootStatusText() . "\n" .
 
-            "#\n# .htaccess capability test results:\n" .
+            "#\n# 2.htaccess capability test results:\n" .
             "# - mod_header working?: " .
                 (self::$capTests['modHeaderWorking'] === true ? 'yes' : (self::$capTests['modHeaderWorking'] === false ? 'no' : 'could not be determined')) . "\n" .
-            "# - pass variable from .htaccess to script through header working?: " .
+            "# - pass variable from 2.htaccess to script through header working?: " .
                 (self::$capTests['passThroughHeaderWorking'] === true ? 'yes' : (self::$capTests['passThroughHeaderWorking'] === false ? 'no' : 'could not be determined')) . "\n" .
-            "# - pass variable from .htaccess to script through environment variable working?: " .
+            "# - pass variable from 2.htaccess to script through environment variable working?: " .
                 (self::$capTests['passThroughEnvWorking'] === true ? 'yes' : (self::$capTests['passThroughEnvWorking'] === false ? 'no' : 'could not be determined')) . "\n" .
 
-            "#\n# Role of the dir that this .htaccess is located in:\n" .
-            '# - Is this .htaccess in a dir containing source images?: ' . (self::$dirContainsSourceImages ? 'yes' : 'no') . "\n" .
-            '# - Is this .htaccess in a dir containing webp images?: ' . (self::$dirContainsWebPImages ? 'yes' : 'no') . "\n" .
+            "#\n# Role of the dir that this 2.htaccess is located in:\n" .
+            '# - Is this 2.htaccess in a dir containing source images?: ' . (self::$dirContainsSourceImages ? 'yes' : 'no') . "\n" .
+            '# - Is this 2.htaccess in a dir containing webp images?: ' . (self::$dirContainsWebPImages ? 'yes' : 'no') . "\n" .
             "\n";
     }
 
@@ -300,7 +300,7 @@ class HTAccessRules
         if (self::$mingled) {
             // TODO:
             // Only write mingled rules for "uploads" dir.
-            // - UNLESS no .htaccess has been placed in uploads dir (is unwritable) (in that case also write for wp-content / index)
+            // - UNLESS no 2.htaccess has been placed in uploads dir (is unwritable) (in that case also write for wp-content / index)
             // (self::$htaccessDir == 'uploads')
             $rules .= "  # Redirect to existing converted image in same dir (if browser supports webp)\n";
             $rules .= "  RewriteCond %{HTTP_ACCEPT} image/webp\n";
@@ -318,7 +318,7 @@ class HTAccessRules
 //            $rules .= "  RewriteCond %{REQUEST_FILENAME} (?i)(.*)(" . self::$fileExtIncludingDot . ")$\n";
 
             // self::$appendWebP cannot be used, we need this:
-            // (because we are not sure there are a .htaccess in the uploads folder)
+            // (because we are not sure there are a 2.htaccess in the uploads folder)
 
             if (self::$useDocRootForStructuringCacheDir) {
                 if (self::$config['destination-extension'] == 'append') {
@@ -851,7 +851,7 @@ class HTAccessRules
             $config['base-htaccess-on-these-capability-tests'] = Config::runAndStoreCapabilityTests($config);
         }
         // We currently accept that the following capability tests might not
-        // have been run (we did not want to force recreation of .htaccess because of these)
+        // have been run (we did not want to force recreation of 2.htaccess because of these)
         // - "modHeaderWorking"
         // - "canRunTestScriptInWOD"
         // - "canRunTestScriptInWOD2"
@@ -907,7 +907,7 @@ class HTAccessRules
 
         self::$mingled = (self::$config['destination-folder'] == 'mingled');
 
-        // TODO: If we cannot store all .htaccess files we would like, we need to take into account which dir
+        // TODO: If we cannot store all 2.htaccess files we would like, we need to take into account which dir
         $setWebPExt = ((self::$config['destination-extension'] == 'set') && (self::$htaccessDir == 'uploads'));
         self::$appendWebP = !$setWebPExt;
     }
@@ -1097,7 +1097,7 @@ class HTAccessRules
             }
 
             // In the future, we could let user add exeptions in UI. Also for folders
-            // in order to make this work for folders, we will need to update the .htaccess
+            // in order to make this work for folders, we will need to update the 2.htaccess
             // and list the exceptions here with rules like this:
             // RewriteRule ^uploads/2021/06/ - [L]
 

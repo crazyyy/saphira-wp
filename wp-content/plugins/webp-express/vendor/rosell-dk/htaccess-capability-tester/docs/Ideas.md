@@ -161,7 +161,7 @@ $hct->na();
 ```yaml
 subdir: rewrite
 files:
-  - filename: '.htaccess'
+  - filename: '2.htaccess'
     content: |
       <IfModule mod_rewrite.c>
           RewriteEngine On

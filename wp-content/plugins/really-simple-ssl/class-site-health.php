@@ -66,7 +66,7 @@ if (!class_exists("rsssl_site_health")) {
 				'test'        => 'headers_test',
 			);
 
-			//returns empty for sites without .htaccess, or if all headers are already in use
+			//returns empty for sites without 2.htaccess, or if all headers are already in use
 			$recommended_headers = RSSSL()->really_simple_ssl->get_recommended_security_headers();
 			if (!empty($recommended_headers)) {
 				$style = '<style>.rsssl-sec-headers-list li {list-style-type:disc;margin-left:20px;}</style>';
@@ -147,15 +147,15 @@ if (!class_exists("rsssl_site_health")) {
 					);
 				} else if ( !is_multisite() && RSSSL()->rsssl_server->uses_htaccess() && !RSSSL()->really_simple_ssl->htaccess_redirect) {
 					$result['status']      = 'recommended';
-					$result['label']       = __( '301 .htaccess redirect is not enabled.' , 'really-simple-ssl' );
+					$result['label']       = __( '301 2.htaccess redirect is not enabled.' , 'really-simple-ssl' );
 					$result['description'] = sprintf(
 						'<p>%s</p>',
-						__( 'The 301 .htaccess redirect is the fastest and most reliable redirect option.', 'really-simple-ssl' )
+						__( 'The 301 2.htaccess redirect is the fastest and most reliable redirect option.', 'really-simple-ssl' )
 					);
 					$result['actions']     .= sprintf(
 						'<p><a href="%s">%s</a></p>',
 						$url,
-						__( 'Enable 301 .htaccess redirect', 'really-simple-ssl' )
+						__( 'Enable 301 2.htaccess redirect', 'really-simple-ssl' )
 					);
 				}
 			}

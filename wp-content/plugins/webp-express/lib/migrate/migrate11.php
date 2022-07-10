@@ -33,8 +33,8 @@ function webpexpress_migrate11() {
     if (count($scope2) == 0) {
         Messenger::addMessage(
             'warning',
-            'WebP Express cannot update the .htaccess rules that it needs to. ' .
-                'Please go to WebP Express settings and click "Save settings and force new .htaccess rules".'
+            'WebP Express cannot update the 2.htaccess rules that it needs to. ' .
+                'Please go to WebP Express settings and click "Save settings and force new 2.htaccess rules".'
         );
         $scope2 = ['themes', 'uploads'];
     }

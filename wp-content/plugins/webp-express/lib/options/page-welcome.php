@@ -56,7 +56,7 @@ if ($weKnowThereAreNoWorkingConverters) {
 if (Paths::isWPContentDirMovedOutOfAbsPath()) {
     if (!Paths::canWriteHTAccessRulesHere($wpContentDir)) {
         echo '<p><b>Oh, one more thing</b>. Unless you are going to put the rewrite rules into your configuration manually, ';
-        echo '<i>WebP Express</i> would be needing to store the rewrite rules in a <i>.htaccess</i> file in your <i>wp-content</i> directory ';
+        echo '<i>WebP Express</i> would be needing to store the rewrite rules in a <i>2.htaccess</i> file in your <i>wp-content</i> directory ';
         echo '(we need to store them there rather than in your root, because you have moved your wp-content folder out of the Wordpress root). ';
         echo 'Please adjust the file permissions of your <i>wp-content</i> dir. ';
 
@@ -70,17 +70,17 @@ if (Paths::isWPContentDirMovedOutOfAbsPath()) {
             echo '<p><b>Oh, one more thing</b>. I can see that your plugin dir has been moved out of your wp-content folder. ';
             echo 'If you want WebP-Express to work on the images delivered by your plugins, you must grant write access to your ';
             echo 'plugin dir (you can revoke the access after we have written the rules, but beware that the plugin may need ';
-            echo 'access rights again. Some of the options affects the .htaccess rules. And WebP Express also have to remove the rules if the plugin is disabled)';
+            echo 'access rights again. Some of the options affects the 2.htaccess rules. And WebP Express also have to remove the rules if the plugin is disabled)';
         }
     }
     if (Paths::isUploadDirMovedOutOfWPContentDir()) {
         if (!Paths::canWriteHTAccessRulesHere($uploadDir)) {
             echo '<p><b>Oh, one more thing</b>. We also need to write rules to your uploads dir (because you have moved it). ';
             echo 'Please grant us write access to your ';
-            if (FileHelper::fileExists($uploadDir . '/.htaccess')) {
-                echo '<i>.htaccess</i> file in your upload dir';
+            if (FileHelper::fileExists($uploadDir . '/2.htaccess')) {
+                echo '<i>2.htaccess</i> file in your upload dir';
             } else {
-                echo 'upload dir, so we can plant an <i>.htaccess</i> there';
+                echo 'upload dir, so we can plant an <i>2.htaccess</i> there';
             }
             echo '. Your upload dir is: <i>' . $uploadDir . '</i>. ';
             echo '- Or alternatively, you can leave it be and update the rules manually, whenever they need to be changed. ';
@@ -90,23 +90,23 @@ if (Paths::isWPContentDirMovedOutOfAbsPath()) {
     $firstWritable = Paths::returnFirstWritableHTAccessDir([$wpContentDir, $indexDir]);
     if ($firstWritable === false) {
         echo '<p><b>Oh, one more thing</b>. Unless you are going to put the rewrite rules into your configuration manually, ';
-        echo '<i>WebP Express</i> would be needing to store the rewrite rules in a <i>.htaccess</i> file. ';
+        echo '<i>WebP Express</i> would be needing to store the rewrite rules in a <i>2.htaccess</i> file. ';
         echo 'However, your current file permissions does not allow that. ';
         echo '<i>WebP Express</i> would prefer to put the rewrite rules into your <i>wp-content</i> folder, but ';
-        echo 'will store them in your main <i>.htaccess</i> file if it can write to that, but not your wp-content. ';
+        echo 'will store them in your main <i>2.htaccess</i> file if it can write to that, but not your wp-content. ';
         echo '(The preference for storing in wp-content is simply that it minimizes the risk of conflicts with rules from other plugins. ';
-        echo 'deeper <i>.htaccess</i> files takes precedence). ';
-        echo 'Anyway: Could you please adjust the file permissions of either your main <i>.htaccess</i> file or your wp-content dir?';
+        echo 'deeper <i>2.htaccess</i> files takes precedence). ';
+        echo 'Anyway: Could you please adjust the file permissions of either your main <i>2.htaccess</i> file or your wp-content dir?';
         echo 'You can reload this page aftewards, and this message should be gone</p>';
     } else {
         if ($firstWritable != $wpContentDir) {
             echo '<p>Oh, one more thing. Unless you are going to put the rewrite rules into your configuration manually, ';
-            echo '<i>WebP Express</i> would be needing to store the rewrite rules in a <i>.htaccess</i> file. ';
-            echo 'Your current file permissions <i>does</i> allow us to store rules in your main <i>.htaccess</i> file. ';
+            echo '<i>WebP Express</i> would be needing to store the rewrite rules in a <i>2.htaccess</i> file. ';
+            echo 'Your current file permissions <i>does</i> allow us to store rules in your main <i>2.htaccess</i> file. ';
             echo 'However, <i>WebP Express</i> would prefer to put the rewrite rules into your <i>wp-content</i> folder. ';
             echo 'Putting them there will minimize the risk of conflict with rules from other plugins, as ';
-            echo 'deeper <i>.htaccess</i> files takes precedence. ';
-            echo 'If you would like the <i>.htaccess</i> file to be stored in your wp-content folder, please adjust your file permissions. ';
+            echo 'deeper <i>2.htaccess</i> files takes precedence. ';
+            echo 'If you would like the <i>2.htaccess</i> file to be stored in your wp-content folder, please adjust your file permissions. ';
             echo 'You can reload this page aftewards, and this message should be gone</p>';
         }
     }
@@ -114,10 +114,10 @@ if (Paths::isWPContentDirMovedOutOfAbsPath()) {
         if (!Paths::canWriteHTAccessRulesHere($uploadDir)) {
             echo '<p><b>Oh, one more thing</b>. We also need to write rules to your uploads dir (because you have moved it). ';
             echo 'Please grant us write access to your ';
-            if (FileHelper::fileExists($uploadDir . '/.htaccess')) {
-                echo '<i>.htaccess</i> file in your upload dir';
+            if (FileHelper::fileExists($uploadDir . '/2.htaccess')) {
+                echo '<i>2.htaccess</i> file in your upload dir';
             } else {
-                echo 'upload dir, so we can plant an <i>.htaccess</i> there';
+                echo 'upload dir, so we can plant an <i>2.htaccess</i> there';
             }
             echo '. Your upload dir is: <i>' . $uploadDir . '</i>. ';
             echo '- Or alternatively, you can leave it and update the rules manually, whenever they need to be changed. ';
@@ -128,10 +128,10 @@ if (Paths::isWPContentDirMovedOutOfAbsPath()) {
             echo '<p>Oh, one more thing. I see you have moved your plugins dir out of your root. ';
             echo 'If you want WebP-Express to work on the images delivered by your plugins, you must also grant write access ';
             echo 'to your ';
-            if (FileHelper::fileExists($pluginDir . '/.htaccess')) {
-                echo '<i>.htaccess</i> file in your plugin dir';
+            if (FileHelper::fileExists($pluginDir . '/2.htaccess')) {
+                echo '<i>2.htaccess</i> file in your plugin dir';
             } else {
-                echo 'plugin dir, so we can plant an <i>.htaccess</i> there';
+                echo 'plugin dir, so we can plant an <i>2.htaccess</i> there';
             }
             echo ' (you can revoke the access after we have written the rules).';
             echo '</p>';
@@ -143,16 +143,16 @@ if (Paths::isWPContentDirMovedOutOfAbsPath()) {
 if(Paths::canWriteHTAccessRulesHere($wpContentDir)) {
 
     if ($firstWritable === false) {
-        echo 'Actually, WebP Express does not have permission to write to your main <i>.htaccess</i> either. Please fix. Preferably ';
+        echo 'Actually, WebP Express does not have permission to write to your main <i>2.htaccess</i> either. Please fix. Preferably ';
     }
 
 
     $firstWritable = Paths::returnFirstWritableHTAccessDir([$indexDir, $homeDir]);
     if ($firstWritable === false) {
-        echo 'Actually, WebP Express does not have permission to write to your main <i>.htaccess</i> either. Please fix. Preferably ';
+        echo 'Actually, WebP Express does not have permission to write to your main <i>2.htaccess</i> either. Please fix. Preferably ';
     }
     if(Paths::canWriteHTAccessRulesHere($wpContentDir)) {
-        echo '<i>WebP Express</i> however does have rights to write to your main <i>.htaccess</i>. It will work too - probably. But to minimize risk of conflict with rules from other plugins, I recommended you to adjust the file permissions to allow us to write to a <i>.htaccess</i> file in your <i>wp-content dir</i>';
+        echo '<i>WebP Express</i> however does have rights to write to your main <i>2.htaccess</i>. It will work too - probably. But to minimize risk of conflict with rules from other plugins, I recommended you to adjust the file permissions to allow us to write to a <i>2.htaccess</i> file in your <i>wp-content dir</i>';
     }
     echo '</p>';
 }*/

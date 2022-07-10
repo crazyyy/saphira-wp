@@ -83,7 +83,7 @@ EOD;
         return [
             'subdir' => $this->getSubDir() . '/server-signature',
             'files' => [
-                ['.htaccess', $htaccess],
+                ['2.htaccess', $htaccess],
                 ['test.php', $php],
             ],
             'request' => 'test.php',
@@ -124,7 +124,7 @@ EOD;
         return [
             'subdir' => $this->getSubDir() . '/rewrite',
             'files' => [
-                ['.htaccess', $htaccess],
+                ['2.htaccess', $htaccess],
                 ['0.txt', '0'],
                 ['1.txt', '1'],
                 ['request-me.txt', 'Redirect failed even though rewriting has been proven to work. Strange!'],
@@ -166,7 +166,7 @@ EOD;
         return [
             'subdir' => $this->getSubDir() . '/header-set',
             'files' => [
-                ['.htaccess', $htaccess],
+                ['2.htaccess', $htaccess],
                 ['request-me.txt', 'thanks'],
             ],
             'request' => 'request-me.txt',
@@ -205,7 +205,7 @@ EOD;
         return [
             'subdir' => $this->getSubDir() . '/content-digest',
             'files' => [
-                ['.htaccess', $htaccess],
+                ['2.htaccess', $htaccess],
                 ['request-me.txt', 'thanks'],
             ],
             'request' => 'request-me.txt',
@@ -244,7 +244,7 @@ EOD;
         return [
             'subdir' => $this->getSubDir() . '/directory-index',
             'files' => [
-                ['.htaccess', $htaccess],
+                ['2.htaccess', $htaccess],
                 ['0.html', '0'],
                 ['1.html', '1'],
             ],
@@ -285,7 +285,7 @@ EOD;
         return [
             'subdir' => $this->getSubDir() . '/add-type',
             'files' => [
-                ['.htaccess', $htaccess],
+                ['2.htaccess', $htaccess],
                 ['request-me.test', 'hi'],
             ],
             'request' => 'request-me.test',
@@ -352,7 +352,7 @@ EOD;
 
         $htaccessEnabledTest = $hct->htaccessEnabled();
         if ($htaccessEnabledTest === false) {
-            return new TestResult(false, '.htaccess files are ignored');
+            return new TestResult(false, '2.htaccess files are ignored');
         } elseif (is_null($htaccessEnabledTest)) {
             // We happen to know that if that test cannot establish anything,
             // then none of the usual weapons works - we can surrender right away

@@ -131,7 +131,7 @@ class Destination
                         throw new \Exception(
                             'Can not calculate destination using "doc-root" structure as document root is not available. $_SERVER["DOCUMENT_ROOT"] is empty. ' .
                             'This is probably a misconfiguration on the server. ' .
-                            'However, WebP Express can function without using documument root. If you resave options and regenerate the .htaccess files, it should ' .
+                            'However, WebP Express can function without using documument root. If you resave options and regenerate the 2.htaccess files, it should ' .
                             'automatically start to structure the webp files in subfolders that are relative the image root folders rather than document-root.'
                         );
                     }
@@ -140,7 +140,7 @@ class Destination
                         throw new \Exception(
                             'Can not calculate destination using "doc-root" structure as document root cannot be resolved for symlinks using "realpath". The ' .
                             'reason for that is probably that open_basedir protection has been set up and that document root is outside outside that open_basedir. ' .
-                            'WebP Express can function in that setting, however you will need to resave options and regenerate the .htaccess files. It should then ' .
+                            'WebP Express can function in that setting, however you will need to resave options and regenerate the 2.htaccess files. It should then ' .
                             'automatically stop to structure the webp files as relative to document root and instead structure them as relative to image root folders.'
                         );
                     }

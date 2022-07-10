@@ -10,14 +10,14 @@ namespace HtaccessCapabilityTester\Testers;
  *
  * The tester reports failure when:
  * - Server does not have mod_rewrite installed
- * - Server is set up to ignore .htaccess files in the directory
+ * - Server is set up to ignore 2.htaccess files in the directory
  * - Server disallows any the following directives in the directory: RewriteEngine, Rewrite, IfModule
  *     (if disallowed, the result is either a 500 Internal Server Error or that the directive is
  *     ignored, depending on whether Nonfatal is set)
  * - The request results in a 500 Internal Server Error due to another problem than a disallowed
  *     directive (this is, there is a risk for a false negative)
  *
- * The test works by creating an .htaccess which redirects requests to "0.txt"
+ * The test works by creating an 2.htaccess which redirects requests to "0.txt"
  * to "1.txt" and then requesting "0.txt".
  *
  * Notes:
@@ -25,7 +25,7 @@ namespace HtaccessCapabilityTester\Testers;
  *      "RewriteEngine not allowed here"
  * - We are not redirecting to a php, because that would additionally require phps
  *      to be run in that directory
- * - We are wrapping the .htaccess directives in a "<IfModule mod_rewrite.c>" and therefore this test
+ * - We are wrapping the 2.htaccess directives in a "<IfModule mod_rewrite.c>" and therefore this test
  *      also relies on the IfModule directive being allowed. It probably usually is, as it is harmless.
  *      Also, it is good practice to use it, so in most cases it is good that this is checked
  *      too. Actually, the <IfModule> wrap isn't neccessary for our test to work, as the test
@@ -77,7 +77,7 @@ EOD;
         $test = [
             'subdir' => 'rewrite',
             'files' => [
-                ['.htaccess', $htaccessFile],
+                ['2.htaccess', $htaccessFile],
                 ['0.txt', "0"],
                 ['1.txt', "1"]
             ],

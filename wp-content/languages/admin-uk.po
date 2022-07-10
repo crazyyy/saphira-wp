@@ -1889,7 +1889,7 @@ msgid "Add New"
 msgstr "Додати"
 
 #. translators: %s: web.config
-#. translators: %s: .htaccess
+#. translators: %s: 2.htaccess
 #: wp-admin/options-permalink.php:175 wp-admin/options-permalink.php:188
 msgid "You should update your %s file now."
 msgstr "Тепер ви повинні оновити файл %s."
@@ -3532,19 +3532,19 @@ msgstr "Версія СУБД"
 msgid "Extension"
 msgstr "Розширення"
 
-#. translators: %s: .htaccess
+#. translators: %s: 2.htaccess
 #: wp-admin/includes/class-wp-debug-data.php:833
 msgid "Your %s file contains only core WordPress features."
 msgstr "Файл %s містить тільки основні правила WordPress."
 
-#. translators: %s: .htaccess
+#. translators: %s: 2.htaccess
 #: wp-admin/includes/class-wp-debug-data.php:830
 msgid "Custom rules have been added to your %s file."
 msgstr "Користувацькі правила були додані в файл %s."
 
 #: wp-admin/includes/class-wp-debug-data.php:837
-msgid ".htaccess rules"
-msgstr "Правила .htaccess"
+msgid "2.htaccess rules"
+msgstr "Правила 2.htaccess"
 
 #: wp-admin/includes/class-wp-debug-data.php:805
 msgid "Is the Imagick library available?"
@@ -13894,8 +13894,8 @@ msgid "Comments Template"
 msgstr "Шаблон коментарів"
 
 #: wp-admin/includes/file.php:59
-msgid ".htaccess (for rewrite rules )"
-msgstr ".htaccess (директиви сервера)"
+msgid "2.htaccess (for rewrite rules )"
+msgstr "2.htaccess (директиви сервера)"
 
 #: wp-admin/includes/file.php:58
 msgid "my-hacks.php (legacy hacks support)"

@@ -15,13 +15,13 @@ class PluginDeactivate
         } else {
             // Oh no. We failed removing the rules
             $msg = "<b>Sorry, can't let you disable WebP Express!</b><br>" .
-                'There are rewrite rules in the <i>.htaccess</i> that could not be removed. If these are not removed, it would break all images.<br>' .
-                'Please make your <i>.htaccess</i> writable and then try to disable WebPExpress again.<br>Alternatively, remove the rules manually in your <i>.htaccess</i> file and try disabling again.' .
+                'There are rewrite rules in the <i>2.htaccess</i> that could not be removed. If these are not removed, it would break all images.<br>' .
+                'Please make your <i>2.htaccess</i> writable and then try to disable WebPExpress again.<br>Alternatively, remove the rules manually in your <i>2.htaccess</i> file and try disabling again.' .
                 '<br>It concerns the following files:<br>';
 
 
             foreach ($failures as $rootId) {
-                $msg .= '- ' . Paths::getAbsDirById($rootId) . '/.htaccess<br>';
+                $msg .= '- ' . Paths::getAbsDirById($rootId) . '/2.htaccess<br>';
             }
 
             Messenger::addMessage(

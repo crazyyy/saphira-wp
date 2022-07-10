@@ -3,7 +3,7 @@
         echo helpIcon(
             '<p>This setting determines which folders WebP Express is operational in. ' .
             'If for example "Uploads only" is selected, WebP Express will only convert the upload images and only put ' .
-            'an <i>.htaccess</i> file in the <i>uploads</i> folder (if needed). Also, <i>Alter HTML</i> will limit itself to that area.' .
+            'an <i>2.htaccess</i> file in the <i>uploads</i> folder (if needed). Also, <i>Alter HTML</i> will limit itself to that area.' .
             '</p>' .
             '<p>The "All content" setting will work on <i>uploads</i>, <i>themes</i>, <i>plugins</i> - anything in the "wp-content" ' .
             '(or whatever it has been renamed to). It will work on uploads, even if the uploads folder has been ' .
@@ -50,7 +50,7 @@
                 // This can be done in migrate11.php or user could have edited config.php manually.
                 // PS: We can rest assure that scope is sanitized - any invalid rootId is filtered out in Config::fix.
                 echo '<option value="' . $imageTypesString . '" selected>' .
-                    'Custom: ' . implode(', ', explode(',', $imageTypesString)) . 
+                    'Custom: ' . implode(', ', explode(',', $imageTypesString)) .
                 '</option>';
             }
             ?>

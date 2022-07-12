@@ -1,6 +1,6 @@
 {
-  "domain": "wp-framework.local",
-  "theme": "wp-framework",
+  "domain": "saphira-wp.local/",
+  "theme": "saphira",
   "path": {
     "base": {
       "src":"assets/",
